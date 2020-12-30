@@ -1,0 +1,27 @@
+@media (min-width: 480px) and (max-width: 574px) {
+  .recogheading h2 {
+    font-size: 1.7em !important;
+  }
+}
+@media (max-width: 479px) {
+  .recogheading h2 {
+    font-size: 1.7em !important;
+  }
+}
+.recogheading {
+  padding: 10px;
+  color: white;
+  margin: 20px 0;
+}
+
+.nav-item {
+  font-size: large;
+  color: white;
+  background-color: #f79e02;
+  width: 120px;
+  margin-right: 4px;
+  text-align: center;
+}
+nav .active {
+  color: white;
+}

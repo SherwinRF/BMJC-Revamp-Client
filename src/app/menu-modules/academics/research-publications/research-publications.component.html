@@ -1,3 +1,36 @@
-<p class="display-1" [ngStyle]="{ 'background-color': theme.col4 }">
-  research-publications works!
-</p>
+<div class="container mx-auto">
+  <div class="row">
+    <div class="col-12 col-sm-12">
+      <h3>Research Publications</h3>
+      <hr />
+    </div>
+  </div>
+  <div *ngIf="Research">
+    <table
+      datatable
+      [dtOptions]="dtOptions"
+      class="row-border hover table-bordered"
+    >
+      <thead [ngStyle]="{ 'background-color': theme.primary }" align="center">
+        <tr>
+          <th>Publication Title</th>
+          <th>Authors</th>
+          <th>Department</th>
+          <th>Year</th>
+          <th>Journal</th>
+          <th>Type</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let a of Research">
+          <td>{{ a.Publication_Title }}</td>
+          <td>{{ a.Authors }}</td>
+          <td>{{ a.Department }}</td>
+          <td>{{ a.Year }}</td>
+          <td>{{ a.Journal }}</td>
+          <td>{{ a.Type }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

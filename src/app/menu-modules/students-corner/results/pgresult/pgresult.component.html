@@ -1,0 +1,96 @@
+<div class="container" style="margin-bottom: 250px">
+  <div class="row">
+    <div class="col-lg-2 col-md-2 col-sm-6 col-6 d-block m-auto">
+      <div class="btn-group" [ngStyle]="{ 'background-color': theme.primary }">
+        <button type="button" class="btn btn-text">Result</button>
+        <button
+          type="button"
+          class="btn btn-text dropdown-toggle dropdown-toggle-split"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+        >
+          <span class="sr-only">Toggle Dropdown</span>
+        </button>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#">MBBS Summer 2016 Result</a>
+          <a class="dropdown-item" href="#">MBBS Winter 2016 Result</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-2 col-md-2 col-sm-6 col-6 d-block m-auto">
+      <div class="btn-group" [ngStyle]="{ 'background-color': theme.primary }">
+        <button type="button" class="btn btn-text">Class</button>
+        <button
+          type="button"
+          class="btn btn-text dropdown-toggle dropdown-toggle-split"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+        >
+          <span class="sr-only">Toggle Dropdown</span>
+        </button>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#">First</a>
+          <a class="dropdown-item" href="#">Second</a>
+          <a class="dropdown-item" href="#">Third</a>
+          <a class="dropdown-item" href="#">Fourth</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-8 col-md-8 col-sm-12 col-12 d-block m-auto">
+      <div class="input-group mt-1">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Search By Seat Number"
+        />
+        <div class="input-group-append">
+          <button
+            class="btn btn-text"
+            type="submit"
+            [ngStyle]="{ 'background-color': theme.primary }"
+          >
+            Search
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br />
+  <div class="card">
+    <div class="card-header" [ngStyle]="{ 'background-color': theme.primary }">
+      <b>{{
+        Results[1].course +
+          " " +
+          Results[1].batch +
+          " " +
+          Results[1].exam +
+          " " +
+          Results[1].year | uppercase
+      }}</b>
+    </div>
+    <table class="table table-striped table-hover">
+      <thead>
+        <tr>
+          <th scope="col">Seat Number</th>
+          <th scope="col">PRN</th>
+          <th scope="col">Name</th>
+          <th scope="col">Department</th>
+          <th scope="col">Result</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let items of result1; let i = index">
+          <td>{{ items.seat_number }}</td>
+          <td>{{ items.prn }}</td>
+          <td>{{ items.name }}</td>
+          <td>{{ items.department }}</td>
+          <td>
+            {{ items.result }}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

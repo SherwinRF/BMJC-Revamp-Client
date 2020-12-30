@@ -1,3 +1,378 @@
-<p class="display-1" [ngStyle]="{ 'background-color': theme.col4 }">
-  deans works!
-</p>
+<div class="container my-4">
+  <nav>
+    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+      <a
+        class="nav-link"
+        id="nav-current_deans-tab"
+        data-toggle="tab"
+        href="#nav-current_deans"
+        role="tab"
+        aria-controls="nav-current_deans"
+        aria-selected="true"
+        >Current Deans</a
+      >
+
+      <a
+        class="nav-link"
+        id="nav-past_deans-tab"
+        data-toggle="tab"
+        href="#nav-past_deans"
+        role="tab"
+        aria-controls="nav-past_deans"
+        aria-selected="false"
+        >Past Deans</a
+      >
+    </div>
+  </nav>
+
+  <div class="tab-content" id="nav-tabContent">
+    <div
+      class="tab-pane fade show active"
+      id="nav-current_deans"
+      role="tabpanel"
+      aria-labelledby="nav-current_deans-tab"
+    >
+      <div class="container my-4 d-flex flex-column align-items-center">
+        <div class="row pb-5 mb-4">
+          <div class="col-lg-4 col-md-6 mb-4 mb-lg-0 my-2">
+            <!-- Card-->
+            <div class="card rounded shadow-sm border-0">
+              <div class="card-body p-0">
+                <div
+                  [ngStyle]="{ 'background-color': theme.primary }"
+                  class="px-0 py-4 text-center card-img-top"
+                >
+                  <img
+                    src="assets/about-us/deans/dean.jpg"
+                    alt="..."
+                    class="rounded-circle mb-2 img-thumbnail d-block mx-auto"
+                    style="height: 90px; width: 90px"
+                  />
+                  <h5 class="text-white mb-0">Dr. Ajay S. Chandanwale</h5>
+                  <h5 class="text-white mb-0">Dean</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4 mb-lg-0 my-2">
+            <!-- Card-->
+            <div class="card rounded shadow-sm border-0">
+              <div class="card-body p-0">
+                <div
+                  [ngStyle]="{ 'background-color': theme.primary }"
+                  class="px-0 py-4 text-center card-img-top"
+                >
+                  <img
+                    src="assets/about-us/deans/dy.dean(ug).jpg"
+                    alt="..."
+                    class="rounded-circle mb-2 img-thumbnail d-block mx-auto"
+                    style="height: 90px; width: 90px"
+                  />
+                  <h5 class="text-white mb-0">Dr. S.V. Joshi</h5>
+                  <h5 class="text-white mb-0">Dy. Dean (UG)</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4 mb-lg-0 my-2">
+            <!-- Card-->
+            <div class="card rounded shadow-sm border-0">
+              <div class="card-body p-0">
+                <div
+                  [ngStyle]="{ 'background-color': theme.primary }"
+                  class="px-0 py-4 text-center card-img-top"
+                >
+                  <img
+                    src="assets/about-us/deans/dy.dean(pg).jpg"
+                    alt="..."
+                    class="rounded-circle mb-2 img-thumbnail d-block mx-auto"
+                    style="height: 90px; width: 90px"
+                  />
+                  <h5 class="text-white mb-0">Dr. Rajesh Karyakarte</h5>
+                  <h5 class="text-white mb-0">Dy. Dean (PG)</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4 mb-lg-0 my-2">
+            <!-- Card-->
+            <div class="card rounded shadow-sm border-0">
+              <div class="card-body p-0">
+                <div
+                  [ngStyle]="{ 'background-color': theme.primary }"
+                  class="px-0 py-4 text-center card-img-top"
+                >
+                  <img
+                    src="assets/about-us/deans/administration.jpg"
+                    alt="..."
+                    class="rounded-circle mb-2 img-thumbnail d-block mx-auto"
+                    style="height: 90px; width: 90px"
+                  />
+                  <h5 class="text-white mb-0">Dr. M.P. Tambe</h5>
+                  <h5 class="text-white mb-0">Dy. Dean (Administration)</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4 mb-lg-0 my-2">
+            <!-- Card-->
+            <div class="card rounded shadow-sm border-0">
+              <div class="card-body p-0">
+                <div
+                  [ngStyle]="{ 'background-color': theme.primary }"
+                  class="px-0 py-4 text-center card-img-top"
+                >
+                  <img
+                    src="assets/about-us/deans/medical_superintendent.jpg"
+                    alt="..."
+                    class="rounded-circle mb-2 img-thumbnail d-block mx-auto"
+                    style="height: 90px; width: 90px"
+                  />
+                  <h5 class="text-white mb-0">Dr. Ajay A. Tawane</h5>
+                  <h5 class="text-white mb-0">Medical Superintendent</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4 mb-lg-0 my-2">
+            <!-- Card-->
+            <div class="card rounded shadow-sm border-0">
+              <div class="card-body p-0">
+                <div
+                  [ngStyle]="{ 'background-color': theme.primary }"
+                  class="px-0 py-4 text-center card-img-top"
+                >
+                  <img
+                    src="assets/about-us/deans/dy.medical_superintendent.jpg"
+                    alt="..."
+                    class="rounded-circle mb-2 img-thumbnail d-block mx-auto"
+                    style="height: 90px; width: 90px"
+                  />
+                  <h5 class="text-white mb-0">Dr. Vijay Jadhav</h5>
+                  <h5 class="text-white mb-0">Dy. Medical Superintendent</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="tab-pane fade"
+      id="nav-past_deans"
+      role="tabpanel"
+      aria-labelledby="nav-past_deans-tab"
+    >
+      <div class="container my-4">
+        <div class="row pb-5 mb-4">
+          <div class="col-lg-4 col-md-6 mb-4 mb-lg-0 my-2">
+            <!-- Card-->
+            <div class="card rounded shadow-sm border-0">
+              <div class="card-body p-0">
+                <div
+                  [ngStyle]="{ 'background-color': theme.primary }"
+                  class="px-0 py-4 text-center card-img-top"
+                >
+                  <img
+                    src="assets/about-us/deans/professor.jpg"
+                    alt="..."
+                    width="90"
+                    class="rounded-circle mb-2 img-thumbnail d-block mx-auto"
+                  />
+                  <h5 class="text-white mb-0">Dr. A.S. Labhsetwar</h5>
+                  <h5 class="text-white mb-0">Subj:Ophthalmology</h5>
+                  <p class="small text-white mb-0">
+                    Period:08-05-2000 to 10-02-2003
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4 mb-lg-0 my-2">
+            <!-- Card-->
+            <div class="card rounded shadow-sm border-0">
+              <div class="card-body p-0">
+                <div
+                  [ngStyle]="{ 'background-color': theme.primary }"
+                  class="px-0 py-4 text-center card-img-top"
+                >
+                  <img
+                    src="assets/about-us/deans/professor.jpg"
+                    alt="..."
+                    width="90"
+                    class="rounded-circle mb-2 img-thumbnail d-block mx-auto"
+                  />
+                  <h5 class="text-white mb-0">Dr. S.G. Deshpande</h5>
+                  <h5 class="text-white mb-0">Subj:Skin VD</h5>
+                  <p class="small text-white mb-0">
+                    Period:11-02-2003 to 31-05-2003
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4 mb-lg-0 my-2">
+            <!-- Card-->
+            <div class="card rounded shadow-sm border-0">
+              <div class="card-body p-0">
+                <div
+                  [ngStyle]="{ 'background-color': theme.primary }"
+                  class="px-0 py-4 text-center card-img-top"
+                >
+                  <img
+                    src="assets/about-us/deans/professor.jpg"
+                    alt="..."
+                    width="90"
+                    class="rounded-circle mb-2 img-thumbnail d-block mx-auto"
+                  />
+                  <h5 class="text-white mb-0">Dr. V.L. Yemul</h5>
+                  <h5 class="text-white mb-0">Subj:Microbiology</h5>
+                  <p class="small text-white mb-0">
+                    Period:04-06-2003 to 30-09-2006
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4 mb-lg-0 my-2">
+            <!-- Card-->
+            <div class="card rounded shadow-sm border-0">
+              <div class="card-body p-0">
+                <div
+                  [ngStyle]="{ 'background-color': theme.primary }"
+                  class="px-0 py-4 text-center card-img-top"
+                >
+                  <img
+                    src="assets/about-us/deans/professor.jpg"
+                    alt="..."
+                    width="90"
+                    class="rounded-circle mb-2 img-thumbnail d-block mx-auto"
+                  />
+                  <h5 class="text-white mb-0">Dr. A.K. Malik</h5>
+                  <h5 class="text-white mb-0">Subj:Surgery</h5>
+                  <p class="small text-white mb-0">
+                    Period:05-11-2007 to 31-07-2008
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4 mb-lg-0 my-2">
+            <!-- Card-->
+            <div class="card rounded shadow-sm border-0">
+              <div class="card-body p-0">
+                <div
+                  [ngStyle]="{ 'background-color': theme.primary }"
+                  class="px-0 py-4 text-center card-img-top"
+                >
+                  <img
+                    src="assets/about-us/deans/professor.jpg"
+                    alt="..."
+                    width="90"
+                    class="rounded-circle mb-2 img-thumbnail d-block mx-auto"
+                  />
+                  <h5 class="text-white mb-0">Dr. A.V. Jamkar</h5>
+                  <h5 class="text-white mb-0">Subj:Surgery</h5>
+                  <p class="small text-white mb-0">
+                    Period:01-10-2006 to 04-11-2007
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4 mb-lg-0 my-2">
+            <!-- Card-->
+            <div class="card rounded shadow-sm border-0">
+              <div class="card-body p-0">
+                <div
+                  [ngStyle]="{ 'background-color': theme.primary }"
+                  class="px-0 py-4 text-center card-img-top"
+                >
+                  <img
+                    src="assets/about-us/deans/professor.jpg"
+                    alt="..."
+                    width="90"
+                    class="rounded-circle mb-2 img-thumbnail d-block mx-auto"
+                  />
+                  <h5 class="text-white mb-0">Dr. N.V. Dravid</h5>
+                  <h5 class="text-white mb-0">Subj:Pathalogy</h5>
+                  <p class="small text-white mb-0">
+                    Period:01-10-2006 to 04-11-2007
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4 mb-lg-0 my-2">
+            <!-- Card-->
+            <div class="card rounded shadow-sm border-0">
+              <div class="card-body p-0">
+                <div
+                  [ngStyle]="{ 'background-color': theme.primary }"
+                  class="px-0 py-4 text-center card-img-top"
+                >
+                  <img
+                    src="assets/about-us/deans/professor.jpg"
+                    alt="..."
+                    width="90"
+                    class="rounded-circle mb-2 img-thumbnail d-block mx-auto"
+                  />
+                  <h5 class="text-white mb-0">Dr. N.G. Borade</h5>
+                  <h5 class="text-white mb-0">Subj:Physiology</h5>
+                  <p class="small text-white mb-0">
+                    Period:29-08-2008 to 22-03-2009
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4 mb-lg-0 my-2">
+            <!-- Card-->
+            <div class="card rounded shadow-sm border-0">
+              <div class="card-body p-0">
+                <div
+                  [ngStyle]="{ 'background-color': theme.primary }"
+                  class="px-0 py-4 text-center card-img-top"
+                >
+                  <img
+                    src="assets/about-us/deans/professor.jpg"
+                    alt="..."
+                    width="90"
+                    class="rounded-circle mb-2 img-thumbnail d-block mx-auto"
+                  />
+                  <h5 class="text-white mb-0">Dr. Renu Bharadwaj</h5>
+                  <h5 class="text-white mb-0">Subj:Microbiology</h5>
+                  <p class="small text-white mb-0">
+                    Period:21-12-2010 to 12-05-2011
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4 mb-lg-0 my-2">
+            <!-- Card-->
+            <div class="card rounded shadow-sm border-0">
+              <div class="card-body p-0">
+                <div
+                  [ngStyle]="{ 'background-color': theme.primary }"
+                  class="px-0 py-4 text-center card-img-top"
+                >
+                  <img
+                    src="assets/about-us/deans/professor.jpg"
+                    alt="..."
+                    width="90"
+                    class="rounded-circle mb-2 img-thumbnail d-block mx-auto"
+                  />
+                  <h5 class="text-white mb-0">Dr. Ajay S. Chandanwale</h5>
+                  <h5 class="text-white mb-0">Subj:Orthopaedics</h5>
+                  <p class="small text-white mb-0">Period:13-05-2011 onwards</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

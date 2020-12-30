@@ -7,37 +7,37 @@ import ColorScheme from "../interfaces/ColorScheme";
 })
 export class ThemeChangerService {
   theme: {
-    cleanAndEnergetic: ColorScheme;
+    mainColors: ColorScheme;
     blueAndRefreshing: ColorScheme;
-    vividBluesAndOrange: ColorScheme;
   } = {
-    cleanAndEnergetic: {
-      col1: "#5680E9",
-      col2: "#84CEEB",
-      col3: "#5AB9EA",
-      col4: "#C1C8E4",
-      col5: "#8860D0",
+    mainColors: {
+      primary: "#007fff",
+      secondary: "#ff8811",
+      primaryHover: "#fff",
+      text: "#2a2a2a",
+      background: "#f0f0f0",
+      error: "#ff0000",
+      helper: "#666666",
+      disabledText: "#888",
+      disabledBg: "#ccc",
     },
     blueAndRefreshing: {
-      col1: "#25274D",
-      col2: "#464866",
-      col3: "#AAABB8",
-      col4: "#2E9CCA",
-      col5: "#29648A",
-    },
-    vividBluesAndOrange: {
-      col1: "#10E7DC",
-      col2: "#0074E1",
-      col3: "#1B9CE5",
-      col4: "#6CDAEE",
-      col5: "#F79E02",
+      primary: "#25274d",
+      secondary: "#2e9cca",
+      primaryHover: "#fff",
+      text: "#000000",
+      background: "#ffffff",
+      error: "#ff0000",
+      helper: "#29648a",
+      disabledText: "#464866",
+      disabledBg: "#aaabb8",
     },
   };
 
   constructor() {}
 
   currentTheme: BehaviorSubject<ColorScheme> = new BehaviorSubject(
-    this.theme.blueAndRefreshing
+    this.theme.mainColors
   );
 
   subscribeToTheme() {

@@ -1,3 +1,711 @@
-<p class="display-1" [ngStyle]="{ 'background-color': theme.col4 }">
-  organogram works!
-</p>
+<div class="container landm pb-5">
+  <!-- ROW 1 -->
+  <div class="row pt-5">
+    <div class="col-md-4"></div>
+
+    <div class="col-md-4 bg-info card dean">
+      <div class="front-card">
+        <div class="card-header">
+          <div class="card-tools">
+            <img
+              class="card-img-top rounded-circle"
+              src="../../../../assets/images/profile.png"
+              style="width: 100%; height: 50%"
+            />
+          </div>
+        </div>
+        <div class="card-body">
+          {{ staff[0].Name }}
+        </div>
+        <div class="card-footer">
+          {{ staff[0].Designation }}
+        </div>
+      </div>
+      <div class="back-card">
+        <div class="card-body">
+          <h6>Address:</h6>
+          <br />
+          <p>{{ staff[0].Address }}</p>
+          <hr />
+          <h6>Contact:</h6>
+          <br />
+          <p>
+            Tel: <br />
+            {{ staff[0].Contact.Tel[0] }}<br />
+            {{ staff[0].Contact.Tel[1] }}<br />
+            Fax: {{ staff[0].Contact.Fax }}<br />
+            Cell: {{ staff[0].Contact.Cell }}<br />
+            Email: {{ staff[0].Contact.Email }}
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4"></div>
+
+    <!-- </div> -->
+
+    <!-- ROW 2 -->
+    <!-- <div class="row pt-3"> -->
+
+    <div class="col-md-2"></div>
+
+    <div class="col-md-2 card bg-info mt-5 ugdean">
+      <div class="front-card">
+        <div class="card-header">
+          <div class="card-tools">
+            <img
+              class="card-img-top rounded-circle"
+              src="../../../../assets/images/profile.png"
+              style="width: 100%; height: 50%"
+            />
+          </div>
+        </div>
+        <div class="card-body">
+          {{ staff[1].Name }}
+        </div>
+        <div class="card-footer">
+          {{ staff[1].Designation }}
+        </div>
+      </div>
+      <div class="back-card">
+        <div class="card-body">
+          <h6>Address:</h6>
+          <br />
+          <p>{{ staff[1].Address }}</p>
+          <hr />
+          <h6>Contact:</h6>
+          <br />
+          <p>
+            Tel: <br />
+            {{ staff[1].Contact.Tel[0] }}<br />
+            {{ staff[0].Contact.Tel[1] }}<br />
+            <!-- Fax: {{staff[1].Contact.Fax}}<br /> -->
+            Cell: {{ staff[1].Contact.Cell }}<br />
+            <!-- Email: {{staff[1].Contact.Email}} -->
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-1"></div>
+
+    <div class="col-md-2 card bg-info mt-5 pgdean">
+      <div class="front-card">
+        <div class="card-header">
+          <div class="card-tools">
+            <img
+              class="card-img-top rounded-circle"
+              src="../../../../assets/images/profile.png"
+              style="width: 100%; height: 50%"
+            />
+          </div>
+        </div>
+        <div class="card-body">
+          {{ staff[2].Name }}
+        </div>
+        <div class="card-footer">
+          {{ staff[2].Designation }}
+        </div>
+      </div>
+      <div class="back-card">
+        <div class="card-body">
+          <h6>Address:</h6>
+          <br />
+          <p>{{ staff[2].Address }}</p>
+          <hr />
+          <h6>Contact:</h6>
+          <br />
+          <p>
+            Tel:<br />
+            {{ staff[2].Contact.Tel[0] }}<br />
+            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{staff[0].Contact.Tel[1]}}<br /> -->
+            <!-- Fax: {{staff[2].Contact.Fax}}<br /> -->
+            Cell: {{ staff[2].Contact.Cell }}<br />
+            <!-- Email: {{staff[2].Contact.Email}} -->
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-1"></div>
+
+    <div class="col-md-2 card bg-info mt-5 vicedean">
+      <div class="front-card">
+        <div class="card-header">
+          <div class="card-tools">
+            <img
+              class="card-img-top rounded-circle"
+              src="../../../../assets/images/profile.png"
+              style="width: 100%; height: 50%"
+            />
+          </div>
+        </div>
+        <div class="card-body">
+          {{ staff[3].Name }}
+        </div>
+        <div class="card-footer">
+          {{ staff[3].Designation }}
+        </div>
+      </div>
+      <div class="back-card">
+        <div class="card-body">
+          <h6>Address:</h6>
+          <br />
+          <p>{{ staff[3].Address }}</p>
+          <hr />
+          <h6>Contact:</h6>
+          <br />
+          <p>
+            Tel: <br />
+            {{ staff[3].Contact.Tel[0] }}<br />
+            {{ staff[0].Contact.Tel[1] }}<br />
+            <!-- Fax: {{staff[3].Contact.Fax}}<br /> -->
+            <!-- Cell: {{staff[3].Contact.Cell}}<br /> -->
+            <!-- Email: {{staff[3].Contact.Email}} -->
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-2"></div>
+
+    <!-- </div> -->
+
+    <!-- ROW 3 -->
+    <!-- <div class="row pt-3"> -->
+
+    <div class="col-md-4"></div>
+
+    <div class="col-md-4 card bg-info mt-5 superintendents">
+      <div class="card-body">Superintendents</div>
+    </div>
+
+    <div class="col-md-4"></div>
+
+    <!-- </div> -->
+
+    <!-- ROW 4 -->
+    <!-- <div class="row pt-3"> -->
+
+    <div class="col-md-4 card bg-info mt-5 medsup">
+      <div class="front-card">
+        <div class="card-body">
+          {{ staff[4].Name }}
+        </div>
+        <div class="card-footer">
+          {{ staff[4].Designation }}
+        </div>
+      </div>
+      <div class="back-card">
+        <div class="card-body">
+          <h6>Address:</h6>
+          <br />
+          <p>{{ staff[4].Address }}</p>
+          <hr />
+          <h6>Contact:</h6>
+          <br />
+          <p>
+            Tel: <br />
+            {{ staff[4].Contact.Tel[0] }}<br />
+            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{staff[0].Contact.Tel[1]}}<br /> -->
+            <!-- Fax: {{staff[4].Contact.Fax}}<br /> -->
+            Cell: {{ staff[4].Contact.Cell }}<br />
+            Email: {{ staff[4].Contact.Email }}
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3"></div>
+
+    <div class="col-md-4 card bg-info mt-5 officers">
+      <div class="card-body">Officers</div>
+    </div>
+
+    <div class="col-md-1"></div>
+
+    <!-- </div> -->
+
+    <!-- ROW 5 -->
+    <!-- <div class="row pt-3"> -->
+
+    <div class="col-md-4 card bg-info mt-5 dymedsup">
+      <div class="front-card">
+        <div class="card-body">
+          {{ staff[5].Name }}
+        </div>
+        <div class="card-footer">
+          {{ staff[5].Designation }}
+        </div>
+      </div>
+      <div class="back-card">
+        <div class="card-body">
+          <h6>Address:</h6>
+          <br />
+          <p>{{ staff[5].Address }}</p>
+          <hr />
+          <h6>Contact:</h6>
+          <br />
+          <p>
+            Tel:<br />
+            {{ staff[5].Contact.Tel[0] }}<br />
+            {{ staff[0].Contact.Tel[1] }}<br />
+            <!-- Fax: {{staff[5].Contact.Fax}}<br /> -->
+            Cell: {{ staff[5].Contact.Cell }}<br />
+            <!-- Email: {{staff[5].Contact.Email}} -->
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-2"></div>
+
+    <div class="col-md-2 mt-5 sghoffsup1">
+      <div class="col-md-12 card bg-info">
+        <div class="front-card">
+          <div class="card-body">
+            {{ staff[6].Name }}
+          </div>
+          <div class="card-footer">
+            {{ staff[6].Designation }}
+          </div>
+        </div>
+        <div class="back-card">
+          <div class="card-body">
+            <h6>Address:</h6>
+            <br />
+            <p>{{ staff[6].Address }}</p>
+            <hr />
+            <h6>Contact:</h6>
+            <br />
+            <p>
+              Tel: <br />{{ staff[6].Contact.Tel[0] }}<br />
+              <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{staff[0].Contact.Tel[1]}}<br /> -->
+              <!-- Fax: {{staff[6].Contact.Fax}}<br /> -->
+              Cell: {{ staff[6].Contact.Cell }}<br />
+              <!-- Email: {{staff[6].Contact.Email}} -->
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-2 mt-5 nursingoffsup">
+      <div class="col-md-12 card bg-info">
+        <div class="front-card">
+          <div class="card-body">
+            {{ staff[7].Name }}
+          </div>
+          <div class="card-footer">
+            {{ staff[7].Designation }}
+          </div>
+        </div>
+        <div class="back-card">
+          <div class="card-body">
+            <h6>Address:</h6>
+            <br />
+            <p>{{ staff[7].Address }}</p>
+            <hr />
+            <h6>Contact:</h6>
+            <br />
+            <p>
+              Tel: <br />{{ staff[7].Contact.Tel[0] }}<br />
+              <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{staff[0].Contact.Tel[1]}}<br /> -->
+              <!-- Fax: {{staff[7].Contact.Fax}}<br /> -->
+              Cell: {{ staff[7].Contact.Cell }}<br />
+              <!-- Email: {{staff[7].Contact.Email}} -->
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-2 mt-5 sghoffsup2">
+      <div class="col-md-12 card bg-info">
+        <div class="front-card">
+          <div class="card-body">
+            {{ staff[8].Name }}
+          </div>
+          <div class="card-footer">
+            {{ staff[8].Designation }}
+          </div>
+        </div>
+        <div class="back-card">
+          <div class="card-body">
+            <h6>Address:</h6>
+            <br />
+            <p>{{ staff[8].Address }}</p>
+            <hr />
+            <h6>Contact:</h6>
+            <br />
+            <p>
+              Tel: <br />{{ staff[8].Contact.Tel[0] }}<br />
+              <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{staff[0].Contact.Tel[1]}}<br /> -->
+              <!-- Fax: {{staff[8].Contact.Fax}}<br /> -->
+              <!-- Cell: {{staff[8].Contact.Cell}}<br /> -->
+              <!-- Email: {{staff[8].Contact.Email}} -->
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- </div> -->
+
+    <!-- ROW 6 -->
+    <!-- <div class="row pt-3"> -->
+
+    <div class="col-md-7"></div>
+
+    <div class="col-md-4 card bg-info mt-5 adminoff">
+      <div class="card-body">Administrative Officers</div>
+    </div>
+
+    <div class="col-md-1"></div>
+
+    <!-- </div> -->
+
+    <!-- ROW 7 -->
+    <!-- <div class="row pt-3"> -->
+
+    <div class="col-md-6"></div>
+
+    <div class="col-md-2 mt-5 bjgmcsghadminoff">
+      <div class="col-md-12 card bg-info">
+        <div class="front-card">
+          <div class="card-body">
+            {{ staff[9].Name }}
+          </div>
+          <div class="card-footer">
+            {{ staff[9].Designation }}
+          </div>
+        </div>
+        <div class="back-card">
+          <div class="card-body">
+            <h6>Address:</h6>
+            <br />
+            <p>{{ staff[9].Address }}</p>
+            <hr />
+            <h6>Contact:</h6>
+            <br />
+            <p>
+              Tel: <br />{{ staff[9].Contact.Tel[0] }}<br />
+              <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{staff[0].Contact.Tel[1]}}<br /> -->
+              <!-- Fax: {{staff[9].Contact.Fax}}<br /> -->
+              Cell: {{ staff[9].Contact.Cell }}<br />
+              <!-- Email: {{staff[9].Contact.Email}} -->
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-2 mt-5 bjgmcadminoff">
+      <div class="col-md-12 card bg-info">
+        <div class="front-card">
+          <div class="card-body">
+            {{ staff[10].Name }}
+          </div>
+          <div class="card-footer">
+            {{ staff[10].Designation }}
+          </div>
+        </div>
+        <div class="back-card">
+          <div class="card-body">
+            <h6>Address:</h6>
+            <br />
+            <p>{{ staff[10].Address }}</p>
+            <hr />
+            <h6>Contact:</h6>
+            <br />
+            <p>
+              Tel: <br />
+              {{ staff[10].Contact.Tel[0] }}<br />
+              {{ staff[0].Contact.Tel[1] }}<br />
+              <!-- Fax: {{staff[10].Contact.Fax}}<br /> -->
+              Cell: {{ staff[10].Contact.Cell }}<br />
+              <!-- Email: {{staff[10].Contact.Email}} -->
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-2 mt-5 sghadminoff">
+      <div class="col-md-12 card bg-info">
+        <div class="front-card">
+          <div class="card-body">
+            {{ staff[11].Name }}
+          </div>
+          <div class="card-footer">
+            {{ staff[11].Designation }}
+          </div>
+        </div>
+        <div class="back-card">
+          <div class="card-body">
+            <h6>Address:</h6>
+            <br />
+            <p>{{ staff[11].Address }}</p>
+            <hr />
+            <h6>Contact:</h6>
+            <br />
+            <p>
+              Tel: <br />
+              {{ staff[11].Contact.Tel[0] }}<br />
+              {{ staff[0].Contact.Tel[1] }}<br />
+              <!-- Fax: {{staff[11].Contact.Fax}}<br /> -->
+              <!-- Cell: {{staff[11].Contact.Cell}}<br /> -->
+              <!-- Email: {{staff[11].Contact.Email}} -->
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container smallview">
+  <div class="row">
+    <div class="accordion" id="accordionExample">
+      <!-- Part 1 -->
+      <div class="card">
+        <div class="card-header" id="headingOne">
+          <h2 class="mb-0">
+            <button
+              class="btn btn-link btn-block text-left"
+              type="button"
+              data-toggle="collapse"
+              data-target="#collapseOne"
+              aria-expanded="true"
+              aria-controls="collapseOne"
+            >
+              Board of Deans
+            </button>
+          </h2>
+        </div>
+        <div
+          id="collapseOne"
+          class="collapse show"
+          aria-labelledby="headingOne"
+          data-parent="#accordionExample"
+        >
+          <div class="card">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-sm-4 col-6" *ngFor="let dean of deansNum">
+                  <div class="col-12 card">
+                    <div class="card-header">
+                      <div class="card-tools">
+                        <img
+                          class="card-img-top rounded-circle"
+                          src="../../../../assets/images/profile.png"
+                          style="width: 100%; height: 50%"
+                        />
+                      </div>
+                    </div>
+                    <div class="card-body">
+                      {{ staff[dean].Name }}
+                    </div>
+                    <div class="card-footer">
+                      {{ staff[dean].Designation }}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Part 2 -->
+      <div class="card">
+        <div class="accordion" id="accordionTwo">
+          <div class="card">
+            <div class="card-header" id="headingTwo">
+              <h2 class="mb-0">
+                <button
+                  class="btn btn-link btn-block text-left"
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#collapseTwo"
+                  aria-expanded="true"
+                  aria-controls="collapseTwo"
+                >
+                  Board of Superintendents
+                </button>
+              </h2>
+            </div>
+            <div
+              id="collapseTwo"
+              class="collapse show"
+              aria-labelledby="headingTwo"
+              data-parent="#accordionExample"
+            >
+              <div class="card">
+                <div class="card-body">
+                  <!-- Part 2.1 -->
+                  <div class="card">
+                    <div class="card-header" id="headingTwoOne">
+                      <h2 class="mb-0">
+                        <button
+                          class="btn btn-link btn-block text-left collapsed"
+                          type="button"
+                          data-toggle="collapse"
+                          data-target="#collapseTwoOne"
+                          aria-expanded="false"
+                          aria-controls="collapseTwoOne"
+                        >
+                          Medical Superintendents
+                        </button>
+                      </h2>
+                    </div>
+
+                    <div
+                      id="collapseTwoOne"
+                      class="collapse"
+                      aria-labelledby="headingTwoOne"
+                      data-parent="#accordionTwo"
+                    >
+                      <div class="card-body">
+                        <div class="row">
+                          <div
+                            class="col-sm-4 col-6"
+                            *ngFor="let medSup of medSupNum"
+                          >
+                            <div class="col-12 card">
+                              <div class="card-header">
+                                <div class="card-tools">
+                                  <img
+                                    class="card-img-top rounded-circle"
+                                    src="../../../../assets/images/profile.png"
+                                    style="width: 100%; height: 50%"
+                                  />
+                                </div>
+                              </div>
+                              <div class="card-body">
+                                {{ staff[medSup].Name }}
+                              </div>
+                              <div class="card-footer">
+                                {{ staff[medSup].Designation }}
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Part 2.2 -->
+                  <div class="card">
+                    <div class="card-header" id="headingTwoTwo">
+                      <h2 class="mb-0">
+                        <button
+                          class="btn btn-link btn-block text-left collapsed"
+                          type="button"
+                          data-toggle="collapse"
+                          data-target="#collapseTwoTwo"
+                          aria-expanded="false"
+                          aria-controls="collapseTwoTwo"
+                        >
+                          Office Superintendents
+                        </button>
+                      </h2>
+                    </div>
+
+                    <div
+                      id="collapseTwoTwo"
+                      class="collapse"
+                      aria-labelledby="headingTwoTwo"
+                      data-parent="#accordionTwo"
+                    >
+                      <div class="card-body">
+                        <div class="row">
+                          <div
+                            class="col-sm-4 col-6"
+                            *ngFor="let officeSup of officeSupNum"
+                          >
+                            <div class="col-12 card">
+                              <div class="card-header">
+                                <div class="card-tools">
+                                  <img
+                                    class="card-img-top rounded-circle"
+                                    src="../../../../assets/images/profile.png"
+                                    style="width: 100%; height: 50%"
+                                  />
+                                </div>
+                              </div>
+                              <div class="card-body">
+                                {{ staff[officeSup].Name }}
+                              </div>
+                              <div class="card-footer">
+                                {{ staff[officeSup].Designation }}
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Part 3 -->
+      <div class="card">
+        <div class="card-header" id="headingThree">
+          <h2 class="mb-0">
+            <button
+              class="btn btn-link btn-block text-left collapsed"
+              type="button"
+              data-toggle="collapse"
+              data-target="#collapseThree"
+              aria-expanded="false"
+              aria-controls="collapseThree"
+            >
+              Board of Administrative Officers
+            </button>
+          </h2>
+        </div>
+        <div
+          id="collapseThree"
+          class="collapse"
+          aria-labelledby="headingThree"
+          data-parent="#accordionExample"
+        >
+          <div class="card">
+            <div class="card-body">
+              <div class="row">
+                <div
+                  class="col-sm-4 col-6"
+                  *ngFor="let adminOff of adminOffNum"
+                >
+                  <div class="col-12 card">
+                    <div class="card-header">
+                      <div class="card-tools">
+                        <img
+                          class="card-img-top rounded-circle"
+                          src="../../../../assets/images/profile.png"
+                          style="width: 100%; height: 50%"
+                        />
+                      </div>
+                    </div>
+                    <div class="card-body">
+                      {{ staff[adminOff].Name }}
+                    </div>
+                    <div class="card-footer">
+                      {{ staff[adminOff].Designation }}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

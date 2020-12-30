@@ -1,3 +1,21 @@
-<p class="display-1" [ngStyle]="{ 'background-color': theme.col4 }">
-  archives works!
-</p>
+<div class="container card-group">
+  <div class="row">
+    <div class="mx-3 my-2 card" *ngFor="let archive of archives">
+      <img
+        src="https://images.unsplash.com/photo-1597092451116-27787c07901d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80"
+        class="card-img-top img"
+        style="width: 20rem; height: 20rem"
+        alt="archive"
+      />
+      <div class="card-body">
+        <h5 class="card-title">{{ archive.title }}</h5>
+        <p class="card-text">
+          {{ archive.description }}
+        </p>
+        <p class="card-text">
+          <small class="text-muted">{{ archive.link }}</small>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

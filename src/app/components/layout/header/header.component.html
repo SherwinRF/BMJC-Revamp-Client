@@ -1,3 +1,27 @@
-<p class="display-2" [ngStyle]="{ 'background-color': theme.col2 }">
-  header works!
-</p>
+<div class="site-branding d-flex justify-content-center align-items-center">
+  <div class="row">
+    <div class="cols-lg-1 col-md-1 cols-sm-12 d-block">
+      <div class="site-logo">
+        <a class="navbar-brand" routerLink="/home">
+          <img
+            src="/assets/images/bjmc_logo.png"
+            width="80"
+            height="80"
+            alt=""
+            loading="lazy"
+          />
+        </a>
+      </div>
+    </div>
+    <div class="cols-lg-11 col-md-11 cols-sm-12 d-block">
+      <div class="site-text">
+        <a routerLink="/home">
+          <h2 class="site-title">
+            BYRAMJEE JEEJEEBHOY GOVERNMENT MEDICAL COLLEGE AND SASSOON GENERAL
+            HOSPITALS, PUNE
+          </h2>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

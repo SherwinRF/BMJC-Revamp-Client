@@ -1,0 +1,31 @@
+button,
+button:hover {
+  color: white;
+}
+.card-header {
+  color: white;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .btn-group {
+    margin: 10px 0;
+  }
+}
+@media (min-width: 575px) and (max-width: 767px) {
+  .btn-group {
+    margin: 10px 0;
+    width: 150px;
+  }
+}
+@media (min-width: 480px) and (max-width: 574px) {
+  .btn-group {
+    margin: 10px 0;
+    width: 150px;
+  }
+}
+
+@media (max-width: 479px) {
+  .btn-group {
+    margin: 10px 0;
+    width: 150px;
+  }
+}

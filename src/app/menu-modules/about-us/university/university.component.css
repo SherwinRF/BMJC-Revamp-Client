@@ -1,0 +1,14 @@
+.univheading {
+  padding: 10px;
+  color: white;
+  margin-top: 20px;
+}
+
+.nav-item {
+  font-size: large;
+  color: white;
+  margin-right: 4px;
+}
+nav .active {
+  color: white;
+}

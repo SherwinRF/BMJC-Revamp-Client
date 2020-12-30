@@ -1,3 +1,56 @@
-<p class="display-1" [ngStyle]="{ 'background-color': theme.col4 }">
+<!-- <p class="display-1" [ngStyle]="{ 'background-color': theme.primary }">
   recognition works!
 </p>
+ -->
+<div class="container">
+  <div class="recogheading" [ngStyle]="{ 'background-color': theme.primary }">
+    <h2>University Recognition</h2>
+  </div>
+</div>
+<div class="container" style="margin-bottom: 500px">
+  <nav>
+    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+      <a
+        class="nav-item nav-link active"
+        id="nav-ug-tab"
+        [ngStyle]="{ 'background-color': theme.primary }"
+        data-toggle="tab"
+        href="#nav-ug"
+        role="tab"
+        aria-controls="nav-home"
+        aria-selected="true"
+        >UG</a
+      >
+      <a
+        class="nav-item nav-link"
+        id="nav-pg-tab"
+        [ngStyle]="{ 'background-color': theme.primary }"
+        data-toggle="tab"
+        href="#nav-pg"
+        role="tab"
+        aria-controls="nav-profile"
+        aria-selected="false"
+        >PG</a
+      >
+    </div>
+  </nav>
+  <br />
+  <div class="tab-content" id="nav-tabContent">
+    <div
+      class="tab-pane fade show active"
+      id="nav-ug"
+      role="tabpanel"
+      aria-labelledby="nav-profile-tab"
+    >
+      <app-ugrecognition></app-ugrecognition>
+    </div>
+    <div
+      class="tab-pane fade"
+      id="nav-pg"
+      role="tabpanel"
+      aria-labelledby="nav-profile-tab"
+    >
+      <app-pgrecognition></app-pgrecognition>
+    </div>
+  </div>
+</div>

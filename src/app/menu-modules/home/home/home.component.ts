@@ -5,7 +5,11 @@ import { ThemeChangerService } from "src/app/services/theme-changer.service";
 @Component({
   selector: "app-home",
   templateUrl: "./home.component.html",
-  styleUrls: ["./home.component.css"],
+  styleUrls: [
+    "./home.component.css",
+    "../../../../styles/css_slider.css",
+    "../../../../styles/font-awesome.min.css",
+  ],
 })
 export class HomeComponent implements OnInit {
   theme: colorScheme;

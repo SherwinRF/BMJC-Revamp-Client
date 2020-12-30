@@ -1,0 +1,17 @@
+.resultheading {
+  padding: 10px;
+  color: white;
+  margin: 20px 0;
+}
+
+.nav-item {
+  font-size: large;
+  color: white;
+  background-color: #f79e02;
+  width: 120px;
+  margin-right: 4px;
+  text-align: center;
+}
+nav .active {
+  color: white;
+}

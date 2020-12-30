@@ -5,7 +5,11 @@ import { ThemeChangerService } from "src/app/services/theme-changer.service";
 @Component({
   selector: "app-footer",
   templateUrl: "./footer.component.html",
-  styleUrls: ["./footer.component.css"],
+  styleUrls: [
+    "./footer.component.css",
+    "../../../../styles/css_slider.css",
+    "../../../../styles/font-awesome.min.css",
+  ],
 })
 export class FooterComponent implements OnInit {
   theme: colorScheme;

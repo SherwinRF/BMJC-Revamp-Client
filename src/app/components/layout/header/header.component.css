@@ -1,0 +1,15 @@
+.site-branding {
+  text-align: center;
+}
+
+.site-title {
+  color: white;
+}
+
+.site-text a {
+  text-decoration: none;
+}
+
+.row {
+  background: rgb(0, 157, 255);
+}

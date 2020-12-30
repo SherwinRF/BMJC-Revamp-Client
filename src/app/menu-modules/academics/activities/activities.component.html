@@ -1,3 +1,34 @@
-<p class="display-1" [ngStyle]="{ 'background-color': theme.col4 }">
-  activities works!
-</p>
+<div class="container mx-auto">
+  <div class="row">
+    <div class="col-12 col-sm-12">
+      <h3>Academic Activities</h3>
+      <hr />
+    </div>
+  </div>
+  <div *ngIf="Activity">
+    <table
+      datatable
+      [dtOptions]="dtOptions"
+      class="row-border hover table-bordered"
+    >
+      <thead [ngStyle]="{ 'background-color': theme.primary }" align="center">
+        <tr>
+          <th>Activity</th>
+          <th>Department</th>
+          <th>Date</th>
+          <th>Conducted By</th>
+          <th>Place</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let a of Activity">
+          <td>{{ a.Activity }}</td>
+          <td>{{ a.Department }}</td>
+          <td>{{ a.Date_day }} {{ a.Date_month }} {{ a.Date_year }}</td>
+          <td>{{ a.Conducted_by }}</td>
+          <td>{{ a.Place }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

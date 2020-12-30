@@ -1,3 +1,71 @@
-<p class="display-1" [ngStyle]="{ 'background-color': theme.col4 }">
-  university works!
-</p>
+<div class="container">
+  <div class="univheading" [ngStyle]="{ 'background-color': theme.primary }">
+    <h2>About University</h2>
+  </div>
+</div>
+<br />
+<div class="container" style="margin-bottom: 250px">
+  <nav>
+    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+      <a
+        class="nav-item nav-link active"
+        [ngStyle]="{ 'background-color': theme.primary }"
+        id="nav-details-tab"
+        data-toggle="tab"
+        href="#details"
+        role="tab"
+        aria-controls="nav-details"
+        aria-selected="true"
+        >Details</a
+      >
+      <a
+        class="nav-item nav-link"
+        id="nav-chancellors-tab"
+        [ngStyle]="{ 'background-color': theme.primary }"
+        data-toggle="tab"
+        href="#chancellors"
+        role="tab"
+        aria-controls="nav-chancellors"
+        aria-selected="false"
+        >Chancellors</a
+      >
+      <a
+        class="nav-item nav-link"
+        id="nav-registrar-tab"
+        [ngStyle]="{ 'background-color': theme.primary }"
+        data-toggle="tab"
+        href="#registrar"
+        role="tab"
+        aria-controls="nav-registrar"
+        aria-selected="false"
+        >Registrar</a
+      >
+    </div>
+  </nav>
+  <div class="tab-content" id="nav-tabContent">
+    <div
+      class="tab-pane fade show active"
+      id="details"
+      role="tabpanel"
+      aria-labelledby="nav-home-tab"
+    >
+      <app-university-details></app-university-details>
+    </div>
+    <div
+      class="tab-pane fade"
+      id="chancellors"
+      role="tabpanel"
+      aria-labelledby="nav-profile-tab"
+    >
+      <app-university-chancellors></app-university-chancellors>
+    </div>
+    <div
+      class="tab-pane fade"
+      id="registrar"
+      role="tabpanel"
+      aria-labelledby="nav-contact-tab"
+    >
+      <app-university-registrar></app-university-registrar>
+    </div>
+  </div>
+</div>
