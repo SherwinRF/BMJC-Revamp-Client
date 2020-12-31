@@ -7,8 +7,8 @@ import { HttpClient } from "@angular/common/http";
 export class StaffService {
   // url="http://localhost:8000/Non-Teaching";
   //url="http://15.207.88.26:8000/Non-Teaching";
-  url = "https://jsonplaceholder.typicode.com/users";
-  url2 = "https://jsonplaceholder.typicode.com/posts";
+  url = "http://localhost:8000/Teachers";
+  url2 = "http://localhost:8000/Non-Teaching";
   constructor(private http: HttpClient) {}
   getresult() {
     return this.http.get(this.url);

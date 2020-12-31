@@ -2,26 +2,38 @@
   .recogheading h2 {
     font-size: 1.7em !important;
   }
+  .nav-item {
+    width: 48% !important;
+  }
 }
 @media (max-width: 479px) {
   .recogheading h2 {
     font-size: 1.7em !important;
   }
+  .nav-item {
+    width: 48% !important;
+  }
 }
 .recogheading {
   padding: 10px;
+  background-color: #007fff;
+  font-family: "Roboto";
   color: white;
   margin: 20px 0;
 }
 
 .nav-item {
-  font-size: large;
-  color: white;
-  background-color: #f79e02;
+  font-family: "Roboto";
+  color: #007fff;
   width: 120px;
-  margin-right: 4px;
   text-align: center;
+  /* border: 1px solid #007fff;*/
 }
 nav .active {
   color: white;
+  background-color: #007fff;
+}
+.nav a:hover {
+  color: white;
+  background-color: #007fff;
 }

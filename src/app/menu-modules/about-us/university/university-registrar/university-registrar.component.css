@@ -1,55 +1,51 @@
-@media(min-width:992px){
+@media (min-width: 992px) {
   .card {
-  width: 80%;
+    width: 80%;
   }
-  
 }
-@media(min-width:768px) and (max-width:991px){
+@media (min-width: 768px) and (max-width: 991px) {
   .card {
-  width: 80%;
+    width: 80%;
   }
-  img{
-    height:240px;
+  img {
+    height: 240px;
   }
- 
 }
-@media(min-width:575px) and (max-width:767px){
+@media (min-width: 575px) and (max-width: 767px) {
   .card {
-  width: 80%;
+    width: 80%;
   }
-  .img{
+  .img {
     float: none !important;
-    text-align:center;
-  }
-  .univcontent{
     text-align: center;
   }
-
-}
-@media(min-width:480px) and (max-width:574px){
-  .card {
-  width: 100%;
-  margin-top:30px !important;
-  }
-  .img{
-    float: none !important;
-    text-align:center;
-  }
-  .univcontent{
+  .univcontent {
     text-align: center;
   }
-  
 }
-@media(max-width:479px){
+@media (min-width: 480px) and (max-width: 574px) {
   .card {
-  width: 100%;
-  margin-top:30px !important;
+    width: 100%;
+    margin-top: 30px !important;
   }
-  .img{
-    float:none !important;
-    text-align:center;
+  .img {
+    float: none !important;
+    text-align: center;
   }
-  .univcontent{
+  .univcontent {
+    text-align: center;
+  }
+}
+@media (max-width: 479px) {
+  .card {
+    width: 100%;
+    margin-top: 30px !important;
+  }
+  .img {
+    float: none !important;
+    text-align: center;
+  }
+  .univcontent {
     text-align: center;
   }
 }
@@ -58,13 +54,18 @@
   margin: 50px auto;
   box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05),
     0 15px 40px rgba(166, 173, 201, 0.2);
-  border: 2px solid;
+  border: 2px solid #007fff;
   animation: slide 0.3s linear;
 }
 .card-header {
-  background-color: #f79e02;
   font-size: large;
+  background-color: #007fff;
+  font-family: "Roboto";
   color: white;
+}
+p {
+  font-family: "Roboto";
+  color: #2a2a2a;
 }
 @keyframes slide {
   0% {

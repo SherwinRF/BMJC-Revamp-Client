@@ -1,6 +1,9 @@
-<div class="display-1" [ngStyle]="{ 'background-color': theme.primary }">
+<div
+  class="display-1 my-3"
+  [ngStyle]="{ 'background-color': theme.background }"
+>
   <div class="container">
-    <h1>Committees</h1>
+    <h1 [ngStyle]="{ color: theme.text }">Committees</h1>
     <div>
       <!-- <a> -->
       <!-- <embed src="../../../../assets/committees.pdf" type="application/pdf" width="100%" height="800px"/> -->

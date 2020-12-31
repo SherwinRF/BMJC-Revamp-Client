@@ -1,37 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Latest compiled and minified CSS -->
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/bootstrap-table@1.18.1/dist/bootstrap-table.min.css"
-    />
-
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://unpkg.com/bootstrap-table@1.18.1/dist/bootstrap-table.min.js"></script>
-    <!-- Latest compiled and minified Locales -->
-    <script src="https://unpkg.com/bootstrap-table@1.18.1/dist/locale/bootstrap-table-zh-CN.min.js"></script>
-    <title>Document</title>
-  </head>
-  <body>
-    <table class="table table-dark" datatable class="row-border hover">
-      <thead>
+<div class="container mx-auto">
+  <div class="row">
+    <div class="col-12 col-sm-12">
+      <h3>Non-Teaching Staff</h3>
+      <hr />
+    </div>
+  </div>
+  <div *ngIf="data2">
+    <table
+      datatable
+      [dtOptions]="dtOptions"
+      class="table table-bordered table-hover table-striped"
+    >
+      <thead [ngStyle]="{ 'background-color': theme.primary }" align="center">
         <tr>
-          <th>id</th>
+          <th>NAME</th>
 
-          <th>title</th>
-          <th>body</th>
+          <th>POST</th>
         </tr>
       </thead>
       <tbody>
         <tr id="row" *ngFor="let item of data2">
-          <td>{{ item.id }}</td>
-          <td>{{ item.title }}</td>
-          <td>{{ item.body }}</td>
+          <td>{{ item.name }}</td>
+          <td>{{ item.post }}</td>
         </tr>
       </tbody>
     </table>
-  </body>
-</html>
+  </div>
+</div>

@@ -1,37 +1,45 @@
-@media(min-width:992px){
+@media (min-width: 992px) {
   .card {
-  width: 80%;
-  }
-  
-}
-@media(min-width:768px) and (max-width:991px){
-  .card {
-  width: 80%;
+    width: 80%;
   }
 }
-@media(min-width:575px) and (max-width:767px){
+@media (min-width: 768px) and (max-width: 991px) {
   .card {
-  width: 80%;
+    width: 80%;
   }
 }
-@media(min-width:480px) and (max-width:574px){
+@media (min-width: 575px) and (max-width: 767px) {
   .card {
-  width: 100%;
-  margin-top:30px !important;
+    width: 80%;
   }
 }
-@media(max-width:479px){
+@media (min-width: 480px) and (max-width: 574px) {
   .card {
-  width: 100%;
-  margin-top:30px !important;
+    width: 100%;
+    margin-top: 30px !important;
+  }
+}
+@media (max-width: 479px) {
+  .card {
+    width: 100%;
+    margin-top: 30px !important;
   }
 }
 .card {
   margin: 50px auto;
   box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05),
     0 15px 40px rgba(166, 173, 201, 0.2);
-    animation: slide 0.3s linear;
+  animation: slide 0.3s linear;
   border-width: 1px;
+}
+a {
+  color: #007fff;
+  font-family: "Roboto";
+  text-decoration: none;
+}
+.badge {
+  font-family: "Roboto";
+  background-color: #ff8811;
 }
 @keyframes slide {
   0% {

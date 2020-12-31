@@ -1,0 +1,21 @@
+section {
+  background-color: #f0f0f0;
+}
+
+table {
+  background-color: white;
+}
+
+h1 {
+  font-family: "Roboto";
+  color: #2a2a2a;
+}
+
+h3 {
+  font-family: "Roboto";
+  color: #f0f0f0;
+}
+
+.thead {
+  background-color: #007fff;
+}

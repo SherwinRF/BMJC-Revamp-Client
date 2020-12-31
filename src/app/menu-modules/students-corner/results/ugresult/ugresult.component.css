@@ -1,9 +1,22 @@
 button,
 button:hover {
+  font-family: "Roboto";
+  background-color: #007fff;
   color: white;
 }
 .card-header {
+  background-color: #007fff;
+  font-family: "Roboto";
   color: white;
+}
+.card {
+  padding-bottom: 20px;
+}
+input {
+  font-family: "Roboto";
+}
+table {
+  font-family: "Roboto";
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .btn-group {

@@ -3,11 +3,18 @@
   text-align: center;
   width: 100%;
   line-height: 0.9;
+  background-color: transparent;
 }
 
 .card {
   height: fit-content;
+  width: 100%;
+  box-shadow: none;
 }
+
+/* .card-footer{
+    background-color: white;
+} */
 
 /* Responsive css */
 
@@ -19,22 +26,33 @@
   }
   .card {
     box-shadow: none;
+    border: none;
   }
   .card-header {
     border-bottom: none;
   }
   .card-footer {
-    background-color: white;
+    background-color: transparent;
     color: gray;
   }
   .card-body {
     font-weight: bold;
   }
+  .knowmore {
+    position: absolute;
+    right: 10px;
+    background-color: white !important;
+    color: #007ffd !important;
+  }
+  .knowmore:hover {
+    background-color: #007ffd !important;
+    color: white !important;
+  }
 }
 
-/* Width >= 992 and width < 1200 (large device) */
+/* Width >= 992 (large and extra large (width > 1200px) device) */
 
-@media screen and (min-width: 992px) and (max-width: 1200px) {
+@media screen and (min-width: 992px) {
   .smallview {
     display: none;
   }
@@ -56,6 +74,20 @@
   .sghadminoff {
     position: relative;
   }
+
+  .card {
+    background-color: #007ffd !important;
+  }
+
+  .knowmore {
+    background-color: white !important;
+    color: #007ffd !important;
+  }
+
+  .knowmore:hover {
+    background-color: #007ffd !important;
+    color: white !important;
+  }
   /* Vertical lines below:- */
   /* Vertical line below Dean */
   .dean::before {
@@ -73,7 +105,7 @@
     position: absolute;
     background-color: black;
     width: 3px;
-    height: 25%;
+    height: 20%;
     top: 100%;
     left: 50%;
   }
@@ -93,7 +125,7 @@
     position: absolute;
     background-color: black;
     width: 3px;
-    height: 11%;
+    height: 10%;
     top: 100%;
     left: 50%;
   }
@@ -123,7 +155,7 @@
     position: absolute;
     background-color: black;
     width: 3px;
-    height: 200%;
+    height: 300%;
     top: 100%;
     left: 50%;
   }
@@ -133,7 +165,7 @@
     position: absolute;
     background-color: black;
     width: 3px;
-    height: 30%;
+    height: 27%;
     top: 82%;
     left: 50%;
   }
@@ -153,7 +185,7 @@
     position: absolute;
     background-color: black;
     width: 3px;
-    height: 30%;
+    height: 27%;
     top: 82%;
     left: 50%;
   }
@@ -194,8 +226,8 @@
     position: absolute;
     background-color: black;
     width: 3px;
-    height: 25%;
-    top: -25%;
+    height: 15%;
+    top: -15%;
     left: 50%;
   }
   /* Vertical line above Officers */
@@ -234,8 +266,8 @@
     position: absolute;
     background-color: black;
     width: 3px;
-    height: 15%;
-    top: -15%;
+    height: 10%;
+    top: -10%;
     left: 50%;
   }
   /* Vertical line above Administrative Officer (SGH) */
@@ -244,8 +276,8 @@
     position: absolute;
     background-color: black;
     width: 3px;
-    height: 15%;
-    top: -15%;
+    height: 10%;
+    top: -10%;
     left: 50%;
   }
   /* Horizontal lines:- */
@@ -256,7 +288,7 @@
     background-color: black;
     width: 151%;
     height: 3px;
-    bottom: -8%;
+    bottom: -5%;
     left: -25%;
   }
   /* Horizontal line below Dy Dean(PG) */
@@ -266,7 +298,7 @@
     background-color: black;
     width: 304%;
     height: 3px;
-    bottom: -25%;
+    bottom: -20%;
     left: -100%;
   }
   /* Horizontal line below Superintendents */
@@ -296,7 +328,7 @@
     background-color: black;
     width: 101%;
     height: 3px;
-    top: -50%;
+    top: -40%;
     left: 0;
   }
   /* Horizontal line below Admin Officers */
@@ -306,317 +338,200 @@
     background-color: black;
     width: 201%;
     height: 3px;
-    top: -15%;
-    left: -50%;
-  }
-}
-
-/* Width >= 1200 (extra-large device) */
-
-@media screen and (min-width: 1200px) {
-  .smallview {
-    display: none;
-  }
-  /* CSS for Hierarchy Lines */
-  .dean,
-  .ugdean,
-  .pgdean,
-  .vicedean,
-  .superintendents,
-  .medsup,
-  .officers,
-  .dymedsup,
-  .sghoffsup1,
-  .nursingoffsup,
-  .sghoffsup2,
-  .adminoff,
-  .bjgmcsghadminoff,
-  .bjgmcadminoff,
-  .sghadminoff {
-    position: relative;
-  }
-  /* Vertical lines below:- */
-  /* Vertical line below Dean */
-  .dean::before {
-    content: "";
-    position: absolute;
-    background-color: black;
-    width: 3px;
-    height: 16%;
-    top: 100%;
-    left: 50%;
-  }
-  /* Vertical line below UGDean */
-  .ugdean::before {
-    content: "";
-    position: absolute;
-    background-color: black;
-    width: 3px;
-    height: 18%;
-    top: 100%;
-    left: 50%;
-  }
-  /* Vertical line below PGDean */
-  .pgdean::before {
-    content: "";
-    position: absolute;
-    background-color: black;
-    width: 3px;
-    height: 45%;
-    top: 100%;
-    left: 50%;
-  }
-  /* Vertical line below ViceDean */
-  .vicedean::before {
-    content: "";
-    position: absolute;
-    background-color: black;
-    width: 3px;
-    height: 11%;
-    top: 100%;
-    left: 50%;
-  }
-  /* Vertical line below Superintendents */
-  .superintendents::before {
-    content: "";
-    position: absolute;
-    background-color: black;
-    width: 3px;
-    height: 55%;
-    top: 100%;
-    left: 50%;
-  }
-  /* Vertical line below Medical Superintendent */
-  .medsup::before {
-    content: "";
-    position: absolute;
-    background-color: black;
-    width: 3px;
-    height: 100%;
-    top: 100%;
-    left: 50%;
-  }
-  /* Vertical line below Officers */
-  .officers::before {
-    content: "";
-    position: absolute;
-    background-color: black;
-    width: 3px;
-    height: 200%;
-    top: 100%;
-    left: 50%;
-  }
-  /* Vertical line below Office Superintendent (SGH) */
-  .sghoffsup1::before {
-    content: "";
-    position: absolute;
-    background-color: black;
-    width: 3px;
-    height: 30%;
-    top: 82%;
-    left: 50%;
-  }
-  /* Vertical line below Office Superintendent (Nursing) */
-  .nursingoffsup::before {
-    content: "";
-    position: absolute;
-    background-color: black;
-    width: 3px;
-    height: 42%;
-    top: 91%;
-    left: 50%;
-  }
-  /* Vertical line below Office Superintendent (SGH) */
-  .sghoffsup2::before {
-    content: "";
-    position: absolute;
-    background-color: black;
-    width: 3px;
-    height: 30%;
-    top: 82%;
-    left: 50%;
-  }
-  /* Vertical line below Administrative Officers */
-  .adminoff::before {
-    content: "";
-    position: absolute;
-    background-color: black;
-    width: 3px;
-    height: 115%;
-    top: 100%;
-    left: 50%;
-  }
-  /* Vertical lines above */
-  /* Vertical line above Dy.Dean (UG) */
-  .ugdean::after {
-    content: "";
-    position: absolute;
-    background-color: black;
-    width: 3px;
-    height: 10%;
     top: -10%;
-    left: 50%;
-  }
-  /* Vertical line above Vice Dean */
-  .vicedean::after {
-    content: "";
-    position: absolute;
-    background-color: black;
-    width: 3px;
-    height: 9%;
-    top: -9%;
-    left: 50%;
-  }
-  /* Vertical line above Medical Superintendent */
-  .medsup::after {
-    content: "";
-    position: absolute;
-    background-color: black;
-    width: 3px;
-    height: 25%;
-    top: -25%;
-    left: 50%;
-  }
-  /* Vertical line above Officers */
-  .officers::after {
-    content: "";
-    position: absolute;
-    background-color: black;
-    width: 3px;
-    height: 45%;
-    top: -45%;
-    left: 50%;
-  }
-  /* Vertical line above SGH1 Officer Superintendent */
-  .sghoffsup1::after {
-    content: "";
-    position: absolute;
-    background-color: black;
-    width: 3px;
-    height: 30%;
-    top: -30%;
-    left: 50%;
-  }
-  /* Vertical line above SGH2 Officer Superintendent */
-  .sghoffsup2::after {
-    content: "";
-    position: absolute;
-    background-color: black;
-    width: 3px;
-    height: 30%;
-    top: -30%;
-    left: 50%;
-  }
-  /* Vertical line above Administrative Officer (BJGMC/SGH) */
-  .bjgmcsghadminoff::after {
-    content: "";
-    position: absolute;
-    background-color: black;
-    width: 3px;
-    height: 15%;
-    top: -15%;
-    left: 50%;
-  }
-  /* Vertical line above Administrative Officer (SGH) */
-  .sghadminoff::after {
-    content: "";
-    position: absolute;
-    background-color: black;
-    width: 3px;
-    height: 15%;
-    top: -15%;
-    left: 50%;
-  }
-  /* Horizontal lines:- */
-  /* Horizontal line below dean */
-  .dean::after {
-    content: "";
-    position: absolute;
-    background-color: black;
-    width: 151%;
-    height: 3px;
-    bottom: -7%;
-    left: -25%;
-  }
-  /* Horizontal line below Dy Dean(PG) */
-  .pgdean::after {
-    content: "";
-    position: absolute;
-    background-color: black;
-    width: 303%;
-    height: 3px;
-    bottom: -18%;
-    left: -100%;
-  }
-  /* Horizontal line below Superintendents */
-  .superintendents::after {
-    content: "";
-    position: absolute;
-    background-color: black;
-    width: 176%;
-    height: 3px;
-    bottom: -55%;
     left: -50%;
   }
-  /* Horizontal line below Officers */
-  .nursingoffsup::after {
-    content: "";
-    position: absolute;
-    background-color: black;
-    width: 201%;
-    height: 3px;
-    top: -30%;
-    left: -50%;
-  }
-  /* Horizontal line below Nursing */
-  .adminoff::after {
-    content: "";
-    position: absolute;
-    background-color: black;
-    width: 101%;
-    height: 3px;
-    top: -60%;
-    left: 0;
-  }
-  /* Horizontal line below Admin Officers */
-  .bjgmcadminoff::after {
-    content: "";
-    position: absolute;
-    background-color: black;
-    width: 201%;
-    height: 3px;
-    top: -15%;
-    left: -50%;
+
+  /* Width >= 1200 (extra-large device) */
+  @media screen and (min-width: 1200px) {
+    /* Vertical line below UGDean */
+    .ugdean::before {
+      content: "";
+      position: absolute;
+      background-color: black;
+      width: 3px;
+      height: 15%;
+      top: 100%;
+      left: 50%;
+    }
+
+    /* Vertical line below Office Superintendent (SGH) */
+    .sghoffsup1::before {
+      content: "";
+      position: absolute;
+      background-color: black;
+      width: 3px;
+      height: 30%;
+      top: 82%;
+      left: 50%;
+    }
+    /* Vertical line below Office Superintendent (Nursing) */
+    .nursingoffsup::before {
+      content: "";
+      position: absolute;
+      background-color: black;
+      width: 3px;
+      height: 42%;
+      top: 91%;
+      left: 50%;
+    }
+    /* Vertical line below Office Superintendent (SGH) */
+    .sghoffsup2::before {
+      content: "";
+      position: absolute;
+      background-color: black;
+      width: 3px;
+      height: 30%;
+      top: 82%;
+      left: 50%;
+    }
+    /* Vertical line above Officers */
+    .officers::after {
+      content: "";
+      position: absolute;
+      background-color: black;
+      width: 3px;
+      height: 43%;
+      top: -43%;
+      left: 50%;
+    }
+    /* Vertical line above Administrative Officer (BJGMC/SGH) */
+    .bjgmcsghadminoff::after {
+      content: "";
+      position: absolute;
+      background-color: black;
+      width: 3px;
+      height: 15%;
+      top: -15%;
+      left: 50%;
+    }
+    /* Vertical line above Administrative Officer (SGH) */
+    .sghadminoff::after {
+      content: "";
+      position: absolute;
+      background-color: black;
+      width: 3px;
+      height: 15%;
+      top: -15%;
+      left: 50%;
+    }
+    /* Horizontal lines:- */
+
+    /* Horizontal line below Dy Dean(PG) */
+    .pgdean::after {
+      content: "";
+      position: absolute;
+      background-color: black;
+      width: 303%;
+      height: 3px;
+      bottom: -15%;
+      left: -100%;
+    }
+    /* Horizontal line below Nursing */
+    .adminoff::after {
+      content: "";
+      position: absolute;
+      background-color: black;
+      width: 101%;
+      height: 3px;
+      top: -45%;
+      left: 0;
+    }
+    /* Horizontal line below Admin Officers */
+    .bjgmcadminoff::after {
+      content: "";
+      position: absolute;
+      background-color: black;
+      width: 201%;
+      height: 3px;
+      top: -15%;
+      left: -50%;
+    }
   }
 }
 
 /* Flip-card css */
 
-.back-card,
+/* .back-card,
 .front-card {
-  -moz-backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  transition: transform 1s;
+    -moz-backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transition: transform 1s;
 }
 
 .back-card {
-  transform: rotateY(180deg);
-  position: absolute;
-  top: 0;
+    transform: rotateY(180deg);
+    position: absolute;
+    top: 0;
 
-  overflow: auto;
+    overflow: auto;
 }
 
 .card:hover .back-card {
-  transform: rotateY(360deg);
-  height: 100%;
-  width: 100%;
+    transform: rotateY(360deg);
+    height: 100%;
+    width: 100%;
 }
 
 .card:hover .front-card {
-  transform: rotateY(180deg);
+    transform: rotateY(180deg);
+} */
+
+/* Modal css */
+.modal-left {
+  float: left;
+  text-align: left;
+  line-height: 1.2;
 }
-.card {
-  box-shadow: none;
+
+.modal-right {
+  margin-left: 25%;
+  text-align: left;
+  line-height: 1.2;
 }
+
+/* Card background css */
+/* .apply-bg{
+    background-color: #007fff;
+}
+
+button{
+    height: 40px;
+    font-size: 14px;
+    padding: 0px 20px 0px 20px;
+    color: #007fff;
+    border: 2px solid #007fff;
+    border-radius: 20px;
+    background-color: white;
+}
+button:hover{
+    background-color: #007fff;
+    color:white;
+} */
+
+/* .primary_btn{​​
+
+    height: 40px;
+
+    font-size: 14px;
+
+    padding: 0px 20px 0px 20px;
+
+    color: #007fff;
+
+    border: 2px solid #007fff ;
+
+    border-radius: 20px;
+
+    background-color: white;
+
+  }​​
+
+  .primary_btn:hover{​​
+
+    background-color: #007fff;
+
+    color: white;
+
+  }​​ */

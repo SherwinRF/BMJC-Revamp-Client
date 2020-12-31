@@ -1,3 +1,18 @@
-<p class="display-1" [ngStyle]="{ 'background-color': theme.primary }">
-  hospital works!
-</p>
+<div class="display-1" [ngStyle]="{ 'background-color': theme.background }">
+  <div class="container">
+    <h1 [ngStyle]="{ color: theme.text }">Hospital</h1>
+    <div>
+      <!-- <a> -->
+      <!-- <embed src="../../../../assets/hospital.pdf" type="application/pdf" width="100%" height="800px"/> -->
+      <!-- </a> -->
+      <iframe
+        name="hospitalPdf"
+        id="hospitalPdf"
+        width="100%"
+        height="700px"
+        src="/assets/pdfs/hospital.pdf#view=FitH"
+      >
+      </iframe>
+    </div>
+  </div>
+</div>

@@ -7,6 +7,15 @@ export class Results {
   student_results: StudentResults[];
   year_id: string;
 }
+export class ResultBySeatNumber {
+  _id: string;
+  course: string;
+  year: string;
+  batch: string;
+  exam: string;
+  student_results: StudentResults;
+  year_id: string;
+}
 export class StudentResults {
   _id: string;
   seat_number: string;

@@ -1,42 +1,38 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script
-      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
-      crossorigin="anonymous"
-    ></script>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
-      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
-      crossorigin="anonymous"
-    />
-    <title>Document</title>
-  </head>
-
-  <body>
-    <table class="table table-dark" datatable class="row-border hover">
-      <thead>
+<div class="container mx-auto">
+  <div class="row">
+    <div class="col-12 col-sm-12">
+      <h3>Teaching Staff</h3>
+      <hr />
+    </div>
+  </div>
+  <div *ngIf="data3">
+    <table
+      datatable
+      [dtOptions]="dtOptions"
+      class="table table-bordered table-hover table-striped"
+    >
+      <thead [ngStyle]="{ 'background-color': theme.primary }" align="center">
         <tr>
           <th>Name</th>
 
-          <th>Post</th>
+          <th>Designation</th>
+
+          <th>Location</th>
+
+          <th>Department</th>
+
+          <th>Contact</th>
         </tr>
       </thead>
       <tbody>
-        <tr id="row" *ngFor="let item of data">
+        <tr id="row" *ngFor="let item of data3">
           <td>{{ item.name }}</td>
-          <td>{{ item.email }}</td>
+          <td>{{ item.designation }}</td>
+          <td>{{ item.location }}</td>
+          <td>{{ item.department }}</td>
+          <td>{{ item.contact }}</td>
         </tr>
       </tbody>
     </table>
-  </body>
-</html>
+  </div>
+</div>
