@@ -1,1 +1,127 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* BUTTONS */
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  color: #2a2a2a;
+}
+p {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  color: #2a2a2a;
+}
+
+.primary-btn {
+  font-family: "Roboto", sans-serif;
+  font-weight: normal;
+  height: 40px;
+  font-size: 14px;
+  padding: 0px 20px 0px 20px;
+  color: #007fff;
+  border: 1px solid #007fff;
+  border-radius: 20px;
+  background-color: white;
+}
+
+.primary-btn:hover {
+  background-color: #007fff;
+  color: white;
+}
+
+.secondary-btn {
+  font-family: "Roboto", sans-serif;
+  font-weight: normal;
+  height: 40px;
+  padding: 0px 20px 0px 20px;
+  font-size: 14px;
+  color: #007fff;
+  border-color: transparent;
+}
+
+.secondary-btn:hover {
+  color: #007fff;
+  border: 1px solid #007fff;
+  border-radius: 20px;
+}
+
+.disable-btn {
+  font-family: "Roboto", sans-serif;
+  font-weight: normal;
+  height: 40px;
+  font-size: 14px;
+  padding: 0px 20px 0px 20px;
+  color: #888;
+  border-color: transparent;
+  background-color: #ccc;
+}
+
+/* //BUTTONS END */
+
+/* HEADINGS */
+h1 {
+  font-family: "Roboto", sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  color: #2a2a2a;
+}
+
+h2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: #2a2a2a;
+}
+
+h3 {
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  color: #2a2a2a;
+}
+/* //HEADINGS END */
+
+/* LINKS */
+a {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  color: #007fff;
+}
+/* //LINKS END */
+
+/* EMPTY MESSAGE TEXT */
+.emp-text {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: lighter;
+  color: #666666;
+}
+/* //EMPTY MESSAGE TEXT END*/
+
+/* LABELS AND HELPER TEXT */
+.lbl-text {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  color: #666666;
+}
+/* //LABELS AND HELPER TEXT END*/
+
+/* ERROR */
+.err-text {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  color: #ff0000;
+}
+/* // ERROR ENDS */
+
+/* ICONS */
+.icons-clr {
+  color: #ff8811;
+}
+/* //ICONS END */
