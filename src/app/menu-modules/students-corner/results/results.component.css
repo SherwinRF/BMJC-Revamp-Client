@@ -1,19 +1,21 @@
 .resultheading {
-  padding: 10px;
-  background-color: #007fff;
-  font-family: "Roboto";
-  color: white;
-  margin: 20px 0;
+  padding: 20px 10px;
+}
+.container {
+  background-color: white;
+  margin-top: 50px;
+  margin-bottom: 150px;
+  padding-bottom: 50px;
+}
+nav {
+  padding: 0 10px;
 }
 
 .nav-item {
-  font-family: "Roboto";
-  color: #007fff;
   width: 120px;
   text-align: center;
 }
 nav .active {
-  font-family: "Roboto";
   color: white;
   background-color: #007fff;
 }
@@ -23,11 +25,11 @@ nav .active {
 }
 @media (min-width: 480px) and (max-width: 574px) {
   .nav-item {
-    width: 48% !important;
+    width: 120px !important;
   }
 }
 @media (max-width: 479px) {
   .nav-item {
-    width: 48% !important;
+    width: 120px !important;
   }
 }

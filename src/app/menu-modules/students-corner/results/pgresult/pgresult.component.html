@@ -1,4 +1,4 @@
-<div class="container" style="margin-bottom: 250px">
+<div class="container">
   <div class="row">
     <div class="col-lg-2 col-md-2 col-sm-6 col-6 d-block m-auto">
       <div class="btn-group">
@@ -13,39 +13,58 @@
           <span class="sr-only">Toggle Dropdown</span>
         </button>
         <div class="dropdown-menu">
-          <a class="dropdown-item" href="#" *ngFor="let items of PG_Result">{{
-            items.course +
-              " " +
-              items.batch +
-              " " +
-              items.exam +
-              " " +
-              items.year
-          }}</a>
+          <a
+            class="dropdown-item"
+            (click)="fetchResult(items)"
+            *ngFor="let items of PG_Result"
+            >{{
+              items.course +
+                " " +
+                items.batch +
+                " " +
+                items.exam +
+                " " +
+                items.year
+            }}</a
+          >
         </div>
       </div>
     </div>
     <div class="col-lg-2 col-md-2 col-sm-6 col-6 d-block m-auto">
       <div class="btn-group">
-        <button type="button" class="btn btn-text">Department</button>
+        <button
+          type="button"
+          class="btn btn-text"
+          [disabled]="department_button"
+        >
+          Department
+        </button>
         <button
           type="button"
           class="btn btn-text dropdown-toggle dropdown-toggle-split"
           data-toggle="dropdown"
           aria-haspopup="true"
           aria-expanded="false"
+          [disabled]="department_button"
         >
           <span class="sr-only">Toggle Dropdown</span>
         </button>
         <div class="dropdown-menu">
-          <a class="dropdown-item" href="#">First</a>
-          <a class="dropdown-item" href="#">Second</a>
-          <a class="dropdown-item" href="#">Third</a>
-          <a class="dropdown-item" href="#">Fourth</a>
+          <a
+            class="dropdown-item"
+            *ngFor="let items of department"
+            (click)="department_result(items)"
+            >{{ items }}</a
+          >
         </div>
       </div>
     </div>
-    <div class="col-lg-8 col-md-8 col-sm-12 col-12 d-block m-auto">
+    <div class="col-lg-2 col-md-2 col-sm-12 col-12 d-block m-auto text-center">
+      <div class="mt-1">
+        <h6>-OR-</h6>
+      </div>
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-12 col-12 d-block m-auto">
       <div class="input-group mt-1">
         <input
           type="text"
@@ -63,9 +82,19 @@
           </button>
         </div>
       </div>
+      <p
+        class="err-text"
+        *ngIf="error_message"
+        style="position: absolute; margin-top: 5px; padding-left: 5px"
+      >
+        {{ result_error_message }}
+      </p>
     </div>
   </div>
   <br />
+  <br />
+
+  <!-- PG Result Table for seat number -->
   <div class="card" *ngIf="seat_result_table">
     <div class="card-header">
       <b>{{
@@ -107,30 +136,22 @@
       </table>
     </div>
   </div>
+
+  <!-- PG Result Table -->
   <div class="card" *ngIf="pg_result_table">
     <div class="card-header">
       <b>{{
-        result_seat_no[0].course +
+        course_result.course +
           " " +
-          result_seat_no[0].batch +
+          course_result.batch +
           " " +
-          result_seat_no[0].exam +
+          course_result.exam +
           " " +
-          result_seat_no[0].year | uppercase
+          course_result.year | uppercase
       }}</b>
     </div>
     <div class="container">
       <br />
-      <div class="col-sm-4">
-        <div class="form-group">
-          <label for="sel1">Select Department:</label>
-          <select class="form-control departmentfilter">
-            <option value="dep">
-              {{ result_seat_no[0].student_results.department }}
-            </option>
-          </select>
-        </div>
-      </div>
       <table
         datatable
         [dtOptions]="dtOptions"
@@ -147,12 +168,12 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let item of result_seat_no">
-            <td>{{ item.student_results.seat_number }}</td>
-            <td>{{ item.student_results.prn }}</td>
-            <td>{{ item.student_results.name }}</td>
-            <td>{{ item.student_results.department }}</td>
-            <td>{{ item.student_results.result }}</td>
+          <tr *ngFor="let item of course_result_student; let i = index">
+            <td>{{ course_result_student[i].seat_number }}</td>
+            <td>{{ course_result_student[i].prn }}</td>
+            <td>{{ course_result_student[i].name }}</td>
+            <td>{{ course_result_student[i].department }}</td>
+            <td>{{ course_result_student[i].result }}</td>
           </tr>
         </tbody>
       </table>

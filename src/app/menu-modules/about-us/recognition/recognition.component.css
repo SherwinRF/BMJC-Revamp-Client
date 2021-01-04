@@ -3,7 +3,7 @@
     font-size: 1.7em !important;
   }
   .nav-item {
-    width: 48% !important;
+    width: 120px !important;
   }
 }
 @media (max-width: 479px) {
@@ -11,23 +11,25 @@
     font-size: 1.7em !important;
   }
   .nav-item {
-    width: 48% !important;
+    width: 120px !important;
   }
 }
 .recogheading {
-  padding: 10px;
-  background-color: #007fff;
-  font-family: "Roboto";
-  color: white;
-  margin: 20px 0;
+  padding: 20px 10px;
+}
+.container {
+  height: 450px;
+  background-color: white;
+  margin-top: 50px;
+  margin-bottom: 250px;
+}
+nav {
+  padding: 0 10px;
 }
 
 .nav-item {
-  font-family: "Roboto";
-  color: #007fff;
   width: 120px;
   text-align: center;
-  /* border: 1px solid #007fff;*/
 }
 nav .active {
   color: white;

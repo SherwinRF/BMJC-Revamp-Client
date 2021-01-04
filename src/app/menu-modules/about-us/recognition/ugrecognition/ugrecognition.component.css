@@ -33,12 +33,9 @@
   border-width: 1px;
 }
 a {
-  color: #007fff;
-  font-family: "Roboto";
   text-decoration: none;
 }
 .badge {
-  font-family: "Roboto";
   background-color: #ff8811;
 }
 @keyframes slide {

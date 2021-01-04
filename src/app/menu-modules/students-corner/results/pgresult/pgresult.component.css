@@ -1,44 +1,47 @@
 button,
 button:hover {
-  font-family: "Roboto";
   background-color: #007fff;
   color: white;
 }
+button:focus {
+  box-shadow: none;
+}
+input:focus {
+  box-shadow: none;
+}
 .card-header {
   background-color: #007fff;
-  font-family: "Roboto";
   color: white;
 }
 .card {
   padding-bottom: 20px;
 }
-input {
-  font-family: "Roboto";
-}
-table {
-  font-family: "Roboto";
+h6 {
+  font-family: "Roboto", sans-serif;
+  color: #2a2a2a;
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .btn-group {
     margin: 10px 0;
   }
+  h6 {
+    text-align: center;
+    margin-left: 50px;
+  }
 }
 @media (min-width: 575px) and (max-width: 767px) {
   .btn-group {
     margin: 10px 0;
-    width: 150px;
   }
 }
 @media (min-width: 480px) and (max-width: 574px) {
   .btn-group {
     margin: 10px 0;
-    width: 150px;
   }
 }
 
 @media (max-width: 479px) {
   .btn-group {
     margin: 10px 0;
-    width: 150px;
   }
 }

@@ -1,14 +1,17 @@
 .univheading {
-  padding: 10px;
-  background-color: #007fff;
-  font-family: "Roboto", sans-serif;
-  color: white;
-  margin: 20px 0;
+  padding: 20px 10px;
+}
+.container {
+  background-color: white;
+  margin-top: 50px;
+  margin-bottom: 250px;
+  padding-bottom: 20px;
+}
+nav {
+  padding: 0 10px;
 }
 
 .nav-item {
-  font-family: "Roboto", sans-serif;
-  color: #007fff;
   width: 120px;
   text-align: center;
 }
@@ -22,11 +25,11 @@ nav .active {
 }
 @media (min-width: 480px) and (max-width: 574px) {
   .nav-item {
-    width: 110px;
+    width: 100px;
   }
 }
 @media (max-width: 479px) {
   .nav-item {
-    width: 110px;
+    width: 100px;
   }
 }

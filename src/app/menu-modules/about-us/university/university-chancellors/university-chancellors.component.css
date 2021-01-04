@@ -54,18 +54,17 @@
   margin: 50px auto;
   box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05),
     0 15px 40px rgba(166, 173, 201, 0.2);
-  border: 2px solid #007fff;
   animation: slide 0.3s linear;
 }
 .card-header {
-  font-size: large;
-  background-color: #007fff;
-  font-family: "Roboto";
   color: white;
+  background-color: #007fff;
 }
-p {
-  font-family: "Roboto";
-  color: #2a2a2a;
+a {
+  color: #007fff !important;
+}
+img {
+  max-height: 200px;
 }
 @keyframes slide {
   0% {
