@@ -169,12 +169,12 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let item of course_result_student; let i = index">
-            <td>{{ course_result_student[i].seat_number }}</td>
-            <td>{{ course_result_student[i].prn }}</td>
-            <td>{{ course_result_student[i].name }}</td>
-            <td>{{ course_result_student[i].department }}</td>
-            <td>{{ course_result_student[i].result }}</td>
+          <tr *ngFor="let item of course_result_student">
+            <td>{{ item.seat_number }}</td>
+            <td>{{ item.prn }}</td>
+            <td>{{ item.name }}</td>
+            <td>{{ item.department }}</td>
+            <td>{{ item.result }}</td>
           </tr>
         </tbody>
       </table>
