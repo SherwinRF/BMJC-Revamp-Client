@@ -1,0 +1,86 @@
+.carousel-control-prev,
+.carousel-control-next {
+  width: 4rem;
+  height: 80%;
+  padding-top: 10%;
+}
+
+.carousel {
+  box-shadow: 4px 4px 3px #414040;
+}
+
+.links-container > div {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-body {
+  height: 15vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #007fff;
+}
+
+.card-body p {
+  color: #007fff;
+}
+
+.card-body:hover {
+  background: #007fff;
+  color: #fff;
+}
+
+.card-body:hover p {
+  color: #fff;
+}
+
+.decorated {
+  overflow: hidden;
+
+  text-align: center;
+}
+
+.decorated > span {
+  position: relative;
+
+  display: inline-block;
+}
+
+.decorated > span::before,
+.decorated > span::after {
+  content: "";
+
+  position: absolute;
+
+  border-bottom: 4px solid #ff8811;
+
+  width: 100vw;
+
+  margin: 20px 20px;
+}
+
+.decorated > span::before {
+  right: 100%;
+}
+
+.decorated > span::after {
+  left: 100%;
+}
+
+.badge,
+.badge-primary,
+.badge-pill {
+  margin: 0;
+  padding: 0.2rem;
+}
+
+.pill-container {
+  margin-top: -0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

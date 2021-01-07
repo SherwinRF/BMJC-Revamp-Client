@@ -1,432 +1,135 @@
-<!-- .entry-header -->
-<!-- Videos start -->
-<h1 class="mx-5">Educational Videos</h1>
-
-<div
-  id="carouselExampleCaptions"
-  class="carousel slide carousel-ppts"
-  data-ride="carousel"
->
-  <ol class="carousel-indicators">
-    <li
-      data-target="#carouselExampleCaptions"
-      data-slide-to="0"
-      class="active"
-    ></li>
-    <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
-    <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
-  </ol>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img
-        src="https://images.unsplash.com/photo-1579684453423-f84349ef60b0?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1068&q=80"
-        class="d-block w-100"
-        alt="..."
-        style="height: 70vh"
-      />
-      <div class="carousel-caption d-none d-md-block">
-        <a href="#" class="h5 video-link-name text-decoration-none">
-          Cathlab
-        </a>
-        <p>A video demonstrating the cathlab process</p>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <img
-        src="https://images.unsplash.com/photo-1579684453423-f84349ef60b0?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1068&q=80"
-        class="d-block w-100"
-        alt="..."
-        style="height: 70vh"
-      />
-      <div class="carousel-caption d-none d-md-block">
-        <a href="#" class="h5 video-link-name text-decoration-none"
-          >Laproscopic Appendectomy</a
-        >
-        <p>
-          A minimally invasive surgery to remove the appendix through several
-          small incisions, rather than through one large one
-        </p>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <img
-        src="https://images.unsplash.com/photo-1579684453423-f84349ef60b0?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1068&q=80"
-        class="d-block w-100"
-        alt="..."
-        style="height: 70vh"
-      />
-      <div class="carousel-caption d-none d-md-block">
-        <a href="#" class="h5 video-link-name text-decoration-none"
-          >Ureterocoel</a
-        >
-        <p>
-          A video demonstrating a congenital abnormality found in the ureter
-        </p>
-      </div>
-    </div>
-  </div>
-  <a
-    class="carousel-control-prev"
-    href="#carouselExampleCaptions"
-    role="button"
-    data-slide="prev"
-  >
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a
-    class="carousel-control-next"
-    href="#carouselExampleCaptions"
-    role="button"
-    data-slide="next"
-  >
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
+<div *ngIf="videos.length === 0 || videos.length === 0" class="container">
+  <app-loading-page></app-loading-page>
 </div>
-<!-- Videos end -->
 
-<!-- PPTs start -->
-<h1 class="mx-5">PPTs</h1>
-<div class="entry-content">
+<div *ngIf="videos.length !== 0 && videos.length !== 0" class="container my-3">
+  <div style="margin-top: 6%">
+    <h2 class="decorated"><span>Videos</span></h2>
+  </div>
   <div
-    class="card-journals row row-cols-1 row-cols-md-4 container mx-auto my-2"
+    id="carouselExampleCaptions"
+    class="carousel slide my-3"
+    data-ride="carousel"
   >
-    <div class="card-journal col mb-3" *ngFor="let item of ppts">
-      <div class="card h-100">
-        <img
-          src="https://images.unsplash.com/photo-1526256262350-7da7584cf5eb?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
-          class="card-img-top"
-          alt="..."
-        />
-        <div
-          class="card-body text-center shadow rounded"
-          style="background: rgba(128, 220, 241, 0.823)"
-        >
-          <a class="card-title h5 text-decoration-none text-primary" href="#">{{
-            item.title
-          }}</a>
+    <ol class="carousel-indicators pb-4">
+      <li
+        data-target="#carouselExampleCaptions"
+        data-slide-to="0"
+        class="active"
+      ></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="embed-responsive embed-responsive-16by9">
+          <video controls width="250">
+            <source
+              src="https://mongoapi.s3.ap-south-1.amazonaws.com/Resources/dummy+educational+videos/dummy-educational-video-1.mp4"
+              type="video/mp4"
+            />
+          </video>
+        </div>
+        <div class="carousel-caption d-none d-md-block mb-3">
+          <h4>Cathlab</h4>
+          <p class="text-white">
+            A video demonstrating visualizing the arteries of the heart,
+            chambers of the heart.
+          </p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="embed-responsive embed-responsive-16by9">
+          <video controls width="250">
+            <source
+              src="https://mongoapi.s3.ap-south-1.amazonaws.com/Resources/dummy+educational+videos/dummy-educational-video-2.mp4"
+              type="video/mp4"
+            />
+          </video>
+        </div>
+        <div class="carousel-caption d-none d-md-block mb-3">
+          <h5>Laproscopic Appendectomy</h5>
+          <p class="text-white">
+            A minimally invasive surgery to remove the appendix through several
+            small incisions, rather than through one large one.
+          </p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="embed-responsive embed-responsive-16by9">
+          <video controls width="250">
+            <source
+              src="https://mongoapi.s3.ap-south-1.amazonaws.com/Resources/dummy+educational+videos/dummy-educational-video-3.mp4"
+              type="video/mp4"
+            />
+          </video>
+        </div>
+        <div class="carousel-caption d-none d-md-block mb-3">
+          <h5>Ureterocoel</h5>
         </div>
       </div>
     </div>
-    <!-- <div class="card-journal col mb-3">
-      <div class="card h-100">
-        <img
-          src="https://images.unsplash.com/photo-1526256262350-7da7584cf5eb?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
-          class="card-img-top"
-          alt="..."
-        />
-        <div
-          class="card-body text-center shadow rounded"
-          style="background: rgba(128, 220, 241, 0.823)"
-        >
-          <a class="card-title h5 text-decoration-none text-primary" href=""
-            >Blunt Abd Trauma</a
-          >
-        </div>
-      </div>
-    </div>
-    <div class="card-journal col mb-3">
-      <div class="card h-100">
-        <img
-          src="https://images.unsplash.com/photo-1526256262350-7da7584cf5eb?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
-          class="card-img-top"
-          alt="..."
-        />
-        <div
-          class="card-body text-center shadow rounded"
-          style="background: rgba(128, 220, 241, 0.823)"
-        >
-          <a class="card-title h5 text-decoration-none text-primary" href=""
-            >Burns Overview</a
-          >
-        </div>
-      </div>
-    </div>
-    <div class="card-journal col mb-3">
-      <div class="card h-100">
-        <img
-          src="https://images.unsplash.com/photo-1526256262350-7da7584cf5eb?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
-          class="card-img-top"
-          alt="..."
-        />
-        <div
-          class="card-body text-center shadow rounded"
-          style="background: rgba(128, 220, 241, 0.823)"
-        >
-          <a class="card-title h5 text-decoration-none text-primary" href=""
-            >Cancer Kidney An Overview MUHS Conference</a
-          >
-        </div>
-      </div>
-    </div>
-    <div class="card-journal col mb-3">
-      <div class="card h-100">
-        <img
-          src="https://images.unsplash.com/photo-1526256262350-7da7584cf5eb?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
-          class="card-img-top"
-          alt="..."
-        />
-        <div
-          class="card-body text-center shadow rounded"
-          style="background: rgba(128, 220, 241, 0.823)"
-        >
-          <a class="card-title h5 text-decoration-none text-primary" href=""
-            >Case Of Obstructive Jaundice</a
-          >
-        </div>
-      </div>
-    </div>
-    <div class="card-journal col mb-3">
-      <div class="card h-100">
-        <img
-          src="https://images.unsplash.com/photo-1526256262350-7da7584cf5eb?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
-          class="card-img-top"
-          alt="..."
-        />
-        <div
-          class="card-body text-center shadow rounded"
-          style="background: rgba(128, 220, 241, 0.823)"
-        >
-          <a class="card-title h5 text-decoration-none text-primary" href=""
-            >Fluid and Electrolyte</a
-          >
-        </div>
-      </div>
-    </div>
-    <div class="card-journal col mb-3">
-      <div class="card h-100">
-        <img
-          src="https://images.unsplash.com/photo-1526256262350-7da7584cf5eb?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
-          class="card-img-top"
-          alt="..."
-        />
-        <div
-          class="card-body text-center shadow rounded"
-          style="background: rgba(128, 220, 241, 0.823)"
-        >
-          <a class="card-title h5 text-decoration-none text-primary" href=""
-            >Head Injury</a
-          >
-        </div>
-      </div>
-    </div>
-    <div class="card-journal col mb-3">
-      <div class="card h-100">
-        <img
-          src="https://images.unsplash.com/photo-1526256262350-7da7584cf5eb?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
-          class="card-img-top"
-          alt="..."
-        />
-        <div
-          class="card-body text-center shadow rounded"
-          style="background: rgba(128, 220, 241, 0.823)"
-        >
-          <a class="card-title h5 text-decoration-none text-primary" href=""
-            >Head Injury No Images</a
-          >
-        </div>
-      </div>
-    </div>
-    <div class="card-journal col mb-3">
-      <div class="card h-100">
-        <img
-          src="https://images.unsplash.com/photo-1526256262350-7da7584cf5eb?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
-          class="card-img-top"
-          alt="..."
-        />
-        <div
-          class="card-body text-center shadow rounded"
-          style="background: rgba(128, 220, 241, 0.823)"
-        >
-          <a class="card-title h5 text-decoration-none text-primary" href=""
-            >HIV and Surgeon</a
-          >
-        </div>
-      </div>
-    </div>
-    <div class="card-journal col mb-3">
-      <div class="card h-100">
-        <img
-          src="https://images.unsplash.com/photo-1526256262350-7da7584cf5eb?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
-          class="card-img-top"
-          alt="..."
-        />
-        <div
-          class="card-body text-center shadow rounded"
-          style="background: rgba(128, 220, 241, 0.823)"
-        >
-          <a class="card-title h5 text-decoration-none text-primary" href=""
-            >Know Your Instruments</a
-          >
-        </div>
-      </div>
-    </div>
-    <div class="card-journal col mb-3">
-      <div class="card h-100">
-        <img
-          src="https://images.unsplash.com/photo-1526256262350-7da7584cf5eb?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
-          class="card-img-top"
-          alt="..."
-        />
-        <div
-          class="card-body text-center shadow rounded"
-          style="background: rgba(128, 220, 241, 0.823)"
-        >
-          <a class="card-title h5 text-decoration-none text-primary" href=""
-            >Management of Wound</a
-          >
-        </div>
-      </div>
-    </div>
-    <div class="card-journal col mb-3">
-      <div class="card h-100">
-        <img
-          src="https://images.unsplash.com/photo-1526256262350-7da7584cf5eb?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
-          class="card-img-top"
-          alt="..."
-        />
-        <div
-          class="card-body text-center shadow rounded"
-          style="background: rgba(128, 220, 241, 0.823)"
-        >
-          <a class="card-title h5 text-decoration-none text-primary" href=""
-            >Management of Wound No Images</a
-          >
-        </div>
-      </div>
-    </div>
-    <div class="card-journal col mb-3">
-      <div class="card h-100">
-        <img
-          src="https://images.unsplash.com/photo-1526256262350-7da7584cf5eb?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
-          class="card-img-top"
-          alt="..."
-        />
-        <div
-          class="card-body text-center shadow rounded"
-          style="background: rgba(128, 220, 241, 0.823)"
-        >
-          <a class="card-title h5 text-decoration-none text-primary" href=""
-            >MUHS</a
-          >
-        </div>
-      </div>
-    </div>
-    <div class="card-journal col mb-3">
-      <div class="card h-100">
-        <img
-          src="https://images.unsplash.com/photo-1526256262350-7da7584cf5eb?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
-          class="card-img-top"
-          alt="..."
-        />
-        <div
-          class="card-body text-center shadow rounded"
-          style="background: rgba(128, 220, 241, 0.823)"
-        >
-          <a class="card-title h5 text-decoration-none text-primary" href=""
-            >MUHS 2003</a
-          >
-        </div>
-      </div>
-    </div>
-    <div class="card-journal col mb-3">
-      <div class="card h-100">
-        <img
-          src="https://images.unsplash.com/photo-1526256262350-7da7584cf5eb?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
-          class="card-img-top"
-          alt="..."
-        />
-        <div
-          class="card-body text-center shadow rounded"
-          style="background: rgba(128, 220, 241, 0.823)"
-        >
-          <a class="card-title h5 text-decoration-none text-primary" href=""
-            >OJS</a
-          >
-        </div>
-      </div>
-    </div>
-    <div class="card-journal col mb-3">
-      <div class="card h-100">
-        <img
-          src="https://images.unsplash.com/photo-1526256262350-7da7584cf5eb?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
-          class="card-img-top"
-          alt="..."
-        />
-        <div
-          class="card-body text-center shadow rounded"
-          style="background: rgba(128, 220, 241, 0.823)"
-        >
-          <a class="card-title h5 text-decoration-none text-primary" href=""
-            >Oral Cancer</a
-          >
-        </div>
-      </div>
-    </div>
-    <div class="card-journal col mb-3">
-      <div class="card h-100">
-        <img
-          src="https://images.unsplash.com/photo-1526256262350-7da7584cf5eb?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
-          class="card-img-top"
-          alt="..."
-        />
-        <div
-          class="card-body text-center shadow rounded"
-          style="background: rgba(128, 220, 241, 0.823)"
-        >
-          <a class="card-title h5 text-decoration-none text-primary" href=""
-            >Oral Cancer No Images</a
-          >
-        </div>
-      </div>
-    </div>
-    <div class="card-journal col mb-3">
-      <div class="card h-100">
-        <img
-          src="https://images.unsplash.com/photo-1526256262350-7da7584cf5eb?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
-          class="card-img-top"
-          alt="..."
-        />
-        <div
-          class="card-body text-center shadow rounded"
-          style="background: rgba(128, 220, 241, 0.823)"
-        >
-          <a class="card-title h5 text-decoration-none text-primary" href=""
-            >Shape Your Future</a
-          >
-        </div>
-      </div>
-    </div>
-    <div class="card-journal col mb-3">
-      <div class="card h-100">
-        <img
-          src="https://images.unsplash.com/photo-1526256262350-7da7584cf5eb?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
-          class="card-img-top"
-          alt="..."
-        />
-        <div
-          class="card-body text-center shadow rounded"
-          style="background: rgba(128, 220, 241, 0.823)"
-        >
-          <a class="card-title h5 text-decoration-none text-primary" href=""
-            >Surgery Update 2008</a
-          >
-        </div>
-      </div>
-    </div> -->
+    <a
+      class="carousel-control-prev"
+      href="#carouselExampleCaptions"
+      role="button"
+      data-slide="prev"
+    >
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a
+      class="carousel-control-next"
+      href="#carouselExampleCaptions"
+      role="button"
+      data-slide="next"
+    >
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
   </div>
-</div>
-<!-- PPTs end -->
 
-<!-- Useful Links start -->
-<h1 class="mx-5">Useful Links</h1>
-<div class="row mx-auto">
-  <div class="col-4 mx-auto btn m-2">
-    <a href="#" class="text-decoration-none h4"> Students' Group </a>
+  <div style="margin-top: 6%">
+    <h2 class="decorated"><span>PPTs</span></h2>
   </div>
-  <div class="col-4 mx-auto btn m-2">
-    <a href="#" class="text-decoration-none h4"> Blog </a>
+  <div
+    class="ppts-container row row-cols-1 row-cols-md-4 container mx-auto my-2"
+  >
+    <div class="col mb-3" *ngFor="let ppt of ppts">
+      <a
+        class="card h-100 text-decoration-none"
+        href="{{ ppt.link }}"
+        target="_blank"
+      >
+        <div class="card-body text-center rounded h3">
+          <p class="h5">{{ ppt.title }}</p>
+        </div>
+        <div class="pill-container">
+          <div class="badge badge-primary badge-pill my-2">PPT</div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <div style="margin-top: 6%">
+    <h2 class="decorated"><span>Useful Links</span></h2>
+  </div>
+  <div class="row justify-content-center my-3 links-container">
+    <div class="col-4">
+      <a
+        href="http://in.groups.yahoo.com/group/jamkarstudents/"
+        class="text-decoration-none h4"
+        target="_blank"
+        ><button class="primary-btn">Students' Group</button>
+      </a>
+    </div>
+    <div class="col-4">
+      <a
+        href="http://jamkarstudents.blogspot.com/2004_09_01_archive.html"
+        class="text-decoration-none h4"
+        target="_blank"
+        ><button class="primary-btn">Blog</button>
+      </a>
+    </div>
   </div>
 </div>
-<!-- Useful Links end -->

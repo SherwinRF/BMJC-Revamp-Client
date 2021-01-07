@@ -24,6 +24,8 @@ export class JournalsComponent implements OnInit {
       this.theme = currentTheme;
     });
 
-    this.journals = this.resourcesService.getJournal();
+    this.resourcesService.getResources().subscribe((res) => {
+      this.journals = res.filter((item) => item.type === "journals");
+    });
   }
 }

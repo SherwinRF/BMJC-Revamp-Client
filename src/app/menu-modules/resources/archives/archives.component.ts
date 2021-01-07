@@ -12,7 +12,7 @@ import { ResourcesService } from "../resources.service";
 })
 export class ArchivesComponent implements OnInit {
   theme: colorScheme;
-  archives: Resources[];
+  archives: Resources[] = [];
 
   constructor(
     private themeChanger: ThemeChangerService,
@@ -24,6 +24,8 @@ export class ArchivesComponent implements OnInit {
       this.theme = currentTheme;
     });
 
-    this.archives = this.resourcesService.getArchives();
+    this.resourcesService.getResources().subscribe((res) => {
+      this.archives = res.filter((item) => item.type === "archive");
+    });
   }
 }

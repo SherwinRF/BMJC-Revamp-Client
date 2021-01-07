@@ -1,5 +1,7 @@
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
+import { LoadingPageComponent } from "./loading-module/loading/loading-page/loading-page.component";
+import { NotFoundPageComponent } from "./notFoundModule/not-found/not-found-page/not-found-page.component";
 
 const routes: Routes = [
   {
@@ -65,6 +67,13 @@ const routes: Routes = [
     path: "staff",
     loadChildren: () =>
       import("./menu-modules/staff/staff.module").then((m) => m.StaffModule),
+  },
+  {
+    path: "**",
+    loadChildren: () =>
+      import("./notFoundModule/not-found/not-found.module").then(
+        (m) => m.NotFoundModule
+      ),
   },
 ];
 

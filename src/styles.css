@@ -32,6 +32,10 @@ p {
   color: white;
 }
 
+.primary-btn:focus {
+  outline: none !important;
+}
+
 .secondary-btn {
   font-family: "Roboto", sans-serif;
   font-weight: normal;

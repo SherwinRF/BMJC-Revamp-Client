@@ -12,8 +12,8 @@ import { ResourcesService } from "../resources.service";
 })
 export class VideosAndPptsComponent implements OnInit {
   theme: colorScheme;
-  videos: Resources[];
-  ppts: Resources[];
+  videos: Resources[] = [];
+  ppts: Resources[] = [];
 
   constructor(
     private themeChanger: ThemeChangerService,
@@ -25,7 +25,12 @@ export class VideosAndPptsComponent implements OnInit {
       this.theme = currentTheme;
     });
 
-    this.videos = this.resourcesService.getVideos();
-    this.ppts = this.resourcesService.getPPTs();
+    this.resourcesService.getResources().subscribe((res) => {
+      this.videos = res.filter((item) => item.type === "educational-video");
+    });
+
+    this.resourcesService.getResources().subscribe((res) => {
+      this.ppts = res.filter((item) => item.type === "ppt");
+    });
   }
 }

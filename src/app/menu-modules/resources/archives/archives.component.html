@@ -1,8 +1,42 @@
-<div class="container card-group my-3">
-  <div class="row">
+<div *ngIf="archives.length === 0" class="container">
+  <app-loading-page></app-loading-page>
+</div>
+
+<div
+  *ngIf="archives.length !== 0"
+  class="card-archives bg-white container my-3"
+>
+  <div class="card-archive" *ngFor="let archive of archives">
+    <a target="_blank" class="text-decoration-none">
+      <div class="card h-100">
+        <img
+          src="assets/resources/archive.jpg"
+          class="card-img-top"
+          alt="archive image"
+        />
+        <div class="card-body text-center shadow rounded">
+          <p class="card-title h5 text-decoration-none">{{ archive.title }}</p>
+          <p class="card-text">
+            {{ archive.description }}
+          </p>
+          <p class="card-text">
+            <small class="text-muted">archive link</small>
+          </p>
+        </div>
+      </div>
+    </a>
+  </div>
+</div>
+
+<!--
+<div
+  *ngIf="archives.length !== 0"
+  class="container card-group my-3 bg-white p-3"
+>
+  <div class="row m-auto">
     <div class="mx-3 my-2 card" *ngFor="let archive of archives">
       <img
-        src="https://images.unsplash.com/photo-1597092451116-27787c07901d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80"
+        src="assets/resources/archive.jpg"
         class="card-img-top img"
         style="width: 20rem; height: 20rem"
         alt="archive"
@@ -13,9 +47,9 @@
           {{ archive.description }}
         </p>
         <p class="card-text">
-          <small class="text-muted">{{ archive.link }}</small>
+          <small class="text-muted">archive link</small>
         </p>
       </div>
     </div>
   </div>
-</div>
+</div> -->

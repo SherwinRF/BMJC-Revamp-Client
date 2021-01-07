@@ -1,0 +1,27 @@
+.card-journal:hover {
+  transform: scale(1.05);
+  transition: all 200ms linear 0;
+}
+
+p:hover {
+  color: #007fff;
+}
+
+.card-journal {
+  width: 15rem;
+  height: 20rem;
+  margin: 15px;
+}
+
+.card-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-journals {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-self: center;
+}
