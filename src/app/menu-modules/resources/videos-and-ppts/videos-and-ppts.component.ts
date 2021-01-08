@@ -12,8 +12,8 @@ import { ResourcesService } from "../resources.service";
 })
 export class VideosAndPptsComponent implements OnInit {
   theme: colorScheme;
-  videos: Resources[] = [];
-  ppts: Resources[] = [];
+  videos: Resources[];
+  ppts: Resources[];
 
   constructor(
     private themeChanger: ThemeChangerService,

@@ -12,7 +12,7 @@ import { ResourcesService } from "../resources.service";
 })
 export class ArchivesComponent implements OnInit {
   theme: colorScheme;
-  archives: Resources[] = [];
+  archives: Resources[];
 
   constructor(
     private themeChanger: ThemeChangerService,

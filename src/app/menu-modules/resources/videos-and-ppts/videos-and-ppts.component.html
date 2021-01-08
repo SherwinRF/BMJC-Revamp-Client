@@ -1,8 +1,8 @@
-<div *ngIf="videos.length === 0 || videos.length === 0" class="container">
+<div *ngIf="!videos && !ppts" class="container">
   <app-loading-page></app-loading-page>
 </div>
 
-<div *ngIf="videos.length !== 0 && videos.length !== 0" class="container my-3">
+<div *ngIf="videos && ppts" class="container my-3">
   <div style="margin-top: 6%">
     <h2 class="decorated"><span>Videos</span></h2>
   </div>

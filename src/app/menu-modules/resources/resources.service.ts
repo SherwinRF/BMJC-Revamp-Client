@@ -8,18 +8,10 @@ import Resources from "../../models/resources";
 })
 export class ResourcesService {
   url: string = "http://13.232.107.115:8000/Resources";
-  // allResources: Resources[];
-  // archives: Resources[];
-  // journals: Resources[];
-  // researchSocieties: Resources[];
-  // videos: Resources[];
-  // ppts: Resources[];
 
   constructor(private http: HttpClient) {}
 
   getResources(): Observable<Resources[]> {
-    return this.http.get<Resources[]>(this.url, {
-      responseType: "json",
-    });
+    return this.http.get<Resources[]>(this.url, { responseType: "json" });
   }
 }
