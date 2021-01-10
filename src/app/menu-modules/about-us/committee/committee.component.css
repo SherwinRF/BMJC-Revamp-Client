@@ -1,4 +1,17 @@
 h1 {
   text-align: center;
-  color: white;
+}
+
+iframe {
+  border-bottom: 14px solid #4d5154;
+  /* box-shadow: 4px 4px 5px #aaa4a4; */
+}
+
+.pdf-holder {
+  margin-bottom: 30px;
+}
+
+.container {
+  background-color: white;
+  padding: 20px 20px;
 }

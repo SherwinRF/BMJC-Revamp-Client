@@ -1,65 +1,67 @@
-<div class="container">
-  <div class="univheading">
-    <h2>About University</h2>
-  </div>
-  <nav>
-    <div class="nav nav-tabs" id="nav-tab" role="tablist">
-      <a
-        class="nav-item nav-link active"
-        id="nav-details-tab"
-        data-toggle="tab"
-        href="#details"
-        role="tab"
-        aria-controls="nav-details"
-        aria-selected="true"
-        >Details</a
-      >
-      <a
-        class="nav-item nav-link"
-        id="nav-chancellors-tab"
-        data-toggle="tab"
-        href="#chancellors"
-        role="tab"
-        aria-controls="nav-chancellors"
-        aria-selected="false"
-        >Chancellor</a
-      >
-      <a
-        class="nav-item nav-link"
-        id="nav-registrar-tab"
-        data-toggle="tab"
-        href="#registrar"
-        role="tab"
-        aria-controls="nav-registrar"
-        aria-selected="false"
-        >Registrar</a
-      >
+<div class="univ">
+  <div class="container">
+    <div class="univheading">
+      <h2>About University</h2>
     </div>
-  </nav>
-  <div class="tab-content" id="nav-tabContent">
-    <div
-      class="tab-pane fade show active"
-      id="details"
-      role="tabpanel"
-      aria-labelledby="nav-home-tab"
-    >
-      <app-university-details></app-university-details>
-    </div>
-    <div
-      class="tab-pane fade"
-      id="chancellors"
-      role="tabpanel"
-      aria-labelledby="nav-profile-tab"
-    >
-      <app-university-chancellors></app-university-chancellors>
-    </div>
-    <div
-      class="tab-pane fade"
-      id="registrar"
-      role="tabpanel"
-      aria-labelledby="nav-contact-tab"
-    >
-      <app-university-registrar></app-university-registrar>
+    <nav>
+      <div class="nav nav-tabs" id="nav-tab" role="tablist">
+        <a
+          class="nav-item nav-link active"
+          id="nav-details-tab"
+          data-toggle="tab"
+          href="#details"
+          role="tab"
+          aria-controls="nav-details"
+          aria-selected="true"
+          >Details</a
+        >
+        <a
+          class="nav-item nav-link"
+          id="nav-chancellors-tab"
+          data-toggle="tab"
+          href="#chancellors"
+          role="tab"
+          aria-controls="nav-chancellors"
+          aria-selected="false"
+          >Chancellor</a
+        >
+        <a
+          class="nav-item nav-link"
+          id="nav-registrar-tab"
+          data-toggle="tab"
+          href="#registrar"
+          role="tab"
+          aria-controls="nav-registrar"
+          aria-selected="false"
+          >Registrar</a
+        >
+      </div>
+    </nav>
+    <div class="tab-content" id="nav-tabContent">
+      <div
+        class="tab-pane fade show active"
+        id="details"
+        role="tabpanel"
+        aria-labelledby="nav-home-tab"
+      >
+        <app-university-details></app-university-details>
+      </div>
+      <div
+        class="tab-pane fade"
+        id="chancellors"
+        role="tabpanel"
+        aria-labelledby="nav-profile-tab"
+      >
+        <app-university-chancellors></app-university-chancellors>
+      </div>
+      <div
+        class="tab-pane fade"
+        id="registrar"
+        role="tabpanel"
+        aria-labelledby="nav-contact-tab"
+      >
+        <app-university-registrar></app-university-registrar>
+      </div>
     </div>
   </div>
 </div>

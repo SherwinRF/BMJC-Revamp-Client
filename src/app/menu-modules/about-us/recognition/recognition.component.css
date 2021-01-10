@@ -5,6 +5,12 @@
   .nav-item {
     width: 120px !important;
   }
+  nav {
+    padding: 0 !important;
+  }
+  .recog {
+    padding: 0 15px;
+  }
 }
 @media (max-width: 479px) {
   .recogheading h2 {
@@ -12,6 +18,12 @@
   }
   .nav-item {
     width: 120px !important;
+  }
+  nav {
+    padding: 0 !important;
+  }
+  .recog {
+    padding: 0 15px;
   }
 }
 .recogheading {

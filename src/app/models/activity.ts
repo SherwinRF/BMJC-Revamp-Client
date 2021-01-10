@@ -1,9 +1,9 @@
 export class activity {
-  Conducted_by: string;
-  Activity: string;
-  Department: string;
-  Date_day: any;
-  Date_month: string;
-  Date_year: number;
-  Place: string;
+  conducted_by: string;
+  activity: string;
+  department: string;
+  date_day: any;
+  date_month: string;
+  date_year: number;
+  place: string;
 }

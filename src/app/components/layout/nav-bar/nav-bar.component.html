@@ -1,430 +1,428 @@
 <nav
-  class="navbar navbar-expand-lg navbar-dark"
+  class="navbar navbar-expand-lg sticky-top navbar-dark"
   [ngStyle]="{ 'background-color': theme.primaryHover }"
 >
   <!-- <a class="navbar-brand" href="#">Navbar</a> -->
-  <a class="navbar-brand" href="#">
-    <img
-      src="../../../../favicon.ico"
-      width="30"
-      height="30"
-      class="d-inline-block align-top"
-      alt=""
-      loading="lazy"
-    />
-    Sassoonsldfl skdflk n
-  </a>
-  <button
-    class="navbar-toggler"
-    type="button"
-    data-toggle="collapse"
-    data-target="#navbarNavDropdown"
-    aria-controls="navbarNavDropdown"
-    aria-expanded="false"
-    aria-label="Toggle navigation"
-  >
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavDropdown">
-    <ul class="navbar-nav">
-      <li
-        class="nav-item"
-        [ngStyle]="{
-          background: rlaHome.isActive ? theme.primary : theme.primaryHover
-        }"
-      >
-        <a
-          class="nav-link"
-          routerLink="/home"
-          routerLinkActive="active"
-          #rlaHome="routerLinkActive"
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"></a>
+    <button
+      class="navbar-toggler justify-content-end"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav nav-fill w-100">
+        <li
+          class="nav-item"
           [ngStyle]="{
-            color: rlaHome.isActive ? theme.primaryHover : theme.text
-          }"
-          >Home
-        </a>
-      </li>
-      <li class="nav-item dropdown">
-        <a
-          class="nav-link dropdown-toggle"
-          id="navbarDropdownMenuLink"
-          role="button"
-          data-toggle="dropdown"
-          aria-haspopup="true"
-          aria-expanded="false"
-          [ngClass]="{
-            active:
-              rlaAbo1.isActive ||
-              rlaAbo2.isActive ||
-              rlaAbo3.isActive ||
-              rlaAbo4.isActive ||
-              rlaAbo5.isActive ||
-              rlaAbo6.isActive
-          }"
-          [ngStyle]="{
-            background:
-              rlaAbo1.isActive ||
-              rlaAbo2.isActive ||
-              rlaAbo3.isActive ||
-              rlaAbo4.isActive ||
-              rlaAbo5.isActive ||
-              rlaAbo6.isActive
-                ? theme.primary
-                : theme.primaryHover,
-            color:
-              rlaAbo1.isActive ||
-              rlaAbo2.isActive ||
-              rlaAbo3.isActive ||
-              rlaAbo4.isActive ||
-              rlaAbo5.isActive ||
-              rlaAbo6.isActive
-                ? theme.primaryHover
-                : theme.text
+            background: rlaHome.isActive ? theme.primary : theme.primaryHover
           }"
         >
-          About Us
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
           <a
-            class="dropdown-item"
-            routerLink="/about-us/deans"
+            class="nav-link"
+            routerLink="/home"
             routerLinkActive="active"
-            #rlaAbo1="routerLinkActive"
-            >Deans</a
-          >
-          <a
-            class="dropdown-item"
-            routerLink="/about-us/organogram"
-            routerLinkActive="active"
-            #rlaAbo2="routerLinkActive"
-            >Organogram</a
-          >
-          <a
-            class="dropdown-item"
-            routerLink="/about-us/history"
-            routerLinkActive="active"
-            #rlaAbo3="routerLinkActive"
-            >History</a
-          >
-          <a
-            class="dropdown-item"
-            routerLink="/about-us/committee"
-            routerLinkActive="active"
-            #rlaAbo4="routerLinkActive"
-            >Committee</a
-          >
-          <a
-            class="dropdown-item"
-            routerLink="/about-us/university"
-            routerLinkActive="active"
-            #rlaAbo5="routerLinkActive"
-            >University</a
-          >
-          <a
-            class="dropdown-item"
-            routerLink="/about-us/recognition"
-            routerLinkActive="active"
-            #rlaAbo6="routerLinkActive"
-            >Recognition</a
-          >
-        </div>
-      </li>
-      <li class="nav-item dropdown">
-        <a
-          class="nav-link dropdown-toggle"
-          id="navbarDropdownMenuLink"
-          role="button"
-          data-toggle="dropdown"
-          aria-haspopup="true"
-          aria-expanded="false"
-          [ngClass]="{ active: rlaAdmi1.isActive || rlaAdmi2.isActive }"
-          [ngStyle]="{
-            background:
-              rlaAdmi1.isActive || rlaAdmi2.isActive
-                ? theme.primary
-                : theme.primaryHover,
-            color:
-              rlaAdmi1.isActive || rlaAdmi2.isActive
-                ? theme.primaryHover
-                : theme.text
-          }"
-        >
-          Admissions
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a
-            class="dropdown-item"
-            routerLink="/admissions/ug-students"
-            routerLinkActive="active"
-            #rlaAdmi1="routerLinkActive"
-            >UG Students</a
-          >
-          <a
-            class="dropdown-item"
-            routerLink="/admissions/pg-students"
-            routerLinkActive="active"
-            #rlaAdmi2="routerLinkActive"
-            >PG Students</a
-          >
-        </div>
-      </li>
-      <li
-        class="nav-item"
-        [ngStyle]="{
-          background: rlaHos.isActive ? theme.primary : theme.primaryHover
-        }"
-      >
-        <a
-          class="nav-link"
-          routerLink="/hospital"
-          routerLinkActive="active"
-          #rlaHos="routerLinkActive"
-          [ngStyle]="{
-            color: rlaHos.isActive ? theme.primaryHover : theme.text
-          }"
-          >Hospital</a
-        >
-      </li>
-      <li
-        class="nav-item"
-        [ngStyle]="{
-          background: rlaDept.isActive ? theme.primary : theme.primaryHover
-        }"
-      >
-        <a
-          class="nav-link"
-          routerLink="/departments"
-          routerLinkActive="active"
-          #rlaDept="routerLinkActive"
-          [ngStyle]="{
-            color: rlaDept.isActive ? theme.primaryHover : theme.text
-          }"
-          >Departments</a
-        >
-      </li>
-      <li class="nav-item dropdown">
-        <a
-          class="nav-link dropdown-toggle"
-          id="navbarDropdownMenuLink"
-          role="button"
-          data-toggle="dropdown"
-          aria-haspopup="true"
-          aria-expanded="false"
-          [ngClass]="{
-            active:
-              rlaRes1.isActive ||
-              rlaRes2.isActive ||
-              rlaRes3.isActive ||
-              rlaRes4.isActive
-          }"
-          [ngStyle]="{
-            background:
-              rlaRes1.isActive ||
-              rlaRes2.isActive ||
-              rlaRes3.isActive ||
-              rlaRes4.isActive
-                ? theme.primary
-                : theme.primaryHover,
-            color:
-              rlaRes1.isActive ||
-              rlaRes2.isActive ||
-              rlaRes3.isActive ||
-              rlaRes4.isActive
-                ? theme.primaryHover
-                : theme.text
-          }"
-        >
-          Resources
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a
-            class="dropdown-item"
-            routerLink="/resources/journals"
-            routerLinkActive="active"
-            #rlaRes1="routerLinkActive"
-            >Journals</a
-          >
-          <a
-            class="dropdown-item"
-            routerLink="/resources/videos-and-ppt"
-            routerLinkActive="active"
-            #rlaRes2="routerLinkActive"
-            >Videos and PPTs</a
-          >
-          <a
-            class="dropdown-item"
-            routerLink="/resources/research-society"
-            routerLinkActive="active"
-            #rlaRes3="routerLinkActive"
-            >Research Society</a
-          >
-          <a
-            class="dropdown-item"
-            routerLink="/resources/archives"
-            routerLinkActive="active"
-            #rlaRes4="routerLinkActive"
-            >Archives</a
-          >
-        </div>
-      </li>
-      <li class="nav-item dropdown">
-        <a
-          class="nav-link dropdown-toggle"
-          id="navbarDropdownMenuLink"
-          role="button"
-          data-toggle="dropdown"
-          aria-haspopup="true"
-          aria-expanded="false"
-          [ngClass]="{
-            active: rlaStu1.isActive || rlaStu2.isActive
-          }"
-          [ngStyle]="{
-            background:
-              rlaStu1.isActive || rlaStu2.isActive
-                ? theme.primary
-                : theme.primaryHover,
-            color:
-              rlaStu1.isActive || rlaStu2.isActive
-                ? theme.primaryHover
-                : theme.text
-          }"
-        >
-          Students' Corner
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a
-            class="dropdown-item"
-            routerLink="/students-corner/results"
-            routerLinkActive="active"
-            #rlaStu1="routerLinkActive"
-            >Results</a
-          >
-          <a
-            class="dropdown-item"
-            routerLink="/students-corner/hostel"
-            routerLinkActive="active"
-            #rlaStu2="routerLinkActive"
-            >Hostel</a
-          >
-        </div>
-      </li>
-      <li class="nav-item dropdown">
-        <a
-          class="nav-link dropdown-toggle"
-          id="navbarDropdownMenuLink"
-          role="button"
-          data-toggle="dropdown"
-          aria-haspopup="true"
-          aria-expanded="false"
-          [ngClass]="{
-            active: rlaAca1.isActive || rlaAca2.isActive || rlaAca3.isActive
-          }"
-          [ngStyle]="{
-            background:
-              rlaAca1.isActive || rlaAca2.isActive || rlaAca3.isActive
-                ? theme.primary
-                : theme.primaryHover,
-            color:
-              rlaAca1.isActive || rlaAca2.isActive || rlaAca3.isActive
-                ? theme.primaryHover
-                : theme.text
-          }"
-        >
-          Academics
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a
-            class="dropdown-item"
-            routerLink="/academics/activities"
-            routerLinkActive="active"
-            #rlaAca1="routerLinkActive"
-            >Activities</a
-          >
-          <a
-            class="dropdown-item"
-            routerLink="/academics/awards-and-achievements"
-            routerLinkActive="active"
-            #rlaAca2="routerLinkActive"
-            >Awards and Achievements</a
-          >
-          <a
-            class="dropdown-item"
-            routerLink="/academics/research-publications"
-            routerLinkActive="active"
-            #rlaAca3="routerLinkActive"
-            >Research Publications</a
-          >
-        </div>
-      </li>
-      <li class="nav-item dropdown">
-        <a
-          class="nav-link dropdown-toggle"
-          id="navbarDropdownMenuLink"
-          role="button"
-          data-toggle="dropdown"
-          aria-haspopup="true"
-          aria-expanded="false"
-          [ngClass]="{
-            active: rlaSta1.isActive || rlaSta2.isActive
-          }"
-          [ngStyle]="{
-            background:
-              rlaSta1.isActive || rlaSta2.isActive
-                ? theme.primary
-                : theme.primaryHover,
-            color:
-              rlaSta1.isActive || rlaSta2.isActive
-                ? theme.primaryHover
-                : theme.text
-          }"
-        >
-          Staff
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a
-            class="dropdown-item"
-            routerLink="/staff/teaching"
-            routerLinkActive="active"
-            #rlaSta1="routerLinkActive"
-            >Teaching</a
-          >
-          <a
-            class="dropdown-item"
-            routerLink="/staff/non-teaching"
-            routerLinkActive="active"
-            #rlaSta2="routerLinkActive"
-            >Non-Teaching</a
-          >
-        </div>
-      </li>
-      <li class="nav-item dropdown">
-        <a
-          class="nav-link dropdown-toggle"
-          href="#"
-          id="navbarDropdownMenuLink"
-          role="button"
-          data-toggle="dropdown"
-          aria-haspopup="true"
-          aria-expanded="false"
-        >
-          <img
-            src="../../../../assets/icons/theme-switch.svg"
-            width="30"
-            height="30"
-            class="d-inline-block align-top"
-            alt=""
-            loading="lazy"
-          />
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" (click)="changeTheme('mainColors')">
-            Default Theme
+            #rlaHome="routerLinkActive"
+            [ngStyle]="{
+              color: rlaHome.isActive ? theme.primaryHover : theme.text
+            }"
+            >Home
           </a>
-          <a class="dropdown-item" (click)="changeTheme('blueAndRefreshing')"
-            >Blue and Refreshing</a
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            id="navbarDropdownMenuLink"
+            role="button"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+            [ngClass]="{
+              active:
+                rlaAbo1.isActive ||
+                rlaAbo2.isActive ||
+                rlaAbo3.isActive ||
+                rlaAbo4.isActive ||
+                rlaAbo5.isActive ||
+                rlaAbo6.isActive
+            }"
+            [ngStyle]="{
+              background:
+                rlaAbo1.isActive ||
+                rlaAbo2.isActive ||
+                rlaAbo3.isActive ||
+                rlaAbo4.isActive ||
+                rlaAbo5.isActive ||
+                rlaAbo6.isActive
+                  ? theme.primary
+                  : theme.primaryHover,
+              color:
+                rlaAbo1.isActive ||
+                rlaAbo2.isActive ||
+                rlaAbo3.isActive ||
+                rlaAbo4.isActive ||
+                rlaAbo5.isActive ||
+                rlaAbo6.isActive
+                  ? theme.primaryHover
+                  : theme.text
+            }"
           >
-        </div>
-      </li>
-    </ul>
+            About Us
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a
+              class="dropdown-item"
+              routerLink="/about-us/deans"
+              routerLinkActive="active"
+              #rlaAbo1="routerLinkActive"
+              >Deans</a
+            >
+            <a
+              class="dropdown-item"
+              routerLink="/about-us/organogram"
+              routerLinkActive="active"
+              #rlaAbo2="routerLinkActive"
+              >Organogram</a
+            >
+            <a
+              class="dropdown-item"
+              routerLink="/about-us/history"
+              routerLinkActive="active"
+              #rlaAbo3="routerLinkActive"
+              >History</a
+            >
+            <a
+              class="dropdown-item"
+              routerLink="/about-us/committee"
+              routerLinkActive="active"
+              #rlaAbo4="routerLinkActive"
+              >Committee</a
+            >
+            <a
+              class="dropdown-item"
+              routerLink="/about-us/university"
+              routerLinkActive="active"
+              #rlaAbo5="routerLinkActive"
+              >University</a
+            >
+            <a
+              class="dropdown-item"
+              routerLink="/about-us/recognition"
+              routerLinkActive="active"
+              #rlaAbo6="routerLinkActive"
+              >Recognition</a
+            >
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            id="navbarDropdownMenuLink"
+            role="button"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+            [ngClass]="{ active: rlaAdmi1.isActive || rlaAdmi2.isActive }"
+            [ngStyle]="{
+              background:
+                rlaAdmi1.isActive || rlaAdmi2.isActive
+                  ? theme.primary
+                  : theme.primaryHover,
+              color:
+                rlaAdmi1.isActive || rlaAdmi2.isActive
+                  ? theme.primaryHover
+                  : theme.text
+            }"
+          >
+            Admissions
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a
+              class="dropdown-item"
+              routerLink="/admissions/ug-students"
+              routerLinkActive="active"
+              #rlaAdmi1="routerLinkActive"
+              >UG Students</a
+            >
+            <a
+              class="dropdown-item"
+              routerLink="/admissions/pg-students"
+              routerLinkActive="active"
+              #rlaAdmi2="routerLinkActive"
+              >PG Students</a
+            >
+          </div>
+        </li>
+        <li
+          class="nav-item"
+          [ngStyle]="{
+            background: rlaHos.isActive ? theme.primary : theme.primaryHover
+          }"
+        >
+          <a
+            class="nav-link"
+            routerLink="/hospital"
+            routerLinkActive="active"
+            #rlaHos="routerLinkActive"
+            [ngStyle]="{
+              color: rlaHos.isActive ? theme.primaryHover : theme.text
+            }"
+            >Hospital</a
+          >
+        </li>
+        <li
+          class="nav-item"
+          [ngStyle]="{
+            background: rlaDept.isActive ? theme.primary : theme.primaryHover
+          }"
+        >
+          <a
+            class="nav-link"
+            routerLink="/departments"
+            routerLinkActive="active"
+            #rlaDept="routerLinkActive"
+            [ngStyle]="{
+              color: rlaDept.isActive ? theme.primaryHover : theme.text
+            }"
+            >Departments</a
+          >
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            id="navbarDropdownMenuLink"
+            role="button"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+            [ngClass]="{
+              active:
+                rlaRes1.isActive ||
+                rlaRes2.isActive ||
+                rlaRes3.isActive ||
+                rlaRes4.isActive
+            }"
+            [ngStyle]="{
+              background:
+                rlaRes1.isActive ||
+                rlaRes2.isActive ||
+                rlaRes3.isActive ||
+                rlaRes4.isActive
+                  ? theme.primary
+                  : theme.primaryHover,
+              color:
+                rlaRes1.isActive ||
+                rlaRes2.isActive ||
+                rlaRes3.isActive ||
+                rlaRes4.isActive
+                  ? theme.primaryHover
+                  : theme.text
+            }"
+          >
+            Resources
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a
+              class="dropdown-item"
+              routerLink="/resources/journals"
+              routerLinkActive="active"
+              #rlaRes1="routerLinkActive"
+              >Journals</a
+            >
+            <a
+              class="dropdown-item"
+              routerLink="/resources/videos-and-ppt"
+              routerLinkActive="active"
+              #rlaRes2="routerLinkActive"
+              >Videos and PPTs</a
+            >
+            <a
+              class="dropdown-item"
+              routerLink="/resources/research-society"
+              routerLinkActive="active"
+              #rlaRes3="routerLinkActive"
+              >Research Society</a
+            >
+            <a
+              class="dropdown-item"
+              routerLink="/resources/archives"
+              routerLinkActive="active"
+              #rlaRes4="routerLinkActive"
+              >Archives</a
+            >
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            id="navbarDropdownMenuLink"
+            role="button"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+            [ngClass]="{
+              active: rlaStu1.isActive || rlaStu2.isActive
+            }"
+            [ngStyle]="{
+              background:
+                rlaStu1.isActive || rlaStu2.isActive
+                  ? theme.primary
+                  : theme.primaryHover,
+              color:
+                rlaStu1.isActive || rlaStu2.isActive
+                  ? theme.primaryHover
+                  : theme.text
+            }"
+          >
+            Students' Corner
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a
+              class="dropdown-item"
+              routerLink="/students-corner/results"
+              routerLinkActive="active"
+              #rlaStu1="routerLinkActive"
+              >Results</a
+            >
+            <a
+              class="dropdown-item"
+              routerLink="/students-corner/hostel"
+              routerLinkActive="active"
+              #rlaStu2="routerLinkActive"
+              >Hostel</a
+            >
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            id="navbarDropdownMenuLink"
+            role="button"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+            [ngClass]="{
+              active: rlaAca1.isActive || rlaAca2.isActive || rlaAca3.isActive
+            }"
+            [ngStyle]="{
+              background:
+                rlaAca1.isActive || rlaAca2.isActive || rlaAca3.isActive
+                  ? theme.primary
+                  : theme.primaryHover,
+              color:
+                rlaAca1.isActive || rlaAca2.isActive || rlaAca3.isActive
+                  ? theme.primaryHover
+                  : theme.text
+            }"
+          >
+            Academics
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a
+              class="dropdown-item"
+              routerLink="/academics/activities"
+              routerLinkActive="active"
+              #rlaAca1="routerLinkActive"
+              >Activities</a
+            >
+            <a
+              class="dropdown-item"
+              routerLink="/academics/awards-and-achievements"
+              routerLinkActive="active"
+              #rlaAca2="routerLinkActive"
+              >Awards and Achievements</a
+            >
+            <a
+              class="dropdown-item"
+              routerLink="/academics/research-publications"
+              routerLinkActive="active"
+              #rlaAca3="routerLinkActive"
+              >Research Publications</a
+            >
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            id="navbarDropdownMenuLink"
+            role="button"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+            [ngClass]="{
+              active: rlaSta1.isActive || rlaSta2.isActive
+            }"
+            [ngStyle]="{
+              background:
+                rlaSta1.isActive || rlaSta2.isActive
+                  ? theme.primary
+                  : theme.primaryHover,
+              color:
+                rlaSta1.isActive || rlaSta2.isActive
+                  ? theme.primaryHover
+                  : theme.text
+            }"
+          >
+            Staff
+          </a>
+          <div
+            class="dropdown-menu dropdown-menu-right"
+            aria-labelledby="navbarDropdownMenuLink"
+          >
+            <a
+              class="dropdown-item"
+              routerLink="/staff/teaching"
+              routerLinkActive="active"
+              #rlaSta1="routerLinkActive"
+              >Teaching</a
+            >
+            <a
+              class="dropdown-item"
+              routerLink="/staff/non-teaching"
+              routerLinkActive="active"
+              #rlaSta2="routerLinkActive"
+              >Non-Teaching</a
+            >
+          </div>
+        </li>
+        <!-- <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdownMenuLink"
+            role="button"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            <img
+              src="../../../../assets/icons/theme-switch.svg"
+              width="25"
+              height="25"
+              class="d-inline-block align-top"
+              alt=""
+              loading="lazy"
+            />
+          </a>
+          <div
+            class="dropdown-menu dropdown-menu-right"
+            aria-labelledby="navbarDropdownMenuLink"
+          >
+            <a class="dropdown-item" (click)="changeTheme('mainColors')">
+              Default Theme
+            </a>
+            <a class="dropdown-item" (click)="changeTheme('blueAndRefreshing')"
+              >Blue and Refreshing</a
+            >
+          </div>
+        </li> -->
+      </ul>
+    </div>
   </div>
 </nav>

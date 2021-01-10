@@ -1,1673 +1,602 @@
-<div class="container landm pb-5">
-  <!-- ROW 1 -->
-  <div class="row pt-5">
-    <div class="col-md-4"></div>
-
-    <div class="col-md-4 bg-info card dean">
-      <div class="card-header">
-        <div class="card-tools">
-          <img
-            class="card-img-top rounded-circle"
-            src="../../../../assets/images/profile.png"
-            style="width: 100%; height: 40%"
-          />
-        </div>
-      </div>
-      <div class="card-body">
-        <b>{{ deansData[0].Name }}</b
-        ><br /><br />
-        {{ deansData[0].Designation }}
-      </div>
-      <div class="card-footer">
-        <button
-          class="btn btn-info btn-block knowmore"
-          type="button"
-          data-toggle="modal"
-          data-target="#deanModal"
-        >
-          Know more
-        </button>
-      </div>
-    </div>
-
-    <div class="col-md-4"></div>
-
-    <!-- </div> -->
-
-    <!-- ROW 2 -->
-    <!-- <div class="row pt-3"> -->
-
-    <div class="col-md-2"></div>
-
-    <div class="col-md-2 card bg-info mt-5 ugdean">
-      <div class="card-header">
-        <div class="card-tools">
-          <img
-            class="card-img-top rounded-circle"
-            src="../../../../assets/images/profile.png"
-            style="width: 100%; height: 50%"
-          />
-        </div>
-      </div>
-      <div class="card-body">
-        <b>{{ deansData[1].Name }}</b
-        ><br /><br />
-        {{ deansData[1].Designation }}
-      </div>
-      <div class="card-footer">
-        <button
-          class="btn btn-info btn-block knowmore"
-          type="button"
-          data-toggle="modal"
-          data-target="#ugdeanModal"
-        >
-          Know more
-        </button>
-      </div>
-    </div>
-
-    <div class="col-md-1"></div>
-
-    <div class="col-md-2 card bg-info mt-5 pgdean">
-      <div class="card-header">
-        <div class="card-tools">
-          <img
-            class="card-img-top rounded-circle"
-            src="../../../../assets/images/profile.png"
-            style="width: 100%; height: 50%"
-          />
-        </div>
-      </div>
-      <div class="card-body">
-        <b>{{ deansData[2].Name }}</b
-        ><br /><br />
-        {{ deansData[2].Designation }}
-      </div>
-      <div class="card-footer">
-        <button
-          class="btn btn-info btn-block knowmore"
-          type="button"
-          data-toggle="modal"
-          data-target="#pgdeanModal"
-        >
-          Know more
-        </button>
-      </div>
-    </div>
-
-    <div class="col-md-1"></div>
-
-    <div class="col-md-2 card bg-info mt-5 vicedean">
-      <div class="card-header">
-        <div class="card-tools">
-          <img
-            class="card-img-top rounded-circle"
-            src="../../../../assets/images/profile.png"
-            style="width: 100%; height: 50%"
-          />
-        </div>
-      </div>
-      <div class="card-body">
-        <b>{{ deansData[3].Name }}</b
-        ><br /><br />
-        {{ deansData[3].Designation }}
-      </div>
-      <div class="card-footer">
-        <button
-          class="btn btn-info btn-block knowmore"
-          type="button"
-          data-toggle="modal"
-          data-target="#pgdeanModal"
-        >
-          Know more
-        </button>
-      </div>
-    </div>
-
-    <div class="col-md-2"></div>
-
-    <!-- </div> -->
-
-    <!-- ROW 3 -->
-    <!-- <div class="row pt-3"> -->
-
-    <div class="col-md-4"></div>
-
-    <div class="col-md-4 card bg-info mt-5 superintendents">
-      <div class="card-body">
-        <b>Superintendents</b>
-      </div>
-    </div>
-
-    <div class="col-md-4"></div>
-
-    <!-- </div> -->
-
-    <!-- ROW 4 -->
-    <!-- <div class="row pt-3"> -->
-
-    <div class="col-md-4 card bg-info mt-5 medsup">
-      <div class="card-body">
-        <b>{{ medSupData[0].Name }}</b
-        ><br /><br />
-        {{ medSupData[0].Designation }}
-      </div>
-      <div class="card-footer">
-        <button
-          class="btn btn-info btn-block knowmore"
-          type="button"
-          data-toggle="modal"
-          data-target="#medsupModal"
-        >
-          Know more
-        </button>
-      </div>
-    </div>
-
-    <div class="col-md-3"></div>
-
-    <div class="col-md-4 card bg-info mt-5 officers">
-      <div class="card-body">
-        <b>Officers</b>
-      </div>
-    </div>
-
-    <div class="col-md-1"></div>
-
-    <!-- </div> -->
-
-    <!-- ROW 5 -->
-    <!-- <div class="row pt-3"> -->
-
-    <div class="col-md-4 card bg-info mt-5 dymedsup">
-      <div class="card-body">
-        <b>{{ medSupData[1].Name }}</b
-        ><br /><br />
-        {{ medSupData[1].Designation }}
-      </div>
-      <div class="card-footer">
-        <button
-          class="btn btn-info btn-block knowmore"
-          type="button"
-          data-toggle="modal"
-          data-target="#dymedsupModal"
-        >
-          Know more
-        </button>
-      </div>
-    </div>
-
-    <div class="col-md-2"></div>
-
-    <div class="col-md-2 mt-5 sghoffsup1">
-      <div class="col-md-12 card bg-info">
-        <div class="card-body">
-          <b>{{ officeSupData[0].Name }}</b
-          ><br /><br />
-          {{ officeSupData[0].Designation }}
-        </div>
-        <div class="card-footer">
-          <button
-            class="btn btn-info btn-block knowmore"
-            type="button"
-            data-toggle="modal"
-            data-target="#sghoffsup1Modal"
-          >
-            Know more
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-2 mt-5 nursingoffsup">
-      <div class="col-md-12 card bg-info">
-        <div class="card-body">
-          <b>{{ officeSupData[1].Name }}</b
-          ><br /><br />
-          {{ officeSupData[1].Designation }}
-        </div>
-        <div class="card-footer">
-          <button
-            class="btn btn-info btn-block knowmore"
-            type="button"
-            data-toggle="modal"
-            data-target="#nursingoffsupModal"
-          >
-            Know more
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-2 mt-5 sghoffsup2">
-      <div class="col-md-12 card bg-info">
-        <div class="card-body">
-          <b>{{ officeSupData[2].Name }}</b
-          ><br /><br />
-          {{ officeSupData[2].Designation }}
-        </div>
-        <div class="card-footer">
-          <button
-            class="btn btn-info btn-block knowmore"
-            type="button"
-            data-toggle="modal"
-            data-target="#sghoffsup2Modal"
-          >
-            Know more
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <!-- </div> -->
-
-    <!-- ROW 6 -->
-    <!-- <div class="row pt-3"> -->
-
-    <div class="col-md-7"></div>
-
-    <div class="col-md-4 card bg-info mt-5 adminoff">
-      <div class="card-body">
-        <b>Administrative Officers</b>
-      </div>
-    </div>
-
-    <div class="col-md-1"></div>
-
-    <!-- </div> -->
-
-    <!-- ROW 7 -->
-    <!-- <div class="row pt-3"> -->
-
-    <div class="col-md-6"></div>
-
-    <div class="col-md-2 mt-5 bjgmcsghadminoff">
-      <div class="col-md-12 card bg-info">
-        <div class="card-body">
-          <b>{{ adminOffData[0].Name }}</b
-          ><br /><br />
-          {{ adminOffData[0].Designation }}
-        </div>
-        <div class="card-footer">
-          <button
-            class="btn btn-info btn-block knowmore"
-            type="button"
-            data-toggle="modal"
-            data-target="#bjgmcsghadminoffModal"
-          >
-            Know more
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-2 mt-5 bjgmcadminoff">
-      <div class="col-md-12 card bg-info">
-        <div class="card-body">
-          <b>{{ adminOffData[1].Name }}</b
-          ><br /><br />
-          {{ adminOffData[1].Designation }}
-        </div>
-        <div class="card-footer">
-          <button
-            class="btn btn-info btn-block knowmore"
-            type="button"
-            data-toggle="modal"
-            data-target="#bjgmcadminoffModal"
-          >
-            Know more
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-2 mt-5 sghadminoff">
-      <div class="col-md-12 card bg-info">
-        <div class="card-body">
-          <b>{{ adminOffData[2].Name }}</b
-          ><br /><br />
-          {{ adminOffData[2].Designation }}
-        </div>
-        <div class="card-footer">
-          <button
-            class="btn btn-info btn-block knowmore"
-            type="button"
-            data-toggle="modal"
-            data-target="#sghadminoffModal"
-          >
-            Know more
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
+<div *ngIf="!dynamStaff" class="container">
+  <app-loading-page></app-loading-page>
 </div>
 
-<div class="container smallview">
-  <div class="row">
-    <div class="accordion" id="accordionExample">
-      <!-- Part 1 -->
-      <div class="card my-3">
-        <div class="card-header" id="headingOne">
-          <h2 class="mb-0">
-            <span>
-              <button
-                class="btn btn-light text-left"
-                type="button"
-                data-toggle="collapse"
-                data-target="#collapseOne"
-                aria-expanded="true"
-                aria-controls="collapseOne"
-              >
-                Board of Deans
-              </button>
-            </span>
-            <span>
-              <button
-                class="btn btn-outline-info knowmore"
-                type="button"
-                data-toggle="modal"
-                data-target="#deansModal"
-              >
-                Know more
-              </button>
-            </span>
-          </h2>
-        </div>
-        <div
-          id="collapseOne"
-          class="collapse show m-2"
-          aria-labelledby="headingOne"
-          data-parent="#accordionExample"
-        >
-          <div class="card">
-            <div class="card-body">
-              <div class="row">
-                <div class="col-sm-4 col-6" *ngFor="let dean of deansData">
-                  <div class="col-12 card mt-3">
-                    <div class="card-header">
-                      <div class="card-tools">
-                        <img
-                          class="card-img-top rounded-circle"
-                          src="../../../../assets/images/profile.png"
-                          style="width: 100%; height: 50%"
-                        />
-                      </div>
-                    </div>
-                    <div class="card-body">
-                      {{ dean.Name }}
-                    </div>
-                    <div class="card-footer">
-                      {{ dean.Designation }}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+<div *ngIf="dynamStaff">
+  <div class="container landm pb-5">
+    <!-- ROW 1 -->
+    <div class="row pt-5">
+      <div class="col-md-4"></div>
+
+      <div class="col-md-4 bg-info card dean">
+        <div class="card-header">
+          <div class="card-tools">
+            <img
+              class="card-img-top rounded-circle"
+              src="../../../../assets/about-us/organogram/{{
+                dynamStaff[0].Name
+              }}.jpg"
+              style="width: 100%; height: 40%"
+            />
           </div>
+        </div>
+        <div class="card-body">
+          <b>{{ dynamStaff[0].Name }}</b
+          ><br /><br />
+          {{ dynamStaff[0].Designation }}
+        </div>
+        <div class="card-footer">
+          <button
+            class="primary-btn"
+            type="button"
+            data-toggle="modal"
+            data-target="#deanModal"
+          >
+            Know more
+          </button>
         </div>
       </div>
 
-      <!-- Part 2 -->
-      <div class="card mb-3">
-        <div class="accordion" id="accordionTwo">
-          <div class="card">
-            <div class="card-header" id="headingTwo">
-              <h2 class="mb-0">
-                <span>
-                  <button
-                    class="btn btn-light text-left"
-                    type="button"
-                    data-toggle="collapse"
-                    data-target="#collapseTwo"
-                    aria-expanded="true"
-                    aria-controls="collapseTwo"
-                  >
-                    Board of Superintendents
-                  </button>
-                </span>
-                <span>
-                  <button
-                    class="btn btn-outline-info knowmore"
-                    type="button"
-                    data-toggle="modal"
-                    data-target="#supModal"
-                  >
-                    Know more
-                  </button>
-                </span>
-              </h2>
+      <div class="col-md-4"></div>
+
+      <!-- </div> -->
+
+      <!-- ROW 2 -->
+      <!-- <div class="row pt-3"> -->
+
+      <div class="col-md-1"></div>
+
+      <div class="col-md-3 mt-5 ugdean">
+        <div class="col-md-12 card bg-info">
+          <div class="card-header">
+            <div class="card-tools">
+              <img
+                class="card-img-top rounded-circle"
+                src="../../../../assets/about-us/organogram/{{
+                  dynamStaff[1].Name
+                }}.jpg"
+                style="width: 100%; height: 50%"
+              />
             </div>
-            <div
-              id="collapseTwo"
-              class="collapse show"
-              aria-labelledby="headingTwo"
-              data-parent="#accordionExample"
+          </div>
+          <div class="card-body">
+            <b>{{ dynamStaff[1].Name }}</b
+            ><br /><br />
+            {{ dynamStaff[1].Designation }}
+          </div>
+          <div class="card-footer">
+            <button
+              class="primary-btn"
+              type="button"
+              data-toggle="modal"
+              data-target="#ugdeanModal"
             >
-              <div class="card">
-                <div class="card-body">
-                  <!-- Part 2.1 -->
-                  <div class="card my-2">
-                    <div class="card-header" id="headingTwoOne">
-                      <h2 class="mb-0">
-                        <span>
-                          <button
-                            class="btn btn-light text-left"
-                            type="button"
-                            data-toggle="collapse"
-                            data-target="#collapseTwoOne"
-                            aria-expanded="true"
-                            aria-controls="collapseTwoOne"
-                          >
-                            Medical Superintendents
-                          </button>
-                        </span>
-                        <!-- <span>
-                                                    <button class="btn btn-info knowmore" type="button"
-                                                        data-toggle="modal" data-target="#medSupModal">
-                                                        Know more
-                                                    </button>
-                                                </span> -->
-                      </h2>
-                    </div>
-
-                    <div
-                      id="collapseTwoOne"
-                      class="collapse"
-                      aria-labelledby="headingTwoOne"
-                      data-parent="#accordionTwo"
-                    >
-                      <div class="card-body">
-                        <div class="row">
-                          <div
-                            class="col-sm-4 col-6"
-                            *ngFor="let medSup of medSupData"
-                          >
-                            <div class="col-12 card">
-                              <div class="card-header">
-                                <div class="card-tools">
-                                  <img
-                                    class="card-img-top rounded-circle"
-                                    src="../../../../assets/images/profile.png"
-                                    style="width: 100%; height: 50%"
-                                  />
-                                </div>
-                              </div>
-                              <div class="card-body">
-                                <h5>{{ medSup.Name }}</h5>
-                              </div>
-                              <div class="card-footer">
-                                <div class="designation">
-                                  {{ medSup.Designation }}
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- Part 2.2 -->
-                  <div class="card my-2">
-                    <div class="card-header" id="headingTwoTwo">
-                      <h2 class="mb-0">
-                        <span>
-                          <button
-                            class="btn btn-light text-left"
-                            type="button"
-                            data-toggle="collapse"
-                            data-target="#collapseTwoTwo"
-                            aria-expanded="true"
-                            aria-controls="collapseTwoTwo"
-                          >
-                            Office Superintendents
-                          </button>
-                        </span>
-                        <!-- <span>
-                                                    <button class="btn btn-info knowmore" type="button"
-                                                        data-toggle="modal" data-target="#officeSupModal">
-                                                        Know more
-                                                    </button>
-                                                </span> -->
-                      </h2>
-                    </div>
-
-                    <div
-                      id="collapseTwoTwo"
-                      class="collapse"
-                      aria-labelledby="headingTwoTwo"
-                      data-parent="#accordionTwo"
-                    >
-                      <div class="card-body">
-                        <div class="row">
-                          <div
-                            class="col-sm-4 col-6"
-                            *ngFor="let officeSup of officeSupData"
-                          >
-                            <div class="col-12 card">
-                              <div class="card-header">
-                                <div class="card-tools">
-                                  <img
-                                    class="card-img-top rounded-circle"
-                                    src="../../../../assets/images/profile.png"
-                                    style="width: 100%; height: 50%"
-                                  />
-                                </div>
-                              </div>
-                              <div class="card-body">
-                                <h5>{{ officeSup.Name }}</h5>
-                              </div>
-                              <div class="card-footer">
-                                <div class="designation">
-                                  {{ officeSup.Designation }}
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+              Know more
+            </button>
           </div>
         </div>
       </div>
 
-      <!-- Part 3 -->
-      <div class="card mb-3">
-        <div class="card-header" id="headingThree">
-          <h2 class="mb-0">
-            <span>
-              <button
-                class="btn btn-light text-left"
-                type="button"
-                data-toggle="collapse"
-                data-target="#collapseThree"
-                aria-expanded="true"
-                aria-controls="collapseThree"
-              >
-                Board of Administrative Officers
-              </button>
-            </span>
-            <span>
-              <button
-                class="btn btn-outline-info knowmore"
-                type="button"
-                data-toggle="modal"
-                data-target="#adminOfficersModal"
-              >
-                Know more
-              </button>
-            </span>
-          </h2>
+      <!-- <div class="col-md-1"></div> -->
+
+      <div class="col-md-3 mt-5 ml-4 pgdean">
+        <div class="col-md-12 card bg-info">
+          <div class="card-header">
+            <div class="card-tools">
+              <img
+                class="card-img-top rounded-circle"
+                src="../../../../assets/about-us/organogram/{{
+                  dynamStaff[2].Name
+                }}.jpg"
+                style="width: 100%; height: 50%"
+              />
+            </div>
+          </div>
+          <div class="card-body">
+            <b>{{ dynamStaff[2].Name }}</b
+            ><br /><br />
+            {{ dynamStaff[2].Designation }}
+          </div>
+          <div class="card-footer">
+            <button
+              class="primary-btn"
+              type="button"
+              data-toggle="modal"
+              data-target="#pgdeanModal"
+            >
+              Know more
+            </button>
+          </div>
         </div>
-        <div
-          id="collapseThree"
-          class="collapse"
-          aria-labelledby="headingThree"
-          data-parent="#accordionExample"
-        >
-          <div class="card">
-            <div class="card-body">
-              <div class="row">
-                <div
-                  class="col-sm-4 col-6"
-                  *ngFor="let adminOff of adminOffData"
+      </div>
+
+      <!-- <div class="col-md-1"></div> -->
+
+      <div class="col-md-3 mt-5 ml-4 vicedean">
+        <div class="col-md-12 card bg-info">
+          <div class="card-header">
+            <div class="card-tools">
+              <img
+                class="card-img-top rounded-circle"
+                src="../../../../assets/about-us/organogram/{{
+                  dynamStaff[3].Name
+                }}.jpg"
+                style="width: 100%; height: 50%"
+              />
+            </div>
+          </div>
+          <div class="card-body">
+            <b>{{ dynamStaff[3].Name }}</b
+            ><br /><br />
+            {{ dynamStaff[3].Designation }}
+          </div>
+          <div class="card-footer">
+            <button
+              class="primary-btn"
+              type="button"
+              data-toggle="modal"
+              data-target="#vicedeanModal"
+            >
+              Know more
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="col-md-2"></div> -->
+
+      <!-- </div> -->
+
+      <!-- ROW 3 -->
+      <!-- <div class="row pt-3"> -->
+
+      <div class="col-md-4"></div>
+
+      <div class="col-md-4 card bg-info mt-5 superintendents">
+        <div class="card-body">
+          <b>Superintendents</b>
+        </div>
+      </div>
+
+      <div class="col-md-4"></div>
+
+      <!-- </div> -->
+
+      <!-- ROW 4 -->
+      <!-- <div class="row pt-3"> -->
+
+      <div class="col-md-4 card bg-info mt-5 medsup">
+        <div class="card-body">
+          <b>{{ dynamStaff[4].Name }}</b
+          ><br /><br />
+          {{ dynamStaff[4].Designation }}
+        </div>
+        <div class="card-footer">
+          <button
+            class="primary-btn"
+            type="button"
+            data-toggle="modal"
+            data-target="#medsupModal"
+          >
+            Know more
+          </button>
+        </div>
+      </div>
+
+      <div class="col-md-3"></div>
+
+      <div class="col-md-4 card bg-info mt-5 officers">
+        <div class="card-body">
+          <b>Officers</b>
+        </div>
+      </div>
+
+      <div class="col-md-1"></div>
+
+      <!-- </div> -->
+
+      <!-- ROW 5 -->
+      <!-- <div class="row pt-3"> -->
+
+      <div class="col-md-4 card bg-info mt-5 dymedsup">
+        <div class="card-body">
+          <b>{{ dynamStaff[5].Name }}</b
+          ><br /><br />
+          {{ dynamStaff[5].Designation }}
+        </div>
+        <div class="card-footer">
+          <button
+            class="primary-btn"
+            type="button"
+            data-toggle="modal"
+            data-target="#dymedsupModal"
+          >
+            Know more
+          </button>
+        </div>
+      </div>
+
+      <div class="col-md-2"></div>
+
+      <div class="col-md-2 mt-5 sghoffsup1">
+        <div class="col-md-12 card bg-info">
+          <div class="card-body">
+            <b>{{ dynamStaff[6].Name }}</b
+            ><br /><br />
+            {{ dynamStaff[6].Designation }}
+          </div>
+          <div class="card-footer">
+            <button
+              class="primary-btn"
+              type="button"
+              data-toggle="modal"
+              data-target="#sghoffsup1Modal"
+            >
+              Know more
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-2 mt-5 nursingoffsup">
+        <div class="col-md-12 card bg-info">
+          <div class="card-body">
+            <b>{{ dynamStaff[7].Name }}</b
+            ><br /><br />
+            {{ dynamStaff[7].Designation }}
+          </div>
+          <div class="card-footer">
+            <button
+              class="primary-btn"
+              type="button"
+              data-toggle="modal"
+              data-target="#nursingoffsupModal"
+            >
+              Know more
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-2 mt-5 sghoffsup2">
+        <div class="col-md-12 card bg-info">
+          <div class="card-body">
+            <b>{{ dynamStaff[8].Name }}</b
+            ><br /><br />
+            {{ dynamStaff[8].Designation }}
+          </div>
+          <div class="card-footer">
+            <button
+              class="primary-btn"
+              type="button"
+              data-toggle="modal"
+              data-target="#sghoffsup2Modal"
+            >
+              Know more
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- </div> -->
+
+      <!-- ROW 6 -->
+      <!-- <div class="row pt-3"> -->
+
+      <div class="col-md-7"></div>
+
+      <div class="col-md-4 card bg-info mt-5 adminoff">
+        <div class="card-body">
+          <b>Administrative Officers</b>
+        </div>
+      </div>
+
+      <div class="col-md-1"></div>
+
+      <!-- </div> -->
+
+      <!-- ROW 7 -->
+      <!-- <div class="row pt-3"> -->
+
+      <div class="col-md-6"></div>
+
+      <div class="col-md-2 mt-5 bjgmcsghadminoff">
+        <div class="col-md-12 card bg-info">
+          <div class="card-body">
+            <b>{{ dynamStaff[9].Name }}</b
+            ><br /><br />
+            {{ dynamStaff[9].Designation }}
+          </div>
+          <div class="card-footer">
+            <button
+              class="primary-btn"
+              type="button"
+              data-toggle="modal"
+              data-target="#bjgmcsghadminoffModal"
+            >
+              Know more
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-2 mt-5 bjgmcadminoff">
+        <div class="col-md-12 card bg-info">
+          <div class="card-body">
+            <b>{{ dynamStaff[10].Name }}</b
+            ><br /><br />
+            {{ dynamStaff[10].Designation }}
+          </div>
+          <div class="card-footer">
+            <button
+              class="primary-btn"
+              type="button"
+              data-toggle="modal"
+              data-target="#bjgmcadminoffModal"
+            >
+              Know more
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-2 mt-5 sghadminoff">
+        <div class="col-md-12 card bg-info">
+          <div class="card-body">
+            <b>{{ dynamStaff[11].Name }}</b
+            ><br /><br />
+            {{ dynamStaff[11].Designation }}
+          </div>
+          <div class="card-footer">
+            <button
+              class="primary-btn"
+              type="button"
+              data-toggle="modal"
+              data-target="#sghadminoffModal"
+            >
+              Know more
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container smallview">
+    <div class="row">
+      <div class="accordion" id="mainAccordion">
+        <!-- Part 1 -->
+        <div class="card board my-3">
+          <div class="card-header" id="headingOne">
+            <h2>
+              <span>
+                <button
+                  class="btn text-left board-btn float-left"
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#collapseOne"
+                  aria-expanded="true"
+                  aria-controls="collapseOne"
                 >
-                  <div class="col-12 card">
-                    <div class="card-header">
-                      <div class="card-tools">
-                        <img
-                          class="card-img-top rounded-circle"
-                          src="../../../../assets/images/profile.png"
-                          style="width: 100%; height: 50%"
-                        />
-                      </div>
-                    </div>
-                    <div class="card-body">
-                      <h5>{{ adminOff.Name }}</h5>
-                    </div>
-                    <div class="card-footer">
-                      <div class="designation">{{ adminOff.Designation }}</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Large View Modals -->
-
-<!-- Dean Modal -->
-<div
-  class="modal fade"
-  id="deanModal"
-  tabindex="-1"
-  aria-labelledby="exampleModalLabel"
-  aria-hidden="true"
->
-  <div
-    class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-dialog"
-  >
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">
-          {{ deansData[0].Name }}<br />({{ deansData[0].Designation }})
-        </h5>
-        <button
-          type="button"
-          class="close"
-          data-dismiss="modal"
-          aria-label="Close"
-        >
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <h6>Address:</h6>
-        <br />
-        <p>{{ deansData[0].Address }}</p>
-        <hr />
-        <h6>Contact:</h6>
-        <br />
-        <p>
-          Tel: {{ deansData[0].Contact.Tel[0] }},
-          {{ deansData[0].Contact.Tel[1] }}<br />
-          Fax: {{ deansData[0].Contact.Fax }}<br />
-          Cell: {{ deansData[0].Contact.Cell }}<br />
-          Email: {{ deansData[0].Contact.Email }}
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- UGDean Modal -->
-<div
-  class="modal fade"
-  id="ugdeanModal"
-  tabindex="-1"
-  aria-labelledby="exampleModalLabel"
-  aria-hidden="true"
->
-  <div
-    class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-dialog"
-  >
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">
-          {{ deansData[1].Name }}<br />({{ deansData[1].Designation }})
-        </h5>
-        <button
-          type="button"
-          class="close"
-          data-dismiss="modal"
-          aria-label="Close"
-        >
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <h6>Address:</h6>
-        <br />
-        <p>{{ deansData[1].Address }}</p>
-        <hr />
-        <h6>Contact:</h6>
-        <br />
-        <p>
-          Tel: {{ deansData[1].Contact.Tel[0] }},
-          {{ deansData[1].Contact.Tel[1] }}<br />
-          <!-- Fax: {{deansData[1].Contact.Fax}}<br /> -->
-          Cell: {{ deansData[1].Contact.Cell }}<br />
-          <!-- Email: {{deansData[1].Contact.Email}} -->
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- PGDean Modal -->
-<div
-  class="modal fade"
-  id="pgdeanModal"
-  tabindex="-1"
-  aria-labelledby="exampleModalLabel"
-  aria-hidden="true"
->
-  <div
-    class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-dialog"
-  >
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">
-          {{ deansData[2].Name }}<br />({{ deansData[2].Designation }})
-        </h5>
-        <button
-          type="button"
-          class="close"
-          data-dismiss="modal"
-          aria-label="Close"
-        >
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <h6>Address:</h6>
-        <br />
-        <p>{{ deansData[2].Address }}</p>
-        <hr />
-        <h6>Contact:</h6>
-        <br />
-        <p>
-          Tel: {{ deansData[2].Contact.Tel[0] }}<br />
-          <!-- {{deansData[2].Contact.Tel[1]}}<br /> -->
-          <!-- Fax: {{deansData[2].Contact.Fax}}<br /> -->
-          Cell: {{ deansData[2].Contact.Cell }}<br />
-          <!-- Email: {{deansData[2].Contact.Email}} -->
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- ViceDean Modal -->
-<div
-  class="modal fade"
-  id="vicedeanModal"
-  tabindex="-1"
-  aria-labelledby="exampleModalLabel"
-  aria-hidden="true"
->
-  <div
-    class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-dialog"
-  >
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">
-          {{ deansData[3].Name }}<br />({{ deansData[3].Designation }})
-        </h5>
-        <button
-          type="button"
-          class="close"
-          data-dismiss="modal"
-          aria-label="Close"
-        >
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <h6>Address:</h6>
-        <br />
-        <p>{{ deansData[3].Address }}</p>
-        <hr />
-        <h6>Contact:</h6>
-        <br />
-        <p>
-          Tel: {{ deansData[3].Contact.Tel[0] }},
-          {{ deansData[0].Contact.Tel[1] }}<br />
-          <!-- Fax: {{deansData[3].Contact.Fax}}<br /> -->
-          <!-- Cell: {{deansData[3].Contact.Cell}}<br /> -->
-          <!-- Email: {{deansData[3].Contact.Email}} -->
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Medical Superintendent Modal -->
-<div
-  class="modal fade"
-  id="medsupModal"
-  tabindex="-1"
-  aria-labelledby="exampleModalLabel"
-  aria-hidden="true"
->
-  <div
-    class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-dialog"
-  >
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">
-          {{ medSupData[0].Name }}<br />({{ medSupData[0].Designation }})
-        </h5>
-        <button
-          type="button"
-          class="close"
-          data-dismiss="modal"
-          aria-label="Close"
-        >
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <h6>Address:</h6>
-        <br />
-        <p>{{ medSupData[0].Address }}</p>
-        <hr />
-        <h6>Contact:</h6>
-        <br />
-        <p>
-          Tel: {{ medSupData[0].Contact.Tel[0] }}<br />
-          <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{medSupData[0].Contact.Tel[1]}}<br /> -->
-          <!-- Fax: {{medSupData[0].Contact.Fax}}<br /> -->
-          Cell: {{ medSupData[0].Contact.Cell }}<br />
-          Email: {{ medSupData[0].Contact.Email }}
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- DyMedical Superintendent Modal -->
-<div
-  class="modal fade"
-  id="dymedsupModal"
-  tabindex="-1"
-  aria-labelledby="exampleModalLabel"
-  aria-hidden="true"
->
-  <div
-    class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-dialog"
-  >
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">
-          {{ medSupData[1].Name }}<br />({{ medSupData[1].Designation }})
-        </h5>
-        <button
-          type="button"
-          class="close"
-          data-dismiss="modal"
-          aria-label="Close"
-        >
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <h6>Address:</h6>
-        <br />
-        <p>{{ medSupData[1].Address }}</p>
-        <hr />
-        <h6>Contact:</h6>
-        <br />
-        <p>
-          Tel: {{ medSupData[1].Contact.Tel[0] }},
-          {{ medSupData[1].Contact.Tel[1] }}<br />
-          <!-- Fax: {{medSupData[1].Contact.Fax}}<br /> -->
-          Cell: {{ medSupData[1].Contact.Cell }}<br />
-          <!-- Email: {{medSupData[1].Contact.Email}} -->
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- SGHOffice Superintendent 1 Modal -->
-<div
-  class="modal fade"
-  id="sghoffsup1Modal"
-  tabindex="-1"
-  aria-labelledby="exampleModalLabel"
-  aria-hidden="true"
->
-  <div
-    class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-dialog"
-  >
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">
-          {{ officeSupData[0].Name }}<br />({{ officeSupData[0].Designation }})
-        </h5>
-        <button
-          type="button"
-          class="close"
-          data-dismiss="modal"
-          aria-label="Close"
-        >
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <h6>Address:</h6>
-        <br />
-        <p>{{ officeSupData[0].Address }}</p>
-        <hr />
-        <h6>Contact:</h6>
-        <br />
-        <p>
-          Tel: {{ officeSupData[0].Contact.Tel[0] }}<br />
-          <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{officeSupData[0].Contact.Tel[1]}}<br /> -->
-          <!-- Fax: {{officeSupData[0].Contact.Fax}}<br /> -->
-          Cell: {{ officeSupData[0].Contact.Cell }}<br />
-          <!-- Email: {{officeSupData[0].Contact.Email}} -->
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Nursing Office Superintendent Modal -->
-<div
-  class="modal fade"
-  id="nursingoffsupModal"
-  tabindex="-1"
-  aria-labelledby="exampleModalLabel"
-  aria-hidden="true"
->
-  <div
-    class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-dialog"
-  >
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">
-          {{ officeSupData[1].Name }}<br />({{ officeSupData[1].Designation }})
-        </h5>
-        <button
-          type="button"
-          class="close"
-          data-dismiss="modal"
-          aria-label="Close"
-        >
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <h6>Address:</h6>
-        <br />
-        <p>{{ officeSupData[1].Address }}</p>
-        <hr />
-        <h6>Contact:</h6>
-        <br />
-        <p>
-          Tel: {{ officeSupData[1].Contact.Tel[0] }}<br />
-          <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{officeSupData[1].Contact.Tel[1]}}<br /> -->
-          <!-- Fax: {{officeSupData[1].Contact.Fax}}<br /> -->
-          Cell: {{ officeSupData[1].Contact.Cell }}<br />
-          <!-- Email: {{officeSupData[1].Contact.Email}} -->
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- SGHOffice Superintendent 2 Modal -->
-<div
-  class="modal fade"
-  id="sghoffsup2Modal"
-  tabindex="-1"
-  aria-labelledby="exampleModalLabel"
-  aria-hidden="true"
->
-  <div
-    class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-dialog"
-  >
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">
-          {{ officeSupData[2].Name }}<br />({{ officeSupData[2].Designation }})
-        </h5>
-        <button
-          type="button"
-          class="close"
-          data-dismiss="modal"
-          aria-label="Close"
-        >
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <h6>Address:</h6>
-        <br />
-        <p>{{ officeSupData[2].Address }}</p>
-        <hr />
-        <h6>Contact:</h6>
-        <br />
-        <p>
-          Tel: {{ officeSupData[2].Contact.Tel[0] }}<br />
-          <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{officeSupData[2].Contact.Tel[1]}}<br /> -->
-          <!-- Fax: {{officeSupData[2].Contact.Fax}}<br /> -->
-          <!-- Cell: {{officeSupData[2].Contact.Cell}}<br /> -->
-          <!-- Email: {{officeSupData[2].Contact.Email}} -->
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Administrative Officer (BJGMC / SGH) Modal -->
-<div
-  class="modal fade"
-  id="bjgmcsghadminoffModal"
-  tabindex="-1"
-  aria-labelledby="exampleModalLabel"
-  aria-hidden="true"
->
-  <div
-    class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-dialog"
-  >
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">
-          {{ adminOffData[0].Name }}<br />({{ adminOffData[0].Designation }})
-        </h5>
-        <button
-          type="button"
-          class="close"
-          data-dismiss="modal"
-          aria-label="Close"
-        >
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <h6>Address:</h6>
-        <br />
-        <p>{{ adminOffData[0].Address }}</p>
-        <hr />
-        <h6>Contact:</h6>
-        <br />
-        <p>
-          Tel: {{ adminOffData[0].Contact.Tel[0] }}<br />
-          <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{adminOffData[0].Contact.Tel[1]}}<br /> -->
-          <!-- Fax: {{adminOffData[0].Contact.Fax}}<br /> -->
-          Cell: {{ adminOffData[0].Contact.Cell }}<br />
-          <!-- Email: {{adminOffData[0].Contact.Email}} -->
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Administrative officer (BJGMC) Modal -->
-<div
-  class="modal fade"
-  id="bjgmcadminoffModal"
-  tabindex="-1"
-  aria-labelledby="exampleModalLabel"
-  aria-hidden="true"
->
-  <div
-    class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-dialog"
-  >
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">
-          {{ adminOffData[1].Name }}<br />({{ adminOffData[1].Designation }})
-        </h5>
-        <button
-          type="button"
-          class="close"
-          data-dismiss="modal"
-          aria-label="Close"
-        >
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <h6>Address:</h6>
-        <br />
-        <p>{{ adminOffData[1].Address }}</p>
-        <hr />
-        <h6>Contact:</h6>
-        <br />
-        <p>
-          Tel: {{ adminOffData[1].Contact.Tel[0] }},
-          {{ adminOffData[1].Contact.Tel[1] }}<br />
-          <!-- Fax: {{adminOffData[1].Contact.Fax}}<br /> -->
-          Cell: {{ adminOffData[1].Contact.Cell }}<br />
-          <!-- Email: {{adminOffData[1].Contact.Email}} -->
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Administrative officer (SGH) Modal -->
-<div
-  class="modal fade"
-  id="sghadminoffModal"
-  tabindex="-1"
-  aria-labelledby="exampleModalLabel"
-  aria-hidden="true"
->
-  <div
-    class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-dialog"
-  >
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">
-          {{ adminOffData[2].Name }}<br />({{ adminOffData[2].Designation }})
-        </h5>
-        <button
-          type="button"
-          class="close"
-          data-dismiss="modal"
-          aria-label="Close"
-        >
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <h6>Address:</h6>
-        <br />
-        <p>{{ adminOffData[2].Address }}</p>
-        <hr />
-        <h6>Contact:</h6>
-        <br />
-        <p>
-          Tel: {{ adminOffData[2].Contact.Tel[0] }},
-          {{ adminOffData[2].Contact.Tel[1] }}<br />
-          <!-- Fax: {{adminOffData[2].Contact.Fax}}<br /> -->
-          <!-- Cell: {{adminOffData[2].Contact.Cell}}<br /> -->
-          <!-- Email: {{adminOffData[2].Contact.Email}} -->
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Small View Modals -->
-
-<!-- Modal of Deans -->
-<div
-  class="modal fade"
-  id="deansModal"
-  tabindex="-1"
-  aria-labelledby="exampleModalLabel"
-  aria-hidden="true"
->
-  <div
-    class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-dialog modal-xl"
-  >
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Deans</h5>
-        <button
-          type="button"
-          class="close"
-          data-dismiss="modal"
-          aria-label="Close"
-        >
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-12" *ngFor="let dean of deansData">
-              <div
-                class="col-12 card modal-card m-2"
-                style="width: 100%; background-color: #5dbcd2"
-              >
-                <div class="card-body">
-                  <div class="card-text" style="width: fit-content">
-                    <img
-                      src="../../../../assets/images/profile.png"
-                      class="modal-img"
-                      style="
-                        width: 100px;
-                        margin-left: 0;
-                        float: left;
-                        height: 100px;
-                        display: absolute;
-                        left: 0;
-                      "
-                    />
-                    <h5
-                      class="modal-name"
-                      style="
-                        height: 100px;
-                        margin-left: 100px;
-                        padding-top: 22px;
-                      "
-                    >
-                      {{ dean.Name }}
-                      <p
-                        class="modal-designation"
-                        style="color: blue; font-size: medium"
-                      >
-                        {{ dean.Designation }}
-                      </p>
-                    </h5>
-                    <hr />
-                    <div>
-                      <div class="modal-left">Address:</div>
-                      <div class="modal-right">{{ dean.Address }}<br /></div>
-                    </div>
-                    <div>
-                      <div class="modal-left">Tel:</div>
-                      <div class="modal-right">
-                        {{ dean.Contact.Tel[0] }}, {{ dean.Contact.Tel[1]
-                        }}<br />
-                      </div>
-                    </div>
-                    <div>
-                      <div class="modal-left">Fax:</div>
-                      <div class="modal-right">
-                        {{ dean.Contact.Fax }}<br />
-                      </div>
-                    </div>
-                    <div>
-                      <div class="modal-left">Cell:</div>
-                      <div class="modal-right">
-                        {{ dean.Contact.Cell }}<br />
-                      </div>
-                    </div>
-                    <div>
-                      <div class="modal-left">Email:</div>
-                      <div class="modal-right">
-                        {{ dean.Contact.Email }}<br />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Modal of Administrative Officers -->
-<div
-  class="modal fade"
-  id="adminOfficersModal"
-  tabindex="-1"
-  aria-labelledby="exampleModalLabel"
-  aria-hidden="true"
->
-  <div
-    class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-dialog modal-xl"
-  >
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-        <button
-          type="button"
-          class="close"
-          data-dismiss="modal"
-          aria-label="Close"
-        >
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-12" *ngFor="let adminOff of adminOffData">
-              <div
-                class="col-12 card modal-card m-2"
-                style="width: 100%; background-color: #5dbcd2"
-              >
-                <div class="card-body">
-                  <div class="card-text" style="width: fit-content">
-                    <img
-                      src="../../../../assets/images/profile.png"
-                      class="modal-img"
-                      style="
-                        width: 100px;
-                        margin-left: 0;
-                        float: left;
-                        height: 100px;
-                        display: absolute;
-                        left: 0;
-                      "
-                    />
-                    <h5
-                      class="modal-name"
-                      style="
-                        height: 100px;
-                        margin-left: 100px;
-                        padding-top: 22px;
-                      "
-                    >
-                      {{ adminOff.Name }}
-                      <p
-                        class="modal-designation"
-                        style="color: blue; font-size: medium"
-                      >
-                        {{ adminOff.Designation }}
-                      </p>
-                    </h5>
-                    <hr />
-                    <div>
-                      <div class="modal-left">Address:</div>
-                      <div class="modal-right">
-                        {{ adminOff.Address }}<br />
-                      </div>
-                    </div>
-                    <div>
-                      <div class="modal-left">Tel:</div>
-                      <div class="modal-right">
-                        {{ adminOff.Contact.Tel[0] }},
-                        {{ adminOff.Contact.Tel[1] }}<br />
-                      </div>
-                    </div>
-                    <div>
-                      <div class="modal-left">Fax:</div>
-                      <div class="modal-right">
-                        {{ adminOff.Contact.Fax }}<br />
-                      </div>
-                    </div>
-                    <div>
-                      <div class="modal-left">Cell:</div>
-                      <div class="modal-right">
-                        {{ adminOff.Contact.Cell }}<br />
-                      </div>
-                    </div>
-                    <div>
-                      <div class="modal-left">Email:</div>
-                      <div class="modal-right">
-                        {{ adminOff.Contact.Email }}<br />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Modal of Medical Superintendents -->
-<!-- <div class="modal fade" id="medSupModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-dialog modal-xl">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Medical Superintendents</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
+                  Board of Deans
                 </button>
-            </div>
-            <div class="modal-body">
-                <div class="container-fluid">
-                    <div class="row">
-
-                        <div class="col-12" *ngFor="let medSup of medSupData">
-
-                            <div class="col-12 card modal-card m-2" style="width: 100%; background-color: #5dbcd2;">
-                                <div class="card-body">
-                                    <div class="card-text" style="width: fit-content;">
-                                        <img src="../../../../assets/images/profile.png" class="modal-img"
-                                            style="width: 100px; margin-left: 0; float:left; height: 100px; display: absolute; left: 0;">
-                                        <h5 class="modal-name"
-                                            style="height: 100px; margin-left: 100px; padding-top: 22px;">
-                                            {{medSup.Name}}
-                                            <p class="modal-designation" style="color: blue; font-size: medium;">
-                                                {{medSup.Designation}}
-                                            </p>
-                                        </h5>
-                                        <hr>
-                                        <div class="modal-left" style="float:left; text-align: left; line-height: 1.2;">
-                                            Address:<br /><br />
-                                            Tel:<br />
-                                            Fax:<br />
-                                            Cell:<br />
-                                            Email:<br />
-                                        </div>
-                                        <div class="modal-right"
-                                            style="margin-left: 25%; text-align: left; line-height: 1.2;">
-                                            {{medSup.Address}}<br />
-                                            {{medSup.Contact.Tel[0]}}, {{medSup.Contact.Tel[1]}}<br />
-                                            {{medSup.Contact.Fax}}<br />
-                                            {{medSup.Contact.Cell}}<br />
-                                            {{medSup.Contact.Email}}
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div> -->
-
-<!-- Modal of Office Superintendents -->
-<!-- <div class="modal fade" id="medSupModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-dialog modal-xl">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Office Superintendents</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
+              </span>
+              <span>
+                <button
+                  class="primary-btn"
+                  type="button"
+                  data-toggle="modal"
+                  data-target="#deansModal"
+                >
+                  Know more
                 </button>
-            </div>
-            <div class="modal-body">
-                <div class="container-fluid">
-                    <div class="row">
-
-                        <div class="col-12" *ngFor="let officeSup of officeSupData">
-
-                            <div class="col-12 card modal-card m-2" style="width: 100%; background-color: #5dbcd2;">
-                                <div class="card-body">
-                                    <div class="card-text" style="width: fit-content;">
-                                        <img src="../../../../assets/images/profile.png" class="modal-img"
-                                            style="width: 100px; margin-left: 0; float:left; height: 100px; display: absolute; left: 0;">
-                                        <h5 class="modal-name"
-                                            style="height: 100px; margin-left: 100px; padding-top: 22px;">
-                                            {{officeSup.Name}}
-                                            <p class="modal-designation" style="color: blue; font-size: medium;">
-                                                {{officeSup.Designation}}
-                                            </p>
-                                        </h5>
-                                        <hr>
-                                        <div class="modal-left" style="float:left; text-align: left; line-height: 1.2;">
-                                            Address:<br /><br />
-                                            Tel:<br />
-                                            Fax:<br />
-                                            Cell:<br />
-                                            Email:<br />
-                                        </div>
-                                        <div class="modal-right"
-                                            style="margin-left: 25%; text-align: left; line-height: 1.2;">
-                                            {{officeSup.Address}}<br />
-                                            {{officeSup.Contact.Tel[0]}}, {{officeSup.Contact.Tel[1]}}<br />
-                                            {{officeSup.Contact.Fax}}<br />
-                                            {{officeSup.Contact.Cell}}<br />
-                                            {{officeSup.Contact.Email}}
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div> -->
-
-<!-- Modal of Superintendents -->
-<div
-  class="modal fade"
-  id="supModal"
-  tabindex="-1"
-  aria-labelledby="exampleModalLabel"
-  aria-hidden="true"
->
-  <div
-    class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-dialog modal-xl"
-  >
-    <div class="modal-content">
-      <div class="modal-header">
-        <h4 class="modal-title" id="exampleModalLabel">Superintendents</h4>
-        <button
-          type="button"
-          class="close"
-          data-dismiss="modal"
-          aria-label="Close"
-        >
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <div class="container-fluid">
-          <div class="row">
-            <hr />
-            <div class="col-12">
-              <h6 class="text-center">Medical Superintendents</h6>
-            </div>
-            <hr />
-            <div class="col-12" *ngFor="let medSup of medSupData">
-              <div
-                class="col-12 card modal-card m-2"
-                style="width: 100%; background-color: #5dbcd2"
-              >
-                <div class="card-body">
-                  <div class="card-text" style="width: fit-content">
-                    <img
-                      src="../../../../assets/images/profile.png"
-                      class="modal-img"
-                      style="
-                        width: 100px;
-                        margin-left: 0;
-                        float: left;
-                        height: 100px;
-                        display: absolute;
-                        left: 0;
-                      "
-                    />
-                    <h5
-                      class="modal-name"
-                      style="
-                        height: 100px;
-                        margin-left: 100px;
-                        padding-top: 22px;
-                      "
+              </span>
+            </h2>
+          </div>
+          <div
+            id="collapseOne"
+            class="collapse show m-2"
+            aria-labelledby="headingOne"
+            data-parent="#mainAccordion"
+          >
+            <div class="card">
+              <div class="card-body">
+                <div class="row">
+                  <ng-container *ngFor="let item of dynamStaff">
+                    <div
+                      class="col-sm-4 col-6 my-3"
+                      *ngIf="item.Designation.includes('Dean')"
                     >
-                      {{ medSup.Name }}
-                      <p
-                        class="modal-designation"
-                        style="color: blue; font-size: medium"
-                      >
-                        {{ medSup.Designation }}
-                      </p>
-                    </h5>
-                    <hr />
-                    <div>
-                      <div class="modal-left">Address:</div>
-                      <div class="modal-right">{{ medSup.Address }}<br /></div>
-                    </div>
-                    <div>
-                      <div class="modal-left">Tel:</div>
-                      <div class="modal-right">
-                        {{ medSup.Contact.Tel[0] }}, {{ medSup.Contact.Tel[1]
-                        }}<br />
+                      <div class="col-12 card deanscard">
+                        <div class="card-header">
+                          <div class="card-tools">
+                            <img
+                              class="card-img-top rounded-circle"
+                              src="../../../../assets/about-us/organogram/{{
+                                item.Name
+                              }}.jpg"
+                              style="width: 100%; height: 50%"
+                            />
+                          </div>
+                        </div>
+                        <div class="card-body">
+                          {{ item.Name }}
+                        </div>
+                        <div class="card-footer">
+                          {{ item.Designation }}
+                        </div>
                       </div>
                     </div>
-                    <div>
-                      <div class="modal-left">Fax:</div>
-                      <div class="modal-right">
-                        {{ medSup.Contact.Fax }}<br />
-                      </div>
-                    </div>
-                    <div>
-                      <div class="modal-left">Cell:</div>
-                      <div class="modal-right">
-                        {{ medSup.Contact.Cell }}<br />
-                      </div>
-                    </div>
-                    <div>
-                      <div class="modal-left">Email:</div>
-                      <div class="modal-right">
-                        {{ medSup.Contact.Email }}<br />
-                      </div>
-                    </div>
-                  </div>
+                  </ng-container>
                 </div>
               </div>
             </div>
+          </div>
+        </div>
 
-            <hr />
-
-            <div class="col-12">
-              <h6 class="text-center">Office Superintendents</h6>
-            </div>
-            <hr />
-            <div class="col-12" *ngFor="let officeSup of officeSupData">
-              <div
-                class="col-12 card modal-card m-2"
-                style="width: 100%; background-color: #5dbcd2"
-              >
-                <div class="card-body">
-                  <div class="card-text" style="width: fit-content">
-                    <img
-                      src="../../../../assets/images/profile.png"
-                      class="modal-img"
-                      style="
-                        width: 100px;
-                        margin-left: 0;
-                        float: left;
-                        height: 100px;
-                        display: absolute;
-                        left: 0;
-                      "
-                    />
-                    <h5
-                      class="modal-name"
-                      style="
-                        height: 100px;
-                        margin-left: 100px;
-                        padding-top: 22px;
-                      "
+        <!-- Part 2 -->
+        <div class="card board my-3">
+          <div class="accordion" id="accordionTwo">
+            <div class="card">
+              <div class="card-header" id="headingTwo">
+                <h2>
+                  <span>
+                    <button
+                      class="btn text-left board-btn float-left"
+                      type="button"
+                      data-toggle="collapse"
+                      data-target="#collapseTwo"
+                      aria-expanded="true"
+                      aria-controls="collapseTwo"
                     >
-                      {{ officeSup.Name }}
-                      <p
-                        class="modal-designation"
-                        style="color: blue; font-size: medium"
+                      Board of Superintendents
+                    </button>
+                  </span>
+                  <span>
+                    <button
+                      class="primary-btn"
+                      type="button"
+                      data-toggle="modal"
+                      data-target="#supModal"
+                    >
+                      Know more
+                    </button>
+                  </span>
+                </h2>
+              </div>
+              <div
+                id="collapseTwo"
+                class="collapse show"
+                aria-labelledby="headingTwo"
+                data-parent="#mainAccordion"
+              >
+                <div class="card">
+                  <div class="card-body">
+                    <!-- Part 2.1 -->
+                    <div class="card board my-2">
+                      <div class="card-header" id="headingTwoOne">
+                        <h2>
+                          <span>
+                            <button
+                              class="btn text-left board-btn"
+                              type="button"
+                              data-toggle="collapse"
+                              data-target="#collapseTwoOne"
+                              aria-expanded="true"
+                              aria-controls="collapseTwoOne"
+                            >
+                              Medical Superintendents
+                            </button>
+                          </span>
+                          <!-- <span>
+                                                      <button class="btn btn-info knowmore" type="button"
+                                                          data-toggle="modal" data-target="#medSupModal">
+                                                          Know more
+                                                      </button>
+                                                  </span> -->
+                        </h2>
+                      </div>
+
+                      <div
+                        id="collapseTwoOne"
+                        class="collapse"
+                        aria-labelledby="headingTwoOne"
+                        data-parent="#accordionTwo"
                       >
-                        {{ officeSup.Designation }}
-                      </p>
-                    </h5>
-                    <hr />
-                    <div>
-                      <div class="modal-left">Address:</div>
-                      <div class="modal-right">
-                        {{ officeSup.Address }}<br />
+                        <div class="card-body">
+                          <div class="row">
+                            <ng-container *ngFor="let item of dynamStaff">
+                              <div
+                                class="col-sm-4 col-6 my-3"
+                                *ngIf="item.Designation.includes('Medical')"
+                              >
+                                <div class="col-12 card medsupcard">
+                                  <div class="card-header">
+                                    <div class="card-tools">
+                                      <img
+                                        class="card-img-top rounded-circle"
+                                        src="../../../../assets/about-us/organogram/{{
+                                          item.Name
+                                        }}.jpg"
+                                        style="width: 100%; height: 50%"
+                                      />
+                                    </div>
+                                  </div>
+                                  <div class="card-body">
+                                    {{ item.Name }}
+                                  </div>
+                                  <div class="card-footer">
+                                    {{ item.Designation }}
+                                  </div>
+                                </div>
+                              </div>
+                            </ng-container>
+                          </div>
+                        </div>
                       </div>
                     </div>
-                    <div>
-                      <div class="modal-left">Tel:</div>
-                      <div class="modal-right">
-                        {{ officeSup.Contact.Tel[0] }},
-                        {{ officeSup.Contact.Tel[1] }}<br />
+
+                    <!-- Part 2.2 -->
+                    <div class="card board my-2">
+                      <div class="card-header" id="headingTwoTwo">
+                        <h2>
+                          <span>
+                            <button
+                              class="btn text-left board-btn"
+                              type="button"
+                              data-toggle="collapse"
+                              data-target="#collapseTwoTwo"
+                              aria-expanded="true"
+                              aria-controls="collapseTwoTwo"
+                            >
+                              Office Superintendents
+                            </button>
+                          </span>
+                          <!-- <span>
+                                                      <button class="btn btn-info knowmore" type="button"
+                                                          data-toggle="modal" data-target="#officeSupModal">
+                                                          Know more
+                                                      </button>
+                                                  </span> -->
+                        </h2>
                       </div>
-                    </div>
-                    <div>
-                      <div class="modal-left">Fax:</div>
-                      <div class="modal-right">
-                        {{ officeSup.Contact.Fax }}<br />
-                      </div>
-                    </div>
-                    <div>
-                      <div class="modal-left">Cell:</div>
-                      <div class="modal-right">
-                        {{ officeSup.Contact.Cell }}<br />
-                      </div>
-                    </div>
-                    <div>
-                      <div class="modal-left">Email:</div>
-                      <div class="modal-right">
-                        {{ officeSup.Contact.Email }}<br />
+
+                      <div
+                        id="collapseTwoTwo"
+                        class="collapse"
+                        aria-labelledby="headingTwoTwo"
+                        data-parent="#accordionTwo"
+                      >
+                        <div class="card-body">
+                          <div class="row">
+                            <ng-container *ngFor="let item of dynamStaff">
+                              <div
+                                class="col-sm-4 col-6 my-3"
+                                *ngIf="item.Designation.includes('Office')"
+                              >
+                                <div class="col-12 card deanscard">
+                                  <div class="card-header">
+                                    <div class="card-tools">
+                                      <img
+                                        class="card-img-top rounded-circle"
+                                        src="../../../../assets/about-us/organogram/{{
+                                          item.Name
+                                        }}.jpg"
+                                        style="width: 100%; height: 50%"
+                                      />
+                                    </div>
+                                  </div>
+                                  <div class="card-body">
+                                    {{ item.Name }}
+                                  </div>
+                                  <div class="card-footer">
+                                    {{ item.Designation }}
+                                  </div>
+                                </div>
+                              </div>
+                            </ng-container>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -1676,7 +605,977 @@
             </div>
           </div>
         </div>
+
+        <!-- Part 3 -->
+        <div class="card board my-3">
+          <div class="card-header" id="headingThree">
+            <h2>
+              <span>
+                <button
+                  class="btn text-left board-btn float-left"
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#collapseThree"
+                  aria-expanded="true"
+                  aria-controls="collapseThree"
+                >
+                  Board of Admin Officers
+                </button>
+              </span>
+              <span>
+                <button
+                  class="primary-btn"
+                  type="button"
+                  data-toggle="modal"
+                  data-target="#adminOfficersModal"
+                >
+                  Know more
+                </button>
+              </span>
+            </h2>
+          </div>
+          <div
+            id="collapseThree"
+            class="collapse"
+            aria-labelledby="headingThree"
+            data-parent="#mainAccordion"
+          >
+            <div class="card">
+              <div class="card-body">
+                <div class="row">
+                  <ng-container *ngFor="let item of dynamStaff">
+                    <div
+                      class="col-sm-4 col-6 my-3"
+                      *ngIf="item.Designation.includes('Administrative')"
+                    >
+                      <div class="col-12 card deanscard">
+                        <div class="card-header">
+                          <div class="card-tools">
+                            <img
+                              class="card-img-top rounded-circle"
+                              src="../../../../assets/about-us/organogram/{{
+                                item.Name
+                              }}.jpg"
+                              style="width: 100%; height: 50%"
+                            />
+                          </div>
+                        </div>
+                        <div class="card-body">
+                          {{ item.Name }}
+                        </div>
+                        <div class="card-footer">
+                          {{ item.Designation }}
+                        </div>
+                      </div>
+                    </div>
+                  </ng-container>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Large View Modals -->
+
+  <!-- Dean Modal -->
+  <div
+    class="modal fade"
+    id="deanModal"
+    tabindex="-1"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="true"
+  >
+    <div
+      class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-dialog"
+    >
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">
+            {{ dynamStaff[0].Name }}<br />({{ dynamStaff[0].Designation }})
+          </h5>
+          <button
+            type="button"
+            class="close"
+            data-dismiss="modal"
+            aria-label="Close"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <h6>Address:</h6>
+          <br />
+          <p>{{ dynamStaff[0].Address }}</p>
+          <hr />
+          <h6>Contact:</h6>
+          <br />
+          <p>
+            Tel: {{ dynamStaff[0].Contact.Tel[0] }},
+            {{ dynamStaff[0].Contact.Tel[1] }}<br />
+            Fax: {{ dynamStaff[0].Contact.Fax }}<br />
+            Cell: {{ dynamStaff[0].Contact.Cell }}<br />
+            Email: {{ dynamStaff[0].Contact.Email }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- UGDean Modal -->
+  <div
+    class="modal fade"
+    id="ugdeanModal"
+    tabindex="-1"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="true"
+  >
+    <div
+      class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-dialog"
+    >
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">
+            {{ dynamStaff[1].Name }}<br />({{ dynamStaff[1].Designation }})
+          </h5>
+          <button
+            type="button"
+            class="close"
+            data-dismiss="modal"
+            aria-label="Close"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <h6>Address:</h6>
+          <br />
+          <p>{{ dynamStaff[1].Address }}</p>
+          <hr />
+          <h6>Contact:</h6>
+          <br />
+          <p>
+            Tel: {{ dynamStaff[1].Contact.Tel[0] }},
+            {{ dynamStaff[1].Contact.Tel[1] }}<br />
+            <!-- Fax: {{dynamStaff[1].Contact.Fax}}<br /> -->
+            Cell: {{ dynamStaff[1].Contact.Cell }}<br />
+            <!-- Email: {{dynamStaff[1].Contact.Email}} -->
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PGDean Modal -->
+  <div
+    class="modal fade"
+    id="pgdeanModal"
+    tabindex="-1"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="true"
+  >
+    <div
+      class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-dialog"
+    >
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">
+            {{ dynamStaff[2].Name }}<br />({{ dynamStaff[2].Designation }})
+          </h5>
+          <button
+            type="button"
+            class="close"
+            data-dismiss="modal"
+            aria-label="Close"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <h6>Address:</h6>
+          <br />
+          <p>{{ dynamStaff[2].Address }}</p>
+          <hr />
+          <h6>Contact:</h6>
+          <br />
+          <p>
+            Tel: {{ dynamStaff[2].Contact.Tel[0] }}<br />
+            <!-- {{dynamStaff[2].Contact.Tel[1]}}<br /> -->
+            <!-- Fax: {{dynamStaff[2].Contact.Fax}}<br /> -->
+            Cell: {{ dynamStaff[2].Contact.Cell }}<br />
+            <!-- Email: {{dynamStaff[2].Contact.Email}} -->
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ViceDean Modal -->
+  <div
+    class="modal fade"
+    id="vicedeanModal"
+    tabindex="-1"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="true"
+  >
+    <div
+      class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-dialog"
+    >
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">
+            {{ dynamStaff[3].Name }}<br />({{ dynamStaff[3].Designation }})
+          </h5>
+          <button
+            type="button"
+            class="close"
+            data-dismiss="modal"
+            aria-label="Close"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <h6>Address:</h6>
+          <br />
+          <p>{{ dynamStaff[3].Address }}</p>
+          <hr />
+          <h6>Contact:</h6>
+          <br />
+          <p>
+            Tel: {{ dynamStaff[3].Contact.Tel[0] }},
+            {{ dynamStaff[3].Contact.Tel[1] }}<br />
+            <!-- Fax: {{dynamStaff[3].Contact.Fax}}<br /> -->
+            <!-- Cell: {{dynamStaff[3].Contact.Cell}}<br /> -->
+            <!-- Email: {{dynamStaff[3].Contact.Email}} -->
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Medical Superintendent Modal -->
+  <div
+    class="modal fade"
+    id="medsupModal"
+    tabindex="-1"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="true"
+  >
+    <div
+      class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-dialog"
+    >
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">
+            {{ dynamStaff[4].Name }}<br />({{ dynamStaff[4].Designation }})
+          </h5>
+          <button
+            type="button"
+            class="close"
+            data-dismiss="modal"
+            aria-label="Close"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <h6>Address:</h6>
+          <br />
+          <p>{{ dynamStaff[4].Address }}</p>
+          <hr />
+          <h6>Contact:</h6>
+          <br />
+          <p>
+            Tel: {{ dynamStaff[4].Contact.Tel[0] }}<br />
+            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{dynamStaff[4].Contact.Tel[1]}}<br /> -->
+            <!-- Fax: {{dynamStaff[4].Contact.Fax}}<br /> -->
+            Cell: {{ dynamStaff[4].Contact.Cell }}<br />
+            Email: {{ dynamStaff[4].Contact.Email }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DyMedical Superintendent Modal -->
+  <div
+    class="modal fade"
+    id="dymedsupModal"
+    tabindex="-1"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="true"
+  >
+    <div
+      class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-dialog"
+    >
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">
+            {{ dynamStaff[5].Name }}<br />({{ dynamStaff[5].Designation }})
+          </h5>
+          <button
+            type="button"
+            class="close"
+            data-dismiss="modal"
+            aria-label="Close"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <h6>Address:</h6>
+          <br />
+          <p>{{ dynamStaff[5].Address }}</p>
+          <hr />
+          <h6>Contact:</h6>
+          <br />
+          <p>
+            Tel: {{ dynamStaff[5].Contact.Tel[0] }},
+            {{ dynamStaff[5].Contact.Tel[1] }}<br />
+            <!-- Fax: {{dynamStaff[5].Contact.Fax}}<br /> -->
+            Cell: {{ dynamStaff[5].Contact.Cell }}<br />
+            <!-- Email: {{dynamStaff[5].Contact.Email}} -->
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SGHOffice Superintendent 1 Modal -->
+  <div
+    class="modal fade"
+    id="sghoffsup1Modal"
+    tabindex="-1"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="true"
+  >
+    <div
+      class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-dialog"
+    >
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">
+            {{ dynamStaff[6].Name }}<br />({{ dynamStaff[6].Designation }})
+          </h5>
+          <button
+            type="button"
+            class="close"
+            data-dismiss="modal"
+            aria-label="Close"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <h6>Address:</h6>
+          <br />
+          <p>{{ dynamStaff[6].Address }}</p>
+          <hr />
+          <h6>Contact:</h6>
+          <br />
+          <p>
+            Tel: {{ dynamStaff[6].Contact.Tel[0] }}<br />
+            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{dynamStaff[6].Contact.Tel[1]}}<br /> -->
+            <!-- Fax: {{dynamStaff[6].Contact.Fax}}<br /> -->
+            Cell: {{ dynamStaff[6].Contact.Cell }}<br />
+            <!-- Email: {{dynamStaff[6].Contact.Email}} -->
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Nursing Office Superintendent Modal -->
+  <div
+    class="modal fade"
+    id="nursingoffsupModal"
+    tabindex="-1"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="true"
+  >
+    <div
+      class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-dialog"
+    >
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">
+            {{ dynamStaff[7].Name }}<br />({{ dynamStaff[7].Designation }})
+          </h5>
+          <button
+            type="button"
+            class="close"
+            data-dismiss="modal"
+            aria-label="Close"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <h6>Address:</h6>
+          <br />
+          <p>{{ dynamStaff[7].Address }}</p>
+          <hr />
+          <h6>Contact:</h6>
+          <br />
+          <p>
+            Tel: {{ dynamStaff[7].Contact.Tel[0] }}<br />
+            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{dynamStaff[7].Contact.Tel[1]}}<br /> -->
+            <!-- Fax: {{dynamStaff[7].Contact.Fax}}<br /> -->
+            Cell: {{ dynamStaff[7].Contact.Cell }}<br />
+            <!-- Email: {{dynamStaff[7].Contact.Email}} -->
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SGHOffice Superintendent 2 Modal -->
+  <div
+    class="modal fade"
+    id="sghoffsup2Modal"
+    tabindex="-1"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="true"
+  >
+    <div
+      class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-dialog"
+    >
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">
+            {{ dynamStaff[8].Name }}<br />({{ dynamStaff[8].Designation }})
+          </h5>
+          <button
+            type="button"
+            class="close"
+            data-dismiss="modal"
+            aria-label="Close"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <h6>Address:</h6>
+          <br />
+          <p>{{ dynamStaff[8].Address }}</p>
+          <hr />
+          <h6>Contact:</h6>
+          <br />
+          <p>
+            Tel: {{ dynamStaff[8].Contact.Tel[0] }}<br />
+            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{dynamStaff[8].Contact.Tel[1]}}<br /> -->
+            <!-- Fax: {{dynamStaff[8].Contact.Fax}}<br /> -->
+            <!-- Cell: {{dynamStaff[8].Contact.Cell}}<br /> -->
+            <!-- Email: {{dynamStaff[8].Contact.Email}} -->
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Administrative Officer (BJGMC / SGH) Modal -->
+  <div
+    class="modal fade"
+    id="bjgmcsghadminoffModal"
+    tabindex="-1"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="true"
+  >
+    <div
+      class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-dialog"
+    >
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">
+            {{ dynamStaff[9].Name }}<br />({{ dynamStaff[9].Designation }})
+          </h5>
+          <button
+            type="button"
+            class="close"
+            data-dismiss="modal"
+            aria-label="Close"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <h6>Address:</h6>
+          <br />
+          <p>{{ dynamStaff[9].Address }}</p>
+          <hr />
+          <h6>Contact:</h6>
+          <br />
+          <p>
+            Tel: {{ dynamStaff[9].Contact.Tel[0] }}<br />
+            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{dynamStaff[9].Contact.Tel[1]}}<br /> -->
+            <!-- Fax: {{dynamStaff[9].Contact.Fax}}<br /> -->
+            Cell: {{ dynamStaff[9].Contact.Cell }}<br />
+            <!-- Email: {{dynamStaff[9].Contact.Email}} -->
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Administrative officer (BJGMC) Modal -->
+  <div
+    class="modal fade"
+    id="bjgmcadminoffModal"
+    tabindex="-1"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="true"
+  >
+    <div
+      class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-dialog"
+    >
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">
+            {{ dynamStaff[10].Name }}<br />({{ dynamStaff[10].Designation }})
+          </h5>
+          <button
+            type="button"
+            class="close"
+            data-dismiss="modal"
+            aria-label="Close"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <h6>Address:</h6>
+          <br />
+          <p>{{ dynamStaff[10].Address }}</p>
+          <hr />
+          <h6>Contact:</h6>
+          <br />
+          <p>
+            Tel: {{ dynamStaff[10].Contact.Tel[0] }},
+            {{ dynamStaff[10].Contact.Tel[1] }}<br />
+            <!-- Fax: {{dynamStaff[10].Contact.Fax}}<br /> -->
+            Cell: {{ dynamStaff[10].Contact.Cell }}<br />
+            <!-- Email: {{dynamStaff[10].Contact.Email}} -->
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Administrative officer (SGH) Modal -->
+  <div
+    class="modal fade"
+    id="sghadminoffModal"
+    tabindex="-1"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="true"
+  >
+    <div
+      class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-dialog"
+    >
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">
+            {{ dynamStaff[11].Name }}<br />({{ dynamStaff[11].Designation }})
+          </h5>
+          <button
+            type="button"
+            class="close"
+            data-dismiss="modal"
+            aria-label="Close"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <h6>Address:</h6>
+          <br />
+          <p>{{ dynamStaff[11].Address }}</p>
+          <hr />
+          <h6>Contact:</h6>
+          <br />
+          <p>
+            Tel: {{ dynamStaff[11].Contact.Tel[0] }},
+            {{ dynamStaff[11].Contact.Tel[1] }}<br />
+            <!-- Fax: {{dynamStaff[11].Contact.Fax}}<br /> -->
+            <!-- Cell: {{dynamStaff[11].Contact.Cell}}<br /> -->
+            <!-- Email: {{dynamStaff[11].Contact.Email}} -->
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Small View Modals -->
+
+  <!-- Modal of Deans -->
+  <div
+    class="modal fade"
+    id="deansModal"
+    tabindex="-1"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="true"
+  >
+    <div
+      class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-dialog modal-xl"
+    >
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Deans</h5>
+          <button
+            type="button"
+            class="close"
+            data-dismiss="modal"
+            aria-label="Close"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="container-fluid">
+            <div class="row">
+              <ng-container *ngFor="let dean of dynamStaff">
+                <div
+                  class="col-12 card modal-card my-3"
+                  *ngIf="dean.Designation.includes('Dean')"
+                >
+                  <div class="card-body">
+                    <div class="card-text" style="width: fit-content">
+                      <img
+                        src="../../../../assets/about-us/organogram/{{
+                          dean.Name
+                        }}.jpg"
+                        class="modal-img"
+                      />
+                      <h5
+                        class="modal-name"
+                        style="
+                          height: 100px;
+                          margin-left: 100px;
+                          padding-top: 22px;
+                        "
+                      >
+                        {{ dean.Name }}
+                        <p class="modal-designation">
+                          <b>{{ dean.Designation }}</b>
+                        </p>
+                      </h5>
+                      <hr />
+                      <div>
+                        <div class="modal-left">Address:</div>
+                        <div class="modal-right">{{ dean.Address }}<br /></div>
+                      </div>
+                      <div>
+                        <div class="modal-left">Tel:</div>
+                        <div class="modal-right">
+                          {{ dean.Contact.Tel[0] }}, {{ dean.Contact.Tel[1]
+                          }}<br />
+                        </div>
+                      </div>
+                      <div>
+                        <div class="modal-left">Fax:</div>
+                        <div class="modal-right">
+                          {{ dean.Contact.Fax }}<br />
+                        </div>
+                      </div>
+                      <div>
+                        <div class="modal-left">Cell:</div>
+                        <div class="modal-right">
+                          {{ dean.Contact.Cell }}<br />
+                        </div>
+                      </div>
+                      <div>
+                        <div class="modal-left">Email:</div>
+                        <div class="modal-right">
+                          {{ dean.Contact.Email }}<br />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </ng-container>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal of Administrative Officers -->
+  <div
+    class="modal fade"
+    id="adminOfficersModal"
+    tabindex="-1"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="true"
+  >
+    <div
+      class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-dialog modal-xl"
+    >
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">
+            Administrative Officers
+          </h5>
+          <button
+            type="button"
+            class="close"
+            data-dismiss="modal"
+            aria-label="Close"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="container-fluid">
+            <div class="row">
+              <ng-container *ngFor="let adminOff of dynamStaff">
+                <div
+                  class="col-12 card modal-card my-3"
+                  *ngIf="adminOff.Designation.includes('Administrative')"
+                >
+                  <div class="card-body">
+                    <div class="card-text" style="width: fit-content">
+                      <img
+                        src="../../../../assets/about-us/organogram/{{
+                          adminOff.Name
+                        }}.jpg"
+                        class="modal-img"
+                      />
+                      <h5
+                        class="modal-name"
+                        style="
+                          height: 100px;
+                          margin-left: 100px;
+                          padding-top: 22px;
+                        "
+                      >
+                        {{ adminOff.Name }}
+                        <p class="modal-designation">
+                          <b>{{ adminOff.Designation }}</b>
+                        </p>
+                      </h5>
+                      <hr />
+                      <div>
+                        <div class="modal-left">Address:</div>
+                        <div class="modal-right">
+                          {{ adminOff.Address }}<br />
+                        </div>
+                      </div>
+                      <div>
+                        <div class="modal-left">Tel:</div>
+                        <div class="modal-right">
+                          {{ adminOff.Contact.Tel[0] }},
+                          {{ adminOff.Contact.Tel[1] }}<br />
+                        </div>
+                      </div>
+                      <div>
+                        <div class="modal-left">Fax:</div>
+                        <div class="modal-right">
+                          {{ adminOff.Contact.Fax }}<br />
+                        </div>
+                      </div>
+                      <div>
+                        <div class="modal-left">Cell:</div>
+                        <div class="modal-right">
+                          {{ adminOff.Contact.Cell }}<br />
+                        </div>
+                      </div>
+                      <div>
+                        <div class="modal-left">Email:</div>
+                        <div class="modal-right">
+                          {{ adminOff.Contact.Email }}<br />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </ng-container>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal of Superintendents -->
+  <div
+    class="modal fade"
+    id="supModal"
+    tabindex="-1"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="true"
+  >
+    <div
+      class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-dialog modal-xl"
+    >
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="exampleModalLabel">Superintendents</h4>
+          <button
+            type="button"
+            class="close"
+            data-dismiss="modal"
+            aria-label="Close"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-12">
+                <h5 class="text-center">Medical Superintendents</h5>
+              </div>
+
+              <ng-container *ngFor="let medSup of dynamStaff">
+                <div
+                  class="col-12 card modal-card my-3"
+                  *ngIf="medSup.Designation.includes('Medical Superintendent')"
+                >
+                  <div class="card-body">
+                    <div class="card-text" style="width: fit-content">
+                      <img
+                        src="../../../../assets/about-us/organogram/{{
+                          medSup.Name
+                        }}.jpg"
+                        class="modal-img"
+                      />
+                      <h5
+                        class="modal-name"
+                        style="
+                          height: 100px;
+                          margin-left: 100px;
+                          padding-top: 22px;
+                        "
+                      >
+                        {{ medSup.Name }}
+                        <p class="modal-designation">
+                          <b>{{ medSup.Designation }}</b>
+                        </p>
+                      </h5>
+                      <hr />
+                      <div>
+                        <div class="modal-left">Address:</div>
+                        <div class="modal-right">
+                          {{ medSup.Address }}<br />
+                        </div>
+                      </div>
+                      <div>
+                        <div class="modal-left">Tel:</div>
+                        <div class="modal-right">
+                          {{ medSup.Contact.Tel[0] }}, {{ medSup.Contact.Tel[1]
+                          }}<br />
+                        </div>
+                      </div>
+                      <div>
+                        <div class="modal-left">Fax:</div>
+                        <div class="modal-right">
+                          {{ medSup.Contact.Fax }}<br />
+                        </div>
+                      </div>
+                      <div>
+                        <div class="modal-left">Cell:</div>
+                        <div class="modal-right">
+                          {{ medSup.Contact.Cell }}<br />
+                        </div>
+                      </div>
+                      <div>
+                        <div class="modal-left">Email:</div>
+                        <div class="modal-right">
+                          {{ medSup.Contact.Email }}<br />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </ng-container>
+
+              <div class="col-12">
+                <h5 class="text-center">Office Superintendents</h5>
+              </div>
+
+              <ng-container *ngFor="let officeSup of dynamStaff">
+                <div
+                  class="col-12 card modal-card my-3"
+                  *ngIf="
+                    officeSup.Designation.includes('Office Superintendent')
+                  "
+                >
+                  <div class="card-body">
+                    <div class="card-text" style="width: fit-content">
+                      <img
+                        src="../../../../assets/about-us/organogram/{{
+                          officeSup.Name
+                        }}.jpg"
+                        class="modal-img"
+                      />
+                      <h5
+                        class="modal-name"
+                        style="
+                          height: 100px;
+                          margin-left: 100px;
+                          padding-top: 22px;
+                        "
+                      >
+                        {{ officeSup.Name }}
+                        <p class="modal-designation">
+                          <b>{{ officeSup.Designation }}</b>
+                        </p>
+                      </h5>
+                      <hr />
+                      <div>
+                        <div class="modal-left">Address:</div>
+                        <div class="modal-right">
+                          {{ officeSup.Address }}<br />
+                        </div>
+                      </div>
+                      <div>
+                        <div class="modal-left">Tel:</div>
+                        <div class="modal-right">
+                          {{ officeSup.Contact.Tel[0] }},
+                          {{ officeSup.Contact.Tel[1] }}<br />
+                        </div>
+                      </div>
+                      <div>
+                        <div class="modal-left">Fax:</div>
+                        <div class="modal-right">
+                          {{ officeSup.Contact.Fax }}<br />
+                        </div>
+                      </div>
+                      <div>
+                        <div class="modal-left">Cell:</div>
+                        <div class="modal-right">
+                          {{ officeSup.Contact.Cell }}<br />
+                        </div>
+                      </div>
+                      <div>
+                        <div class="modal-left">Email:</div>
+                        <div class="modal-right">
+                          {{ officeSup.Contact.Email }}<br />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </ng-container>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </div>
+
+<!-- <ng-template #loading>
+  <h1 style="text-align: center; height: 500px">
+    Loading Organogram Data<br />
+    <div class="spinner-grow spinner-grow-sm" role="status"></div>
+    &nbsp;
+    <div class="spinner-grow spinner-grow-sm" role="status"></div>
+    &nbsp;
+    <div class="spinner-grow spinner-grow-sm" role="status"></div>
+  </h1>
+</ng-template> -->

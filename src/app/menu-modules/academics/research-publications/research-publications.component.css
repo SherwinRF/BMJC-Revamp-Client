@@ -1,0 +1,41 @@
+.white-back {
+  background-color: white;
+  margin: 30px;
+  font-family: Roboto;
+  font-size: 16px;
+  color: #666666;
+}
+
+h3 {
+  font-family: "Mukta", "sans-serif";
+  color: #2a2a2a;
+  font-size: 32px;
+}
+
+thead {
+  color: white;
+  text-align: center;
+}
+
+option:nth-child(1) {
+  font-weight: bold;
+}
+
+a.paginate_button.current {
+  color: #007fff;
+  font-family: Roboto;
+  font-size: 14px;
+  padding: 0 20px 0 20px;
+  height: 40px;
+  border: 1px solid #007fff;
+}
+
+a.paginate_button.hover {
+  color: white;
+  background-color: #007fff;
+  font-family: Roboto;
+  font-size: 14px;
+  padding: 0 20px 0 20px;
+  height: 40px;
+  border: 1px solid #fff;
+}

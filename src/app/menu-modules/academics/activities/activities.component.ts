@@ -12,10 +12,9 @@ import { AcademicsService } from "../academics.service";
 })
 export class ActivitiesComponent implements OnInit {
   theme: colorScheme;
-
-  //dtOptions: DataTables.Settings = {}; // new added
   dtOptions: any = {};
-  Activity: activity[]; // new added
+  Activity: activity[];
+  dataURL = "http://13.232.107.115:8000/academic-activities/";
 
   constructor(
     private themeChanger: ThemeChangerService,
@@ -27,18 +26,68 @@ export class ActivitiesComponent implements OnInit {
       this.theme = currentTheme;
     });
 
-    //this.dtOptions = { pagingType: 'full_numbers' }; // new added
     this.dtOptions = {
       paging: true,
       ordering: true,
       info: true,
-      //"bootstrap": true
+      responsive: true,
     };
 
-    this.httpclient
-      .get("/assets/data/Academic_Activities.json")
-      .subscribe((result: activity[]) => {
-        this.Activity = result;
-      }); // new added
+    this.httpclient.get(this.dataURL).subscribe((result: activity[]) => {
+      this.Activity = result;
+    });
+  }
+
+  dept: any = "";
+  year: any = "";
+  table_filter(event) {
+    this.Activity = null;
+    let years = ["All Years", "2016", "2017", "2018"];
+
+    if (years.includes(event.target.value)) this.year = event.target.value;
+    else this.dept = event.target.value;
+    let a = this.dept;
+    let b = this.year;
+
+    if (
+      (this.dept == "All Departments" && this.year == "All Years") ||
+      (this.dept == "All Departments" && this.year == "") ||
+      (this.dept == "" && this.year == "All Years")
+    ) {
+      this.dept = "";
+      this.year = "";
+      this.httpclient.get(this.dataURL).subscribe((result3: activity[]) => {
+        this.Activity = result3;
+      });
+    }
+    if (
+      (this.dept != "" && this.year == "") ||
+      (this.dept != "" && this.year == "All Years")
+    ) {
+      this.year = "";
+      this.httpclient.get(this.dataURL).subscribe((result3: activity[]) => {
+        this.Activity = result3.filter(function (d) {
+          return d.department == a;
+        });
+      });
+    }
+    if (
+      (this.dept == "" && this.year != "") ||
+      (this.dept == "All Departments" && this.year != "")
+    ) {
+      this.dept = "";
+      this.httpclient.get(this.dataURL).subscribe((result3: activity[]) => {
+        this.Activity = result3.filter(function (d) {
+          return d.date_year == b;
+        });
+      });
+    }
+    if (this.dept != "" && this.year != "") {
+      this.httpclient.get(this.dataURL).subscribe((result3: activity[]) => {
+        this.Activity = result3.filter(function (d) {
+          return d.department == a && d.date_year == b;
+        });
+      });
+    }
   }
 }

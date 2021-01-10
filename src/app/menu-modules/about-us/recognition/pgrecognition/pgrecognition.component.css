@@ -38,6 +38,12 @@ a {
 .badge {
   background-color: #ff8811;
 }
+.card:hover a {
+  color: white;
+}
+.card:hover {
+  background-color: #007fff;
+}
 @keyframes slide {
   0% {
     transform: translate(-400px, 0);

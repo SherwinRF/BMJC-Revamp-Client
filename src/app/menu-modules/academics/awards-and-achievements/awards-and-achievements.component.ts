@@ -12,8 +12,9 @@ import { AcademicsService } from "../academics.service";
 })
 export class AwardsAndAchievementsComponent implements OnInit {
   theme: colorScheme;
-  dtOptions: any = {}; // new added
-  Awards: awards[]; // new added
+  dtOptions: any = {};
+  Awards: awards[];
+  dataURL = "http://13.232.107.115:8000/awards-achievements/";
 
   constructor(
     private themeChanger: ThemeChangerService,
@@ -29,12 +30,63 @@ export class AwardsAndAchievementsComponent implements OnInit {
       paging: true,
       ordering: true,
       info: true,
-    }; // new added
+    };
 
-    this.httpclient
-      .get("/assets/data/Awards_Achievements.json")
-      .subscribe((result2: awards[]) => {
-        this.Awards = result2;
-      }); // new added
+    this.httpclient.get(this.dataURL).subscribe((result2: awards[]) => {
+      this.Awards = result2;
+    });
+  }
+
+  dept: any = "";
+  year: any = "";
+  table_filter(event) {
+    this.Awards = null;
+    let years = ["All Years", "2016", "2017", "2018"];
+
+    if (years.includes(event.target.value)) this.year = event.target.value;
+    else this.dept = event.target.value;
+    let a = this.dept;
+    let b = this.year;
+
+    if (
+      (this.dept == "All Departments" && this.year == "All Years") ||
+      (this.dept == "All Departments" && this.year == "") ||
+      (this.dept == "" && this.year == "All Years")
+    ) {
+      this.dept = "";
+      this.year = "";
+      this.httpclient.get(this.dataURL).subscribe((result3: awards[]) => {
+        this.Awards = result3;
+      });
+    }
+    if (
+      (this.dept != "" && this.year == "") ||
+      (this.dept != "" && this.year == "All Years")
+    ) {
+      this.year = "";
+      this.httpclient.get(this.dataURL).subscribe((result3: awards[]) => {
+        this.Awards = result3.filter(function (d) {
+          return d.department == a;
+        });
+      });
+    }
+    if (
+      (this.dept == "" && this.year != "") ||
+      (this.dept == "All Departments" && this.year != "")
+    ) {
+      this.dept = "";
+      this.httpclient.get(this.dataURL).subscribe((result3: awards[]) => {
+        this.Awards = result3.filter(function (d) {
+          return d.date_year == b;
+        });
+      });
+    }
+    if (this.dept != "" && this.year != "") {
+      this.httpclient.get(this.dataURL).subscribe((result3: awards[]) => {
+        this.Awards = result3.filter(function (d) {
+          return d.department == a && d.date_year == b;
+        });
+      });
+    }
   }
 }

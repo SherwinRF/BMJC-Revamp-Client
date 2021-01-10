@@ -5,9 +5,10 @@ import { PGResultComponent } from "./pgresult/pgresult.component";
 import { DataTablesModule } from "angular-datatables";
 import { FormsModule } from "@angular/forms";
 import { ResultService } from "./result.service";
+import { GoogleChartsModule } from "angular-google-charts";
 @NgModule({
   declarations: [UGResultComponent, PGResultComponent],
-  imports: [CommonModule, DataTablesModule, FormsModule],
+  imports: [CommonModule, DataTablesModule, FormsModule, GoogleChartsModule],
   providers: [ResultService],
   exports: [UGResultComponent, PGResultComponent],
 })

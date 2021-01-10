@@ -1,0 +1,19 @@
+.deans {
+  transition-property: transform;
+  transition-duration: 1s;
+  /* border-radius: 20px; */
+}
+.deans:hover {
+  /* background-color: #007fff; */
+  /* border: 2px solid #007fff; */
+  /* border-radius: 20px #007fff; */
+  box-shadow: 0 0 10px #007fff;
+  transform: scale(1.02);
+}
+
+h5 {
+  font-family: "Roboto", sans-serif;
+  /* font-size: 15px; */
+  /* font-weight: 500; */
+  color: #2a2a2a;
+}

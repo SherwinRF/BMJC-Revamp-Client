@@ -129,3 +129,8 @@ a {
   color: #ff8811;
 }
 /* //ICONS END */
+
+/* In-page smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}

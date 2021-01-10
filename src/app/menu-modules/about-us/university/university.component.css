@@ -27,9 +27,21 @@ nav .active {
   .nav-item {
     width: 100px;
   }
+  nav {
+    padding: 0 !important;
+  }
+  .univ {
+    padding: 0 15px;
+  }
 }
 @media (max-width: 479px) {
   .nav-item {
     width: 100px;
+  }
+  nav {
+    padding: 0 !important;
+  }
+  .univ {
+    padding: 0 15px;
   }
 }

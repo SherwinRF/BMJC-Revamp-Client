@@ -26,6 +26,26 @@ export class PGResultComponent implements OnInit {
   course_result_student_temp: StudentResults[] = []; //stores temporary
   department: String[] = []; //stores unique departments
 
+  //Column Chart
+  passcount: any;
+  failcount: any;
+  failatktcount: any;
+  withheldcount: any;
+  charts: boolean = false;
+  optionsbar = {};
+  col = ["Result", "Result", { role: "style" }];
+  datacolumn: any[] = [];
+
+  //Pie Chart Prooperty
+  title: String;
+  data: any[] = [];
+  type = "PieChart";
+  options = {
+    colors: ["green", "red", "orange", "blue"],
+  };
+  width;
+  height;
+
   //data table property
   dtOptions: any = {};
   constructor(
@@ -75,6 +95,7 @@ export class PGResultComponent implements OnInit {
   fetchResult(dep) {
     this.error_message = false;
     this.pg_result_table = false;
+    this.charts = false;
     this.department = [];
     this.course_result = dep;
     this.course_result_student = this.course_result.student_results;
@@ -97,10 +118,88 @@ export class PGResultComponent implements OnInit {
     for (let items of this.course_result_student_temp) {
       if (items.department == dep_name) this.course_result_student.push(items);
     }
+    this.chartCount(this.course_result_student);
     setTimeout(() => {
       this.pg_result_table = true;
     }, 100);
   }
+
+  //Function for counting pass  and fail for charts
+  chartCount(course_result_student) {
+    this.passcount = 0;
+    this.failcount = 0;
+    this.failatktcount = 0;
+    this.withheldcount = 0;
+    for (let i = 0; i < this.course_result_student.length; i++) {
+      if (course_result_student[i].result == "PASS") {
+        this.passcount++;
+      }
+      if (course_result_student[i].result == "FAIL") {
+        this.failcount++;
+      }
+      if (course_result_student[i].result == "FAILS-ATKT") {
+        this.failatktcount++;
+      }
+      if (course_result_student[i].result == "WITHHELD") {
+        this.withheldcount++;
+      }
+    }
+    this.charts = true;
+    this.drawchart();
+    //For Column Chart
+    this.optionsbar = {
+      title: this.course_result_student[0].department + " Result Statictics",
+      legend: "none",
+    };
+    this.title = this.course_result_student[0].department + " Result Piechart";
+    this.datacolumn = [
+      ["PASS", parseInt(this.passcount), "green"],
+      ["FAIL", parseInt(this.failcount), "red"],
+      ["FAILS-ATKT", parseInt(this.failatktcount), "orange"],
+      ["WITH-HELD", parseInt(this.withheldcount), "blue"],
+    ];
+    //For Pie Chart
+    this.data = [
+      ["PASS", parseInt(this.passcount)],
+      ["FAIL", parseInt(this.failcount)],
+      ["FAILS-ATKT", parseInt(this.failatktcount)],
+      ["WITH-HELD", parseInt(this.withheldcount)],
+    ];
+  }
+
+  //to draw chart on different screens
+  drawchart() {
+    if (document.documentElement.clientWidth >= 992) {
+      this.width = 500;
+      this.height = 400;
+    }
+    if (
+      document.documentElement.clientWidth <= 991 &&
+      document.documentElement.clientWidth >= 768
+    ) {
+      this.width = 400;
+      this.height = 400;
+    }
+    if (
+      document.documentElement.clientWidth <= 767 &&
+      document.documentElement.clientWidth >= 575
+    ) {
+      this.width = 350;
+      this.height = 350;
+    }
+    if (
+      document.documentElement.clientWidth <= 574 &&
+      document.documentElement.clientWidth >= 479
+    ) {
+      this.width = 300;
+      this.height = 300;
+    }
+    if (document.documentElement.clientWidth <= 480) {
+      this.width = 253;
+      this.height = 253;
+    }
+  }
+
   ngOnInit(): void {
     this.themeChanger.subscribeToTheme().subscribe((currentTheme) => {
       this.theme = currentTheme;

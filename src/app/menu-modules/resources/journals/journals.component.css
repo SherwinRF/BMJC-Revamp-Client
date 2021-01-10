@@ -1,7 +1,7 @@
-.card-journal:hover {
+/* .card-journal:hover {
   transform: scale(1.05);
   transition: all 200ms linear 0;
-}
+} */
 
 p:hover {
   color: #007fff;
@@ -24,4 +24,17 @@ p:hover {
   flex-wrap: wrap;
   justify-content: center;
   align-self: center;
+}
+
+.card-journal {
+  transition-property: transform;
+  transition-duration: 1s;
+  /* border-radius: 20px; */
+}
+.card-journal:hover {
+  /* background-color: #007fff; */
+  /* border: 2px solid #007fff; */
+  /* border-radius: 20px #007fff; */
+  box-shadow: 0 0 10px #007fff;
+  transform: scale(1.02);
 }

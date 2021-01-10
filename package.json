@@ -20,6 +20,7 @@
     "@angular/platform-browser-dynamic": "~9.0.6",
     "@angular/router": "~9.0.6",
     "angular-datatables": "^10.0.0",
+    "angular-google-charts": "^1.1.6",
     "bootstrap": "^4.5.3",
     "datatables.net": "^1.10.23",
     "datatables.net-buttons": "^1.6.5",

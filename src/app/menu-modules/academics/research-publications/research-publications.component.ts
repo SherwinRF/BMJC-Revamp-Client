@@ -12,8 +12,9 @@ import { AcademicsService } from "../academics.service";
 })
 export class ResearchPublicationsComponent implements OnInit {
   theme: colorScheme;
-  dtOptions: any = {}; // new added
-  Research: research[]; // new added
+  dtOptions: any = {};
+  Research: research[];
+  dataURL = "http://13.232.107.115:8000/research_publications/";
 
   constructor(
     private themeChanger: ThemeChangerService,
@@ -25,16 +26,68 @@ export class ResearchPublicationsComponent implements OnInit {
       this.theme = currentTheme;
     });
 
+    this.httpclient.get(this.dataURL).subscribe((result3: research[]) => {
+      this.Research = result3;
+    }); // "/assets/data/Research_Publications.json"
+
     this.dtOptions = {
       paging: true,
       ordering: true,
       info: true,
-    }; // new added
+      responsive: true,
+    };
+  }
 
-    this.httpclient
-      .get("/assets/data/Research_Publications.json")
-      .subscribe((result3: research[]) => {
+  dept: any = "";
+  year: any = "";
+  table_filter(event) {
+    this.Research = null;
+    let years = ["All Years", "2016", "2017", "2018"];
+
+    if (years.includes(event.target.value)) this.year = event.target.value;
+    else this.dept = event.target.value;
+    let a = this.dept;
+    let b = this.year;
+
+    if (
+      (this.dept == "All Departments" && this.year == "All Years") ||
+      (this.dept == "All Departments" && this.year == "") ||
+      (this.dept == "" && this.year == "All Years")
+    ) {
+      this.dept = "";
+      this.year = "";
+      this.httpclient.get(this.dataURL).subscribe((result3: research[]) => {
         this.Research = result3;
-      }); // new added
+      });
+    }
+    if (
+      (this.dept != "" && this.year == "") ||
+      (this.dept != "" && this.year == "All Years")
+    ) {
+      this.year = "";
+      this.httpclient.get(this.dataURL).subscribe((result3: research[]) => {
+        this.Research = result3.filter(function (d) {
+          return d.Department == a;
+        });
+      });
+    }
+    if (
+      (this.dept == "" && this.year != "") ||
+      (this.dept == "All Departments" && this.year != "")
+    ) {
+      this.dept = "";
+      this.httpclient.get(this.dataURL).subscribe((result3: research[]) => {
+        this.Research = result3.filter(function (d) {
+          return d.Year == b;
+        });
+      });
+    }
+    if (this.dept != "" && this.year != "") {
+      this.httpclient.get(this.dataURL).subscribe((result3: research[]) => {
+        this.Research = result3.filter(function (d) {
+          return d.Department == a && d.Year == b;
+        });
+      });
+    }
   }
 }

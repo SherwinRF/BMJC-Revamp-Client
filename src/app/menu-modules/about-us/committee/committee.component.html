@@ -3,8 +3,9 @@
   [ngStyle]="{ 'background-color': theme.background }"
 >
   <div class="container">
-    <h1 [ngStyle]="{ color: theme.text }">Committees</h1>
-    <div>
+    <h1 class="my-3">Committees</h1>
+    <hr />
+    <div class="pdf-holder">
       <!-- <a> -->
       <!-- <embed src="../../../../assets/committees.pdf" type="application/pdf" width="100%" height="800px"/> -->
       <!-- </a> -->
@@ -12,7 +13,7 @@
         name="committeePdf"
         id="committeePdf"
         width="100%"
-        height="700px"
+        height="700vw"
         src="/assets/pdfs/committees.pdf#view=FitH"
       >
       </iframe>

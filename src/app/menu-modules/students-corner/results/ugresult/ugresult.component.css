@@ -24,7 +24,29 @@ a:hover {
   background-color: #007fff;
   color: white;
 }
-
+.dropdown-menu {
+  padding: 0;
+  overflow-y: auto;
+  max-height: 250px;
+}
+.charts {
+  text-align: center;
+}
+.chart {
+  display: inline-block;
+}
+.green {
+  color: green;
+}
+.red {
+  color: red;
+}
+.orange {
+  color: orange;
+}
+.blue {
+  color: blue;
+}
 @media (min-width: 768px) and (max-width: 991px) {
   .btn-group {
     margin: 10px 0;
@@ -44,7 +66,6 @@ a:hover {
     margin: 10px 0;
   }
 }
-
 @media (max-width: 479px) {
   .btn-group {
     margin: 10px 0;

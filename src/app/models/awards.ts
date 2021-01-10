@@ -1,10 +1,10 @@
 export class awards {
-    Name: string;
-    Designation: string;
-    Achievement: string;
-    Department: string;
-    Date_day: any;
-    Date_month: string;
-    Date_year: number;
-    Place: string;
+  name: string;
+  designation: string;
+  achievement: string;
+  department: string;
+  date_day: any;
+  date_month: string;
+  date_year: number;
+  place: string;
 }

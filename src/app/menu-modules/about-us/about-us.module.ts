@@ -10,6 +10,8 @@ import { UniversityComponent } from "./university/university.component";
 import { RecognitionComponent } from "./recognition/recognition.component";
 import { RecognitionModule } from "./recognition/recognition.module";
 import { UniversityModule } from "./university/university.module";
+import { HttpClientModule } from "@angular/common/http";
+import { LoadingModule } from "src/app/loading-module/loading/loading.module";
 @NgModule({
   declarations: [
     DeansComponent,
@@ -24,6 +26,8 @@ import { UniversityModule } from "./university/university.module";
     AboutUsRoutingModule,
     RecognitionModule,
     UniversityModule,
+    HttpClientModule,
+    LoadingModule,
   ],
 })
 export class AboutUsModule {}

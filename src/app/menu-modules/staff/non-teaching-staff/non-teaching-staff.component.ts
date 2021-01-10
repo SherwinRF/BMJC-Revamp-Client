@@ -33,7 +33,7 @@ export class NonTeachingStaffComponent implements OnInit {
     }; // new added
 
     this.httpclient
-      .get("http://localhost:8000/Non-Teaching")
+      .get("http://13.232.107.115:8000/Non-Teaching")
       .subscribe((result3) => {
         this.data2 = result3;
         console.log(result3);

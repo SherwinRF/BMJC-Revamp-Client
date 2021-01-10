@@ -66,6 +66,9 @@ a {
 img {
   max-height: 180px;
 }
+button:hover a {
+  color: white !important;
+}
 @keyframes slide {
   0% {
     transform: translate(-400px, 0);

@@ -27,9 +27,15 @@ nav .active {
   .nav-item {
     width: 120px !important;
   }
+  .result {
+    padding: 0 15px;
+  }
 }
 @media (max-width: 479px) {
   .nav-item {
     width: 120px !important;
+  }
+  .result {
+    padding: 0 15px;
   }
 }

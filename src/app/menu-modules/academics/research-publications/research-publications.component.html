@@ -1,36 +1,78 @@
-<div class="container mx-auto">
-  <div class="row">
-    <div class="col-12 col-sm-12">
-      <h3>Research Publications</h3>
-      <hr />
+<div class="white-back">
+  <br />
+  <div class="container mx-auto">
+    <div class="row">
+      <div class="col-12 col-sm-12">
+        <h3>Research Publications</h3>
+        <hr />
+      </div>
+    </div>
+
+    <div class="form-row align-items-center">
+      <div class="col-auto my-1">
+        <label class="mr-sm-2" for="dept">Filter by Department</label>
+        <select
+          class="custom-select mr-sm-2"
+          id="dept"
+          (change)="table_filter($event)"
+        >
+          <option value="All Departments" selected>All Departments</option>
+          <option value="Anatomy">Anatomy</option>
+          <option value="Biochemistry">Biochemistry</option>
+          <option value="Microbiology">Microbiology</option>
+          <option value="Paediatric Surgery">Paediatric Surgery</option>
+          <option value="Pathology">Pathology</option>
+          <option value="Pharmacology">Pharmacology</option>
+          <option value="Psychiatry">Psychiatry</option>
+          <option value="Radiology">Radiology</option>
+          <option value="Skin and VD">Skin and VD</option>
+          <option value="Surgery">Surgery</option>
+        </select>
+      </div>
+      <div class="col-auto my-1">
+        <label class="mr-sm-2" for="year">Filter by Year</label>
+        <select
+          class="custom-select mr-sm-2"
+          id="year"
+          (change)="table_filter($event)"
+        >
+          <option value="All Years" selected>All Years</option>
+          <option value="2016">2016</option>
+          <option value="2017">2017</option>
+          <option value="2018">2018</option>
+        </select>
+      </div>
+    </div>
+    <br />
+
+    <div *ngIf="Research">
+      <table
+        datatable
+        [dtOptions]="dtOptions"
+        class="table-striped row-border hover table-bordered"
+      >
+        <thead [ngStyle]="{ 'background-color': theme.primary }">
+          <tr>
+            <th>Publication Title</th>
+            <th>Authors</th>
+            <th>Department</th>
+            <th>Year</th>
+            <th>Journal</th>
+            <th>Type</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let a of Research">
+            <td>{{ a.Publication_Title }}</td>
+            <td>{{ a.Authors }}</td>
+            <td>{{ a.Department }}</td>
+            <td>{{ a.Year }}</td>
+            <td>{{ a.Journal }}</td>
+            <td>{{ a.Type }}</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
-  <div *ngIf="Research">
-    <table
-      datatable
-      [dtOptions]="dtOptions"
-      class="row-border hover table-bordered"
-    >
-      <thead [ngStyle]="{ 'background-color': theme.primary }" align="center">
-        <tr>
-          <th>Publication Title</th>
-          <th>Authors</th>
-          <th>Department</th>
-          <th>Year</th>
-          <th>Journal</th>
-          <th>Type</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let a of Research">
-          <td>{{ a.Publication_Title }}</td>
-          <td>{{ a.Authors }}</td>
-          <td>{{ a.Department }}</td>
-          <td>{{ a.Year }}</td>
-          <td>{{ a.Journal }}</td>
-          <td>{{ a.Type }}</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+  <br />
 </div>

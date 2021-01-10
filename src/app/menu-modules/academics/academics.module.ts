@@ -17,8 +17,8 @@ import { ResearchPublicationsComponent } from "./research-publications/research-
   imports: [
     CommonModule,
     AcademicsRoutingModule,
-    HttpClientModule, // New Added
-    DataTablesModule, // New Added
+    HttpClientModule,
+    DataTablesModule,
   ],
   bootstrap: [
     ActivitiesComponent,

@@ -1,0 +1,36 @@
+.white-back {
+  background-color: white;
+  margin: 30px;
+  font-family: Roboto;
+  font-size: 16px;
+  color: #666666;
+}
+
+h3 {
+  font-family: "Mukta", "sans-serif";
+  color: #2a2a2a;
+  font-size: 32px;
+}
+
+thead {
+  color: white;
+  text-align: center;
+}
+
+option:nth-child(1) {
+  font-weight: bold;
+}
+
+a.paginate_button:hover {
+  color: white !important;
+  border: 1px solid blue;
+  background-color: blue;
+  background: linear-gradient(to bottom, blue 0%, blue 100%);
+}
+
+table.datatable.paginate_button.current {
+  color: white !important;
+  border: 1px solid white;
+  background-color: blue;
+  background: linear-gradient(to bottom, blue 0%, blue 100%);
+}

@@ -1,17 +1,62 @@
-<div class="container mx-auto">
+<div class="container">
   <div class="row">
     <div class="col-12 col-sm-12">
       <h3>Teaching Staff</h3>
       <hr />
     </div>
   </div>
+
+  <div class="form-row align-items-center">
+    <div class="col-auto my-1">
+      <label class="mr-sm-2" for="dept">Filter by Department</label>
+      <div class="wrapper">
+        <select
+          class="custom-select mr-sm-2"
+          onfocus="this.size=9;"
+          onblur="this.size=1;"
+          onchange="this.size=1; this.blur();"
+          id="dept"
+          (change)="showDetails($event)"
+        >
+          <option value="All Departments" selected>All Departments</option>
+          <option value="Anatomy">Anatomy</option>
+          <option value="Physiology">Physiology</option>
+          <option value="Medicine">Medicine</option>
+          <option value="Microbiology">Microbiology</option>
+          <option value="Gynaecology">Gynaecology</option>
+          <option value="Anaesthesiology">Anaesthesiology</option>
+          <option value="Paediatric">Paediatric</option>
+          <option value=" Psychiatry">Psychiatry</option>
+          <option value="Radio-Diagnosis">Radio-Diagnosis</option>
+          <option value="Dental">Dental</option>
+          <option value="Forensic Medicine (FMT)">
+            Forensic Medicine (FMT)
+          </option>
+          <option value="Bio-Chemistry">Bio-Chemistry</option>
+          <option value="Pathology">Pathology</option>
+          <option value=" Pharmacology">Pharmacology</option>
+          <option value="Orthopaedic">Orthopaedic</option>
+          <option value="Preventive & Social Medicine (PSM)">
+            Preventive & Social Medicine (PSM)
+          </option>
+          <option value="Skin & V.B.">Skin & VB</option>
+          <option value="Surgery">Surgery</option>
+          <option value="Tuberculosis (TB)">Tuberculosis (TB)</option>
+          <option value="Opthamology">Opthamology</option>
+          <option value="E.N.T.">E.N.T.</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  <br />
   <div *ngIf="data3">
     <table
       datatable
       [dtOptions]="dtOptions"
-      class="table table-bordered table-hover table-striped"
+      class="row-border table-striped table-bordered hover"
+      width="100%"
     >
-      <thead [ngStyle]="{ 'background-color': theme.primary }" align="center">
+      <thead [ngStyle]="{ 'background-color': theme.primary }">
         <tr>
           <th>Name</th>
 

@@ -1,48 +1,50 @@
-<div class="container">
-  <div class="resultheading">
-    <h2>Results</h2>
-  </div>
-  <nav>
-    <div class="nav nav-tabs" id="nav-tab" role="tablist">
-      <a
-        class="nav-item nav-link active"
-        id="nav-ug-tab"
-        data-toggle="tab"
-        href="#nav-ug"
-        role="tab"
-        aria-controls="nav-home"
-        aria-selected="true"
-        >UG</a
-      >
-      <a
-        class="nav-item nav-link"
-        id="nav-pg-tab"
-        data-toggle="tab"
-        href="#nav-pg"
-        role="tab"
-        aria-controls="nav-profile"
-        aria-selected="false"
-        >PG</a
-      >
+<div class="result">
+  <div class="container">
+    <div class="resultheading">
+      <h2>Results</h2>
     </div>
-  </nav>
-  <br />
-  <div class="tab-content" id="nav-tabContent">
-    <div
-      class="tab-pane fade show active"
-      id="nav-ug"
-      role="tabpanel"
-      aria-labelledby="nav-profile-tab"
-    >
-      <app-ugresult></app-ugresult>
-    </div>
-    <div
-      class="tab-pane fade"
-      id="nav-pg"
-      role="tabpanel"
-      aria-labelledby="nav-profile-tab"
-    >
-      <app-pgresult></app-pgresult>
+    <nav>
+      <div class="nav nav-tabs" id="nav-tab" role="tablist">
+        <a
+          class="nav-item nav-link active"
+          id="nav-ug-tab"
+          data-toggle="tab"
+          href="#nav-ug"
+          role="tab"
+          aria-controls="nav-home"
+          aria-selected="true"
+          >UG</a
+        >
+        <a
+          class="nav-item nav-link"
+          id="nav-pg-tab"
+          data-toggle="tab"
+          href="#nav-pg"
+          role="tab"
+          aria-controls="nav-profile"
+          aria-selected="false"
+          >PG</a
+        >
+      </div>
+    </nav>
+    <br />
+    <div class="tab-content" id="nav-tabContent">
+      <div
+        class="tab-pane fade show active"
+        id="nav-ug"
+        role="tabpanel"
+        aria-labelledby="nav-profile-tab"
+      >
+        <app-ugresult></app-ugresult>
+      </div>
+      <div
+        class="tab-pane fade"
+        id="nav-pg"
+        role="tabpanel"
+        aria-labelledby="nav-profile-tab"
+      >
+        <app-pgresult></app-pgresult>
+      </div>
     </div>
   </div>
 </div>

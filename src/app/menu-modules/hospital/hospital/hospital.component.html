@@ -1,15 +1,19 @@
-<div class="display-1" [ngStyle]="{ 'background-color': theme.background }">
+<div
+  class="display-1 my-3"
+  [ngStyle]="{ 'background-color': theme.background }"
+>
   <div class="container">
-    <h1 [ngStyle]="{ color: theme.text }">Hospital</h1>
-    <div>
+    <h1 class="my-3">Hospital</h1>
+    <hr />
+    <div class="pdf-holder">
       <!-- <a> -->
-      <!-- <embed src="../../../../assets/hospital.pdf" type="application/pdf" width="100%" height="800px"/> -->
+      <!-- <embed src="../../../../assets/committees.pdf" type="application/pdf" width="100%" height="800px"/> -->
       <!-- </a> -->
       <iframe
-        name="hospitalPdf"
-        id="hospitalPdf"
+        name="committeePdf"
+        id="committeePdf"
         width="100%"
-        height="700px"
+        height="700vw"
         src="/assets/pdfs/hospital.pdf#view=FitH"
       >
       </iframe>

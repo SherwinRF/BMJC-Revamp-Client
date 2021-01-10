@@ -2,15 +2,14 @@
   <div class="row">
     <div class="col-lg-2 col-md-2 col-sm-6 col-6 d-block m-auto">
       <div class="btn-group">
-        <button type="button" class="btn btn-text">Result</button>
         <button
           type="button"
-          class="btn btn-text dropdown-toggle dropdown-toggle-split"
+          class="btn btn-plain dropdown-toggle"
           data-toggle="dropdown"
           aria-haspopup="true"
           aria-expanded="false"
         >
-          <span class="sr-only">Toggle Dropdown</span>
+          Result
         </button>
         <div class="dropdown-menu">
           <a
@@ -34,22 +33,18 @@
       <div class="btn-group">
         <button
           type="button"
-          class="btn btn-text"
+          class="btn btn-plain dropdown-toggle"
           [disabled]="department_button"
+          data-toggle="dropdown"
+          [ngStyle]="{
+            'background-color': department_button == true ? '#888' : '#007fff'
+          }"
+          aria-haspopup="true"
+          aria-expanded="false"
         >
           Department
         </button>
-        <button
-          type="button"
-          class="btn btn-text dropdown-toggle dropdown-toggle-split"
-          data-toggle="dropdown"
-          aria-haspopup="true"
-          aria-expanded="false"
-          [disabled]="department_button"
-        >
-          <span class="sr-only">Toggle Dropdown</span>
-        </button>
-        <div class="dropdown-menu">
+        <div class="dropdown-menu dropdown-menu-right">
           <a
             class="dropdown-item"
             *ngFor="let items of department"
@@ -130,7 +125,16 @@
             <td>{{ item.student_results.prn }}</td>
             <td>{{ item.student_results.name }}</td>
             <td>{{ item.student_results.department }}</td>
-            <td>{{ item.student_results.result }}</td>
+            <td
+              [ngClass]="{
+                green: item.result == 'PASS',
+                red: item.result == 'FAIL',
+                orange: item.result == 'FAILS-ATKT',
+                blue: item.result == 'WITHHELD'
+              }"
+            >
+              {{ item.student_results.result }}
+            </td>
           </tr>
         </tbody>
       </table>
@@ -173,10 +177,47 @@
             <td>{{ item.prn }}</td>
             <td>{{ item.name }}</td>
             <td>{{ item.department }}</td>
-            <td>{{ item.result }}</td>
+            <td
+              [ngClass]="{
+                green: item.result == 'PASS',
+                red: item.result == 'FAIL',
+                orange: item.result == 'FAILS-ATKT',
+                blue: item.result == 'WITHHELD'
+              }"
+            >
+              {{ item.result }}
+            </td>
           </tr>
         </tbody>
       </table>
+      <br />
+      <div class="charts" (window:resize)="drawchart()">
+        <hr *ngIf="charts" />
+        <google-chart
+          *ngIf="charts"
+          #chart
+          class="chart"
+          type="ColumnChart"
+          [data]="datacolumn"
+          [columns]="col"
+          [options]="optionsbar"
+          [width]="width"
+          [height]="height"
+        >
+        </google-chart>
+        <google-chart
+          *ngIf="charts"
+          #chart
+          class="chart"
+          [title]="title"
+          [type]="type"
+          [data]="data"
+          [options]="options"
+          [width]="width"
+          [height]="height"
+        >
+        </google-chart>
+      </div>
     </div>
   </div>
 </div>

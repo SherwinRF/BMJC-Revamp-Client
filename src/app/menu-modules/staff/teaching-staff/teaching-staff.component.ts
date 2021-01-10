@@ -14,6 +14,8 @@ export class TeachingStaffComponent implements OnInit {
   theme: colorScheme;
   dtOptions: any = {}; // new added
   data3: any;
+  d1: any;
+  data4: any;
 
   constructor(
     private themeChanger: ThemeChangerService,
@@ -29,13 +31,43 @@ export class TeachingStaffComponent implements OnInit {
       paging: true,
       ordering: true,
       info: true,
+      responsive: true,
     }; // new added
 
     this.httpclient
-      .get("http://localhost:8000/Teachers")
+      .get("http://13.232.107.115:8000/teachers")
       .subscribe((result4) => {
         this.data3 = result4;
-        console.log(result4);
+        this.data4 = result4;
       }); // new added
+  }
+
+  showDetails(event) {
+    this.data3 = null;
+
+    let dept = event.target.value;
+    console.log(dept);
+    if (dept == "All Departments") {
+      this.httpclient
+        .get("http://13.232.107.115:8000/teachers")
+        .subscribe((result4) => {
+          this.data3 = result4;
+        });
+
+      this.dtOptions = {
+        paging: true,
+        ordering: true,
+        info: true,
+        responsive: true,
+      };
+    } else {
+      this.httpclient
+        .get("http://13.232.107.115:8000/teachers/" + dept)
+        .subscribe((resu) => {
+          this.data3 = resu;
+
+          console.log(resu);
+        });
+    }
   }
 }
