@@ -71,12 +71,12 @@
         </thead>
         <tbody>
           <tr *ngFor="let a of Awards">
-            <td>{{ a.name }}</td>
-            <td>{{ a.designation }}</td>
-            <td>{{ a.achievement }}</td>
-            <td>{{ a.department }}</td>
+            <td>{{ a.name.length === 0 ? "N/A" : a.name }}</td>
+            <td>{{ a.designation.length === 0 ? "N/A" : a.designation }}</td>
+            <td>{{ a.achievement.length === 0 ? "N/A" : a.achievement }}</td>
+            <td>{{ a.department.length === 0 ? "N/A" : a.department }}</td>
             <td>{{ a.date_day }} {{ a.date_month }} {{ a.date_year }}</td>
-            <td>{{ a.place }}</td>
+            <td>{{ a.place.length === 0 ? "N/A" : a.place }}</td>
           </tr>
         </tbody>
       </table>

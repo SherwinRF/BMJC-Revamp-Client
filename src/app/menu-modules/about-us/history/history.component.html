@@ -1,15 +1,25 @@
-<section id="timeline" class="container">
-  <h1>KNOW ABOUT US</h1>
-
+<section id="timeline" class="container my-3">
+  <div>
+    <h2 class="decorated"><span>Know about us</span></h2>
+  </div>
   <div
-    id="carouselExampleSlidesOnly"
-    class="carousel slide container mx-auto"
+    id="carouselExampleCaptions"
+    class="carousel slide my-3"
     data-ride="carousel"
   >
-    <div class="carousel-inner mx-auto">
+    <ol class="carousel-indicators pb-4">
+      <li
+        data-target="#carouselExampleCaptions"
+        data-slide-to="0"
+        class="active"
+      ></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
       <div class="carousel-item active">
         <img
-          src="assets/about-us/history/bjmc4.jpg"
+          src="assets/about-us/history/bjmc.jpg"
           style="height: 400px; width: 100%"
         />
       </div>
@@ -21,17 +31,29 @@
       </div>
       <div class="carousel-item">
         <img
-          src="assets/about-us/history/bjmc2.jpg"
-          style="height: 400px; width: 100%"
-        />
-      </div>
-      <div class="carousel-item">
-        <img
-          src="assets/about-us/history/bjmc.jpg"
+          src="assets/about-us/history/bjmc4.jpg"
           style="height: 400px; width: 100%"
         />
       </div>
     </div>
+    <a
+      class="carousel-control-prev"
+      href="#carouselExampleCaptions"
+      role="button"
+      data-slide="prev"
+    >
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a
+      class="carousel-control-next"
+      href="#carouselExampleCaptions"
+      role="button"
+      data-slide="next"
+    >
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
   </div>
 
   <div class="demo-card-wrapper">
@@ -172,11 +194,11 @@
   <div class="card">
     <div
       class="card-header"
-      style="background-color: rgb(91, 91, 247); color: white; font: 45px bold"
+      style="background-color: #007fff; color: white; font: 45px bold"
     >
       BJMC Achievements and Contribution
     </div>
-    <div class="card-body" style="background-color: rgb(233, 233, 241)">
+    <div class="card-body" style="background-color: rgb(255, 255, 255)">
       <p class="card-text">
         BJMC fought the outbreak of 2009 H1N1 (Swine flu) in Maharashtra. Pune
         was epicentre of the outbreak and BJMC served as tertiary level facility
@@ -219,15 +241,16 @@
       </p>
     </div>
   </div>
-  <button
-    type="button"
-    class="card"
-    data-toggle="modal"
-    data-target="#myModal"
-    class="primary-btn"
-  >
-    Read More About History
-  </button>
+  <div class="text-center">
+    <button
+      type="button"
+      class="text-center primary-btn my-3"
+      data-toggle="modal"
+      data-target="#myModal"
+    >
+      Read more
+    </button>
+  </div>
 
   <div id="myModal" class="modal fade" role="dialog">
     <div class="modal-dialog">

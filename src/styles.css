@@ -134,3 +134,38 @@ a {
 html {
   scroll-behavior: smooth;
 }
+
+/* Style for heading on each page */
+
+.decorated {
+  overflow: hidden;
+
+  text-align: center;
+}
+
+.decorated > span {
+  position: relative;
+
+  display: inline-block;
+}
+
+.decorated > span::before,
+.decorated > span::after {
+  content: "";
+
+  position: absolute;
+
+  border-bottom: 4px solid #ff8811;
+
+  width: 100vw;
+
+  margin: 20px 20px;
+}
+
+.decorated > span::before {
+  right: 100%;
+}
+
+.decorated > span::after {
+  left: 100%;
+}

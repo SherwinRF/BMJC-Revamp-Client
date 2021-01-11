@@ -6,6 +6,7 @@ import { ResultsComponent } from "./results/results.component";
 import { HostelComponent } from "./hostel/hostel.component";
 import { ResultModule } from "./results/results.module";
 import { HttpClientModule } from "@angular/common/http";
+import { GoogleChartsModule } from "angular-google-charts";
 
 @NgModule({
   declarations: [ResultsComponent, HostelComponent],
@@ -14,6 +15,7 @@ import { HttpClientModule } from "@angular/common/http";
     StudentsCornerRoutingModule,
     ResultModule,
     HttpClientModule,
+    GoogleChartsModule,
   ],
 })
 export class StudentsCornerModule {}

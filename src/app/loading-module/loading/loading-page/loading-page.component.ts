@@ -7,11 +7,11 @@ import { Component, OnInit } from "@angular/core";
 })
 export class LoadingPageComponent implements OnInit {
   loadingTexts: string[] = [
-    "loading1",
-    "loading2",
-    "loading3",
-    "loading4",
-    "loading5",
+    "loading...",
+    "loading...",
+    "loading...",
+    "loading...",
+    "loading...",
   ];
   currentLoadingText: string;
   constructor() {}

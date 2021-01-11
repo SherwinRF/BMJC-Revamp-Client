@@ -37,44 +37,12 @@
   color: #fff;
 }
 
-.decorated {
-  overflow: hidden;
-
-  text-align: center;
-}
-
-.decorated > span {
-  position: relative;
-
-  display: inline-block;
-}
-
-.decorated > span::before,
-.decorated > span::after {
-  content: "";
-
-  position: absolute;
-
-  border-bottom: 4px solid #ff8811;
-
-  width: 100vw;
-
-  margin: 20px 20px;
-}
-
-.decorated > span::before {
-  right: 100%;
-}
-
-.decorated > span::after {
-  left: 100%;
-}
-
 .badge,
 .badge-primary,
 .badge-pill {
   margin: 0;
   padding: 0.2rem;
+  background: #ff8811;
 }
 
 .pill-container {

@@ -2,10 +2,7 @@
   <app-loading-page></app-loading-page>
 </div>
 
-<div
-  *ngIf="journals"
-  class="card-journals bg-white container my-3"
->
+<div *ngIf="journals" class="card-journals container my-3">
   <div class="card-journal" *ngFor="let item of journals">
     <a href="{{ item.link }}" target="_blank" class="text-decoration-none">
       <div class="card h-100">

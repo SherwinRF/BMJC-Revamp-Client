@@ -17,3 +17,20 @@ h5 {
   /* font-weight: 500; */
   color: #2a2a2a;
 }
+
+nav {
+  padding: 0 10px;
+}
+
+.nav-item {
+  /* width: 120px; */
+  text-align: center;
+}
+nav .active {
+  color: white;
+  background-color: #007fff;
+}
+.nav a:hover {
+  color: white;
+  background-color: #007fff;
+}

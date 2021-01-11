@@ -11,7 +11,19 @@ iframe {
   margin-bottom: 30px;
 }
 
-.container {
-  background-color: white;
+/* .container {
   padding: 20px 20px;
+} */
+
+.nav-item {
+  width: 120px;
+  text-align: center;
+}
+nav .active {
+  color: white;
+  background-color: #007fff;
+}
+.nav a:hover {
+  color: white;
+  background-color: #007fff;
 }

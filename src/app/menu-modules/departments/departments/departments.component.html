@@ -1,471 +1,605 @@
-<div id="content">
-  <section class="title-block">
-    <div class="page-title" style="text-align: center">
+<div *ngIf="!data" class="container">
+  <h2>loading</h2>
+</div>
+
+<div *ngIf="data" class="container py-5 pr-3 tryscroll">
+  <div class="upperdiv">
+    <div class="page-title">
       <h1>DEPARTMENTS &amp; CENTERS</h1>
     </div>
-    <nav class="anchor-block row-3">
-      <ul class="btn-row-container">
-        <li class="btn-anch">
-          <a href="./departments#department"
-            ><span class="ico-arrow down">Pre-Clinical Departments</span></a
-          >
-        </li>
-        <li class="btn-anch">
-          <a href="./departments#parac"
-            ><span class="ico-arrow down">Para-Clinical Department</span></a
-          >
-        </li>
-        <li class="btn-anch">
-          <a href="./departments#medis"
-            ><span class="ico-arrow down">Medical Specialties</span></a
-          >
-        </li>
-        <li class="btn-anch">
-          <a href="./departments#mediss"
-            ><span class="ico-arrow down">Medical Super Specialties</span></a
-          >
-        </li>
-        <li class="btn-anch">
-          <a href="./departments#surs"
-            ><span class="ico-arrow down"
-              ><span class="small">Surgical Specialties</span></span
-            ></a
-          >
-        </li>
-        <li class="btn-anch">
-          <a href="./departments#surss"
-            ><span class="ico-arrow down">Surgical Super Specialties</span></a
-          >
-        </li>
-        <li class="btn-anch">
-          <a href="./departments#alls"
-            ><span class="ico-arrow down">Allied Services</span></a
-          >
-        </li>
-        <li class="btn-anch">
-          <a href="./departments#hivai"
-            ><span class="ico-arrow down">HIV AIDS</span></a
-          >
-        </li>
-      </ul>
-    </nav>
-  </section>
-</div>
-<div class="content-block">
-  <div id="department" class="l-row-cont">
-    <div class="l-col-cont cont-ttl">
-      <div class="cont-ttl-box"></div>
-    </div>
-    <div class="l-col-cont cont-body">
-      <div class="col-block">
-        <div
-          class="col-box"
-          style="text-align: center; color: blue; font-size: 25px"
-        >
-          <h2 class="small">Pre-Clinical Departments</h2>
+
+    <hr />
+
+    <div class="row py-5 text-center">
+      <div class="col-md-4 col-sm-6 py-2">
+        <div class="col-12 btn-dept py-3">
+          <a href="./departments#pre-clinical">
+            <span> Pre-Clinical Department </span>
+          </a>
         </div>
-        <nav class="col-box mt12rem">
-          <ul class="btn-row-container">
-            <li class="btn-link">
-              <a href="departments.html#hematology-oncology"
-                ><span class="ico-arrow">Anatomy</span></a
-              >
-            </li>
-            <li class="btn-link">
-              <a href="departments.html#den"
-                ><span class="ico-arrow">Physiology</span></a
-              >
-            </li>
-            <li class="btn-link">
-              <a href="departments.html#cardiovascular"
-                ><span class="ico-arrow">Biochemistry</span></a
-              >
-            </li>
-          </ul>
-        </nav>
+      </div>
+
+      <div class="col-md-4 col-sm-6 py-2">
+        <div class="col-12 btn-dept py-3">
+          <a href="./departments#parac">
+            <span class="btn-text"> Para-Clinical Department </span>
+          </a>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-sm-6 py-2">
+        <div class="col-12 btn-dept py-3">
+          <a href="./departments#medis">
+            <span class="btn-text"> Medical Specialties </span>
+          </a>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-sm-6 py-2">
+        <div class="col-12 btn-dept py-3">
+          <a href="./departments#mediss">
+            <span class="btn-text"> Medical Super Specialties </span>
+          </a>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-sm-6 py-2">
+        <div class="col-12 btn-dept py-3">
+          <a href="./departments#surs">
+            <span class="btn-text"> Surgical Specialitie </span>
+          </a>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-sm-6 py-2">
+        <div class="col-12 btn-dept py-3">
+          <a href="./departments#surss">
+            <span class="btn-text"> Surgical Super Specialties </span>
+          </a>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-sm-6 py-2">
+        <div class="col-12 btn-dept py-3">
+          <a href="./departments#alls">
+            <span class="btn-text"> Allied Services </span>
+          </a>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-sm-6 py-2">
+        <div class="col-12 btn-dept py-3">
+          <a href="./departments#hivai">
+            <span class="btn-text"> HIV AIDS </span>
+          </a>
+        </div>
       </div>
     </div>
+  </div>
 
-    <div id="parac" class="l-row-cont">
-      <div class="l-col-cont cont-ttl">
-        <div class="cont-ttl-box"></div>
+  <hr />
+  <br />
+
+  <div class="card lowerdiv">
+    <div class="card-body">
+      <div id="pre-clinical" class="col-box">
+        <h2>Pre-Clinical Departments</h2>
+
+        <div class="row my-5 text-center">
+          <div class="col-md-4 col-sm-6 py-2">
+            <div class="col-12">
+              <div class="btn-anch py-3">
+                <a href="{{ data[1].link }}" target="_blank">
+                  <span class="btn-text"> Anatomy </span>
+                  &nbsp;&nbsp;
+                  <span class="badge badge-primary badge-pill"> PDF </span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-sm-6 py-2">
+            <div class="col-12">
+              <div class="btn-anch py-3">
+                <a href="{{ data[21].link }}" target="_blank">
+                  <span class="btn-text"> Physiology </span>
+                  &nbsp;&nbsp;
+                  <span class="badge badge-primary badge-pill"> PDF </span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-sm-6 py-2">
+            <div class="col-12">
+              <div class="btn-anch py-3">
+                <a href="{{ data[2].link }}" target="_blank">
+                  <span class="btn-text"> Biochemistry </span>
+                  &nbsp;&nbsp;
+                  <span class="badge badge-primary badge-pill"> PDF </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="l-col-cont cont-body">
-        <div class="col-block">
-          <div
-            class="col-box"
-            style="
-              text-align: center;
-              color: blue;
-              font-size: 25px;
-              padding-bottom: 15px;
-            "
-          >
-            <h2 class="small">Para-Clinical Departments</h2>
+
+      <div id="parac" class="col-box">
+        <h2>Para-Clinical Departments</h2>
+
+        <div class="row my-5 text-center">
+          <div class="col-md-4 col-sm-6 py-2">
+            <div class="col-12">
+              <div class="btn-anch py-3">
+                <a href="{{ data[18].link }}" target="_blank">
+                  <span class="btn-text"> Pathology </span>
+                  &nbsp;&nbsp;
+                  <span class="badge badge-primary badge-pill"> PDF </span>
+                </a>
+              </div>
+            </div>
           </div>
-          <nav>
-            <ul class="btn-row-container">
-              <li class="btn-link">
-                <a href="division.html#pdcu"
-                  ><span class="ico-arrow">Microbioloy</span></a
-                >
-              </li>
-              <li class="btn-link">
-                <a href="division.html#otmcu"
-                  ><span class="ico-arrow">Forensic Medicine</span></a
-                >
-              </li>
-              <li class="btn-link">
-                <a href="division.html#cgu"
-                  ><span class="ico-arrow">Pharmacology</span></a
-                >
-              </li>
-              <li class="btn-link">
-                <a href="division.html#ccu"
-                  ><span class="ico-arrow">Community Medicine</span></a
-                >
-              </li>
-              <li class="btn-link">
-                <a href="departments.html#women"
-                  ><span class="ico-arrow">Pathology</span></a
-                >
-              </li>
-            </ul>
-          </nav>
+
+          <div class="col-md-4 col-sm-6 py-2">
+            <div class="col-12">
+              <div class="btn-anch py-3">
+                <a href="{{ data[13].link }}" target="_blank">
+                  <span class="btn-text"> Microbioloy </span>
+                  &nbsp;&nbsp;
+                  <span class="badge badge-primary badge-pill"> PDF </span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-sm-6 py-2">
+            <div class="col-12">
+              <div class="btn-anch py-3">
+                <a href="{{ data[28].link }}" target="_blank">
+                  <span class="btn-text"> Pharmacology </span>
+                  &nbsp;&nbsp;
+                  <span class="badge badge-primary badge-pill"> PDF </span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-sm-6 py-2">
+            <div class="col-12">
+              <div class="btn-anch py-3">
+                <a href="{{ data[8].link }}" target="_blank">
+                  <span class="btn-text"> Community Medicine </span>
+                  &nbsp;&nbsp;
+                  <span class="badge badge-primary badge-pill"> PDF </span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-sm-6 py-2">
+            <div class="col-12">
+              <div class="btn-anch py-3">
+                <a href="{{ data[11].link }}" target="_blank">
+                  <span class="btn-text"> Forensic Medicine </span>
+                  &nbsp;&nbsp;
+                  <span class="badge badge-primary badge-pill"> PDF </span>
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div id="medis" class="l-row-cont">
-        <div class="l-col-cont cont-ttl">
-          <div class="cont-ttl-box">
-            <h2 class="small"></h2>
+      <div id="medis" class="col-box">
+        <h2 class="small">Medical Specialities</h2>
+
+        <div class="row my-5 text-center">
+          <div class="col-md-4 col-sm-6 py-2">
+            <div class="col-12">
+              <div class="btn-anch py-3">
+                <a href="{{ data[25].link }}" target="_blank">
+                  <span class="btn-text"> Skin & V. D. </span>
+                  &nbsp;&nbsp;
+                  <span class="badge badge-primary badge-pill"> PDF </span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-sm-6 py-2">
+            <div class="col-12">
+              <div class="btn-anch py-3">
+                <a href="{{ data[19].link }}" target="_blank">
+                  <span class="btn-text"> Pediatrics </span>
+                  &nbsp;&nbsp;
+                  <span class="badge badge-primary badge-pill"> PDF </span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-sm-6 py-2">
+            <div class="col-12">
+              <div class="btn-anch py-3">
+                <a href="{{ data[24].link }}" target="_blank">
+                  <span class="btn-text"> Radiology </span>
+                  &nbsp;&nbsp;
+                  <span class="badge badge-primary badge-pill"> PDF </span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-sm-6 py-2">
+            <div class="col-12">
+              <div class="btn-anch py-3">
+                <a href="{{ data[23].link }}" target="_blank">
+                  <span class="btn-text"> Psychiatry </span>
+                  &nbsp;&nbsp;
+                  <span class="badge badge-primary badge-pill"> PDF </span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-sm-6 py-2">
+            <div class="col-12">
+              <div class="btn-anch py-3">
+                <a href="{{ data[0].link }}" target="_blank">
+                  <span class="btn-text"> Anesthesiology </span>
+                  &nbsp;&nbsp;
+                  <span class="badge badge-primary badge-pill"> PDF </span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-sm-6 py-2">
+            <div class="col-12">
+              <div class="btn-anch py-3">
+                <a href="{{ data[12].link }}" target="_blank">
+                  <span class="btn-text"> General Medicine </span>
+                  &nbsp;&nbsp;
+                  <span class="badge badge-primary badge-pill"> PDF </span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-sm-6 py-2">
+            <div class="col-12">
+              <div class="btn-anch py-3">
+                <a href="{{ data[5].link }}" target="_blank">
+                  <span class="btn-text">
+                    Tuberculosis and Chest Diseases
+                  </span>
+                  &nbsp;&nbsp;
+                  <span class="badge badge-primary badge-pill"> PDF </span>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="l-col-cont cont-body">
-          <div class="col-block">
-            <div
-              class="col-box"
-              style="
-                text-align: center;
-                color: blue;
-                font-size: 25px;
-                padding-bottom: 15px;
-              "
-            >
-              <h2 class="small">Medical Specialities</h2>
+      </div>
+
+      <div id="mediss" class="col-box">
+        <h2 class="small">Medical Super Specialties</h2>
+
+        <div class="row my-5 text-center">
+          <div class="col-md-4 col-sm-6 py-2">
+            <div class="col-12">
+              <div class="btn-anch py-3">
+                <a href="/departments">
+                  <span class="btn-text"> Cardiology </span>
+                  &nbsp;&nbsp;
+                  <span class="badge badge-primary badge-pill"> PDF </span>
+                </a>
+              </div>
             </div>
-            <nav>
-              <ul class="btn-row-container">
-                <li class="btn-link">
-                  <a href="central.html#clinical-laboratory"
-                    ><span class="ico-arrow">General Medicine</span></a
-                  >
-                </li>
-                <li class="btn-link">
-                  <a href="central.html#ict"
-                    ><span class="ico-arrow">Pediatrics</span></a
-                  >
-                </li>
-                <li class="btn-link">
-                  <a href="central.html#surgery"
-                    ><span class="ico-arrow"
-                      >Tuberculosis and Chest Diseases</span
-                    ></a
-                  >
-                </li>
-                <li class="btn-link">
-                  <a href="central.html#crsu"
-                    ><span class="ico-arrow">Skin & V. D.</span></a
-                  >
-                </li>
-                <li class="btn-link">
-                  <a href="departments.html#pcem"
-                    ><span class="ico-arrow">Psychiatry</span></a
-                  >
-                </li>
-                <li class="btn-link">
-                  <a href="central.html#rehabilitation"
-                    ><span class="ico-arrow">Radiology</span></a
-                  >
-                </li>
-                <li class="btn-link">
-                  <a href="central.html#medical-equipment"
-                    ><span class="ico-arrow">Anesthesiology</span></a
-                  >
-                </li>
-              </ul>
-            </nav>
+          </div>
+
+          <div class="col-md-4 col-sm-6 py-2">
+            <div class="col-12">
+              <div class="btn-anch py-3">
+                <a href="/departments">
+                  <span class="btn-text"> Neurology </span>
+                  &nbsp;&nbsp;
+                  <span class="badge badge-primary badge-pill"> PDF </span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-sm-6 py-2">
+            <div class="col-12">
+              <div class="btn-anch py-3">
+                <a href="/departments">
+                  <span class="btn-text"> Nephrology </span>
+                  &nbsp;&nbsp;
+                  <span class="badge badge-primary badge-pill"> PDF </span>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
+      </div>
 
-        <div id="mediss" class="l-row-cont">
-          <div class="l-col-cont cont-ttl">
-            <div class="cont-ttl-box">
-              <h2 class="small"></h2>
-            </div>
-          </div>
-          <div class="l-col-cont cont-body">
-            <div class="col-block">
-              <div
-                class="col-box"
-                style="
-                  text-align: center;
-                  color: blue;
-                  font-size: 25px;
-                  padding-bottom: 15px;
-                "
-              >
-                <h2 class="small">Medical Super Specialties</h2>
+      <div id="surs" class="col-box">
+        <h2 class="small">Surgical Specialties</h2>
+
+        <div class="row my-5 text-center">
+          <div class="col-md-4 col-sm-6 py-2">
+            <div class="col-12">
+              <div class="btn-anch py-3">
+                <a href="{{ data[17].link }}" target="_blank">
+                  <span class="btn-text"> Orthopedics </span>
+                  &nbsp;&nbsp;
+                  <span class="badge badge-primary badge-pill"> PDF </span>
+                </a>
               </div>
-              <nav>
-                <ul class="btn-row-container">
-                  <li class="btn-link">
-                    <a href="management.html#nursing"
-                      ><span class="ico-arrow">Cardiologyt</span></a
-                    >
-                  </li>
-                  <li class="btn-link">
-                    <a href="management.html#pharmacy"
-                      ><span class="ico-arrow">Neurology</span></a
-                    >
-                  </li>
-                  <li class="btn-link">
-                    <a href="management.html#mitap"
-                      ><span class="ico-arrow">Nephrology</span></a
-                    >
-                  </li>
-                </ul>
-              </nav>
             </div>
           </div>
 
-          <div id="surs" class="l-row-cont">
-            <div class="l-col-cont cont-ttl">
-              <div class="cont-ttl-box">
-                <h2 class="small"></h2>
+          <div class="col-md-4 col-sm-6 py-2">
+            <div class="col-12">
+              <div class="btn-anch py-3">
+                <a href="{{ data[26].link }}" target="_blank">
+                  <span class="btn-text"> General Surgery </span>
+                  &nbsp;&nbsp;
+                  <span class="badge badge-primary badge-pill"> PDF </span>
+                </a>
               </div>
             </div>
-            <div class="l-col-cont cont-body">
-              <div class="col-block">
-                <div
-                  class="col-box"
-                  style="
-                    text-align: center;
-                    color: blue;
-                    font-size: 25px;
-                    padding-bottom: 15px;
-                  "
-                >
-                  <h2 class="small">Surgical Specialties</h2>
-                </div>
-                <nav>
-                  <ul class="btn-row-container">
-                    <li class="btn-link">
-                      <a
-                        href="https://www.kuhp.kyoto-u.ac.jp/~iact/en/"
-                        target="_blank"
-                        ><span class="ico-arrow blank">General Surgery</span></a
-                      >
-                    </li>
-                    <li class="btn-link">
-                      <a
-                        href="https://www.kuhp.kyoto-u.ac.jp/~iact/en/"
-                        target="_blank"
-                        ><span class="ico-arrow blank">Orthopedics</span></a
-                      >
-                    </li>
-                    <li class="btn-link">
-                      <a
-                        href="https://www.kuhp.kyoto-u.ac.jp/~iact/en/"
-                        target="_blank"
-                        ><span class="ico-arrow blank">Ophthalmology</span></a
-                      >
-                    </li>
-                    <li class="btn-link">
-                      <a
-                        href="https://www.kuhp.kyoto-u.ac.jp/~iact/en/"
-                        target="_blank"
-                        ><span class="ico-arrow blank"
-                          >Otorhinolaryngology (ENT)</span
-                        ></a
-                      >
-                    </li>
-                    <li class="btn-link">
-                      <a
-                        href="https://www.ki-connect.kuhp.kyoto-u.ac.jp/en/"
-                        target="_blank"
-                        ><span class="ico-arrow blank"
-                          >Obstetrics & Gynecology</span
-                        ></a
-                      >
-                    </li>
-                  </ul>
-                </nav>
+          </div>
+
+          <div class="col-md-4 col-sm-6 py-2">
+            <div class="col-12">
+              <div class="btn-anch py-3">
+                <a href="{{ data[16].link }}" target="_blank">
+                  <span class="btn-text"> Ophthalmology </span>
+                  &nbsp;&nbsp;
+                  <span class="badge badge-primary badge-pill"> PDF </span>
+                </a>
               </div>
             </div>
+          </div>
 
-            <div id="surss" class="l-row-cont">
-              <div class="l-col-cont cont-ttl">
-                <div class="cont-ttl-box">
-                  <h2 class="small"></h2>
-                </div>
+          <div class="col-md-4 col-sm-6 py-2">
+            <div class="col-12">
+              <div class="btn-anch py-3">
+                <a href="{{ data[9].link }}" target="_blank">
+                  <span class="btn-text"> Otorhinolaryngology (ENT) </span>
+                  &nbsp;&nbsp;
+                  <span class="badge badge-primary badge-pill"> PDF </span>
+                </a>
               </div>
-              <div class="l-col-cont cont-body">
-                <div class="col-block">
-                  <div
-                    class="col-box"
-                    style="
-                      text-align: center;
-                      color: blue;
-                      font-size: 25px;
-                      padding-bottom: 15px;
-                    "
-                  >
-                    <h2 class="small">Surgical Super Specialties</h2>
-                  </div>
-                  <nav>
-                    <ul class="btn-row-container">
-                      <li class="btn-link">
-                        <a href="research-education.html#education"
-                          ><span class="ico-arrow"
-                            >Cardiovascular and Thoracic Surgery</span
-                          ></a
-                        >
-                      </li>
-                      <li class="btn-link">
-                        <a href="research-education.html#ips"
-                          ><span class="ico-arrow">Neuro-Surgery</span></a
-                        >
-                      </li>
-                      <li class="btn-link">
-                        <a href="research-education.html#ncpsc"
-                          ><span class="ico-arrow">Pediatric Surgery</span></a
-                        >
-                      </li>
-                      <li class="btn-link">
-                        <a href="http://ehr.realwired.net/w/en/" target="_blank"
-                          ><span class="ico-arrow blank"
-                            >Plastic Surgery</span
-                          ></a
-                        >
-                      </li>
-                      <li class="btn-link">
-                        <span class="no-link">Urosurgery</span>
-                      </li>
-                    </ul>
-                  </nav>
-                </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-sm-6 py-2">
+            <div class="col-12">
+              <div class="btn-anch py-3">
+                <a href="{{ data[15].link }}" target="_blank">
+                  <span class="btn-text"> Obstetrics & Gynecology </span>
+                  &nbsp;&nbsp;
+                  <span class="badge badge-primary badge-pill"> PDF </span>
+                </a>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-              <div id="alls" class="l-row-cont">
-                <div class="l-col-cont cont-ttl">
-                  <div class="cont-ttl-box">
-                    <h2 class="small"></h2>
-                  </div>
-                </div>
-                <div class="l-col-cont cont-body">
-                  <div class="col-block">
-                    <div
-                      class="col-box"
-                      style="
-                        text-align: center;
-                        color: blue;
-                        font-size: 25px;
-                        padding-bottom: 15px;
-                      "
-                    >
-                      <h2 class="small">Allied Services</h2>
-                    </div>
-                    <nav>
-                      <ul class="btn-row-container">
-                        <li class="btn-link">
-                          <a href="research-education.html#education"
-                            ><span class="ico-arrow">Dentistry</span></a
-                          >
-                        </li>
-                        <li class="btn-link">
-                          <a href="research-education.html#ips"
-                            ><span class="ico-arrow"
-                              >Bio Medical Waste Management</span
-                            ></a
-                          >
-                        </li>
-                        <li class="btn-link">
-                          <a href="research-education.html#ncpsc"
-                            ><span class="ico-arrow">Blood Bank</span></a
-                          >
-                        </li>
-                        <li class="btn-link">
-                          <a
-                            href="http://ehr.realwired.net/w/en/"
-                            target="_blank"
-                            ><span class="ico-arrow blank">Eye Bank</span></a
-                          >
-                        </li>
-                        <li class="btn-link">
-                          <span class="no-link">Physiotherapy</span>
-                        </li>
-                        <li class="btn-link">
-                          <span class="no-link">Nursing</span>
-                        </li>
-                        <li class="btn-link">
-                          <span class="no-link"
-                            >Body / Kidney / Organ donation</span
-                          >
-                        </li>
-                        <li class="btn-link">
-                          <span class="no-link"
-                            >Institute of Nursing education</span
-                          >
-                        </li>
+      <div id="surss" class="col-box">
+        <h2 class="small">Super Surgical Specialties</h2>
 
-                        <li class="btn-link">
-                          <a href="research-education.html#education"
-                            ><span class="ico-arrow"
-                              >Disaster Management</span
-                            ></a
-                          >
-                        </li>
-                      </ul>
-                    </nav>
-                  </div>
-                </div>
-                <div id="hivai" class="l-row-cont">
-                  <div class="l-col-cont cont-ttl">
-                    <div class="cont-ttl-box">
-                      <h2 class="small"></h2>
-                    </div>
-                  </div>
-                  <div class="l-col-cont cont-body">
-                    <div class="col-block">
-                      <div
-                        class="col-box"
-                        style="
-                          text-align: center;
-                          color: blue;
-                          font-size: 25px;
-                          padding-bottom: 15px;
-                        "
-                      >
-                        <h2 class="small">HIV AIDS</h2>
-                      </div>
-                      <nav>
-                        <ul class="btn-row-container">
-                          <li class="btn-link">
-                            <a href="research-education.html#education"
-                              ><span class="ico-arrow">ICTC</span></a
-                            >
-                          </li>
-                          <li class="btn-link">
-                            <a href="research-education.html#ips"
-                              ><span class="ico-arrow">ART</span></a
-                            >
-                          </li>
-                        </ul>
-                      </nav>
-                    </div>
-                  </div>
-                </div>
+        <div class="row my-5 text-center">
+          <div class="col-md-4 col-sm-6 py-2">
+            <div class="col-12">
+              <div class="btn-anch py-3">
+                <a href="{{ data[27].link }}" target="_blank">
+                  <span class="btn-text"> Urosurgery </span>
+                  &nbsp;&nbsp;
+                  <span class="badge badge-primary badge-pill"> PDF </span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-sm-6 py-2">
+            <div class="col-12">
+              <div class="btn-anch py-3">
+                <a href="{{ data[14].link }}" target="_blank">
+                  <span class="btn-text"> Neuro-Surgery </span>
+                  &nbsp;&nbsp;
+                  <span class="badge badge-primary badge-pill"> PDF </span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-sm-6 py-2">
+            <div class="col-12">
+              <div class="btn-anch py-3">
+                <a href="{{ data[22].link }}" target="_blank">
+                  <span class="btn-text"> Plastic Surgery </span>
+                  &nbsp;&nbsp;
+                  <span class="badge badge-primary badge-pill"> PDF </span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-sm-6 py-2">
+            <div class="col-12">
+              <div class="btn-anch py-3">
+                <a href="{{ data[20].link }}" target="_blank">
+                  <span class="btn-text"> Pediatric Surgery </span>
+                  &nbsp;&nbsp;
+                  <span class="badge badge-primary badge-pill"> PDF </span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-sm-6 py-2">
+            <div class="col-12">
+              <div class="btn-anch py-3">
+                <a href="{{ data[7].link }}" target="_blank">
+                  <span class="btn-text">
+                    Cardiovascular and Thoracic Surgery
+                  </span>
+                  &nbsp;&nbsp;
+                  <span class="badge badge-primary badge-pill"> PDF </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="alls" class="col-box">
+        <h2 class="small">Allied Services</h2>
+
+        <div class="row my-5 text-center">
+          <div class="col-md-4 col-sm-6 py-2">
+            <div class="col-12">
+              <div class="btn-anch py-3">
+                <a href="{{ data[6].link }}" target="_blank">
+                  <span class="btn-text"> Dentistry </span>
+                  &nbsp;&nbsp;
+                  <span class="badge badge-primary badge-pill"> PDF </span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-sm-6 py-2">
+            <div class="col-12">
+              <div class="btn-anch py-3">
+                <a href="/departments"
+                  ><span class="btn-text"> Nursing </span>
+                  &nbsp;&nbsp;
+                  <span class="badge badge-primary badge-pill"> PDF </span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-sm-6 py-2">
+            <div class="col-12">
+              <div class="btn-anch py-3">
+                <a href="{{ data[10].link }}" target="_blank">
+                  <span class="btn-text"> Eye Bank </span>
+                  &nbsp;&nbsp;
+                  <span class="badge badge-primary badge-pill"> PDF </span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-sm-6 py-2">
+            <div class="col-12">
+              <div class="btn-anch py-3">
+                <a href="{{ data[4].link }}" target="_blank">
+                  <span class="btn-text"> Blood Bank </span>
+                  &nbsp;&nbsp;
+                  <span class="badge badge-primary badge-pill"> PDF </span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-sm-6 py-2">
+            <div class="col-12">
+              <div class="btn-anch py-3">
+                <a href="/departments"
+                  ><span class="btn-text"> Physiotherapy </span>
+                  &nbsp;&nbsp;
+                  <span class="badge badge-primary badge-pill"> PDF </span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-sm-6 py-2">
+            <div class="col-12">
+              <div class="btn-anch py-3">
+                <a href="/departments"
+                  ><span class="btn-text"> Disaster Management </span>
+                  &nbsp;&nbsp;
+                  <span class="badge badge-primary badge-pill"> PDF </span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-sm-6 py-2">
+            <div class="col-12">
+              <div class="btn-anch py-3">
+                <a href="/departments"
+                  ><span class="btn-text">
+                    Body / Kidney / Organ donation
+                  </span>
+                  &nbsp;&nbsp;
+                  <span class="badge badge-primary badge-pill"> PDF </span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-sm-6 py-2">
+            <div class="col-12">
+              <div class="btn-anch py-3">
+                <a href="/departments"
+                  ><span class="btn-text">
+                    Institute of Nursing education
+                  </span>
+                  &nbsp;&nbsp;
+                  <span class="badge badge-primary badge-pill"> PDF </span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-sm-6 py-2">
+            <div class="col-12">
+              <div class="btn-anch py-3">
+                <a href="{{ data[3].link }}" target="_blank">
+                  <span class="btn-text"> Bio Medical Waste Management </span>
+                  &nbsp;&nbsp;
+                  <span class="badge badge-primary badge-pill"> PDF </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="hivai" class="col-box">
+        <h2 class="small">HIV AIDS</h2>
+
+        <div class="row my-5 text-center">
+          <div class="col-md-4 col-sm-6 py-2">
+            <div class="col-12">
+              <div class="btn-anch py-3">
+                <a href="/departments">
+                  <span class="btn-text"> ART </span>
+                  &nbsp;&nbsp;
+                  <span class="badge badge-primary badge-pill"> PDF </span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-sm-6 py-2">
+            <div class="col-12">
+              <div class="btn-anch py-3">
+                <a href="/departments">
+                  <span class="btn-text"> ICTC </span>
+                  &nbsp;&nbsp;
+                  <span class="badge badge-primary badge-pill"> PDF </span>
+                </a>
               </div>
             </div>
           </div>

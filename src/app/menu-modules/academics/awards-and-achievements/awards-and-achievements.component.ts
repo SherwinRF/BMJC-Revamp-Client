@@ -30,6 +30,7 @@ export class AwardsAndAchievementsComponent implements OnInit {
       paging: true,
       ordering: true,
       info: true,
+      responsive: true,
     };
 
     this.httpclient.get(this.dataURL).subscribe((result2: awards[]) => {

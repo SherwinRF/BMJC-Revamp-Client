@@ -11,12 +11,20 @@ import { DepartmentsService } from "../departments.service";
 })
 export class DepartmentsComponent implements OnInit {
   theme: colorScheme;
+  data: any[];
 
-  constructor(private themeChanger: ThemeChangerService) {}
+  constructor(
+    private themeChanger: ThemeChangerService,
+    private deptservice: DepartmentsService
+  ) {}
 
   ngOnInit(): void {
     this.themeChanger.subscribeToTheme().subscribe((currentTheme) => {
       this.theme = currentTheme;
+    });
+    this.deptservice.getData().subscribe((res) => {
+      this.data = res;
+      console.log(res);
     });
   }
 }

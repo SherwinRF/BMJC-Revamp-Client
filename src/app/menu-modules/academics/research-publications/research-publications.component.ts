@@ -28,7 +28,7 @@ export class ResearchPublicationsComponent implements OnInit {
 
     this.httpclient.get(this.dataURL).subscribe((result3: research[]) => {
       this.Research = result3;
-    }); // "/assets/data/Research_Publications.json"
+    });
 
     this.dtOptions = {
       paging: true,

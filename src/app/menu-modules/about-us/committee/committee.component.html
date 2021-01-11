@@ -1,22 +1,19 @@
-<div
-  class="display-1 my-3"
-  [ngStyle]="{ 'background-color': theme.background }"
->
-  <div class="container">
-    <h1 class="my-3">Committees</h1>
-    <hr />
-    <div class="pdf-holder">
-      <!-- <a> -->
-      <!-- <embed src="../../../../assets/committees.pdf" type="application/pdf" width="100%" height="800px"/> -->
-      <!-- </a> -->
-      <iframe
-        name="committeePdf"
-        id="committeePdf"
-        width="100%"
-        height="700vw"
-        src="/assets/pdfs/committees.pdf#view=FitH"
-      >
-      </iframe>
-    </div>
+<div class="container my-3">
+  <div>
+    <h2 class="decorated"><span>Committee</span></h2>
+  </div>
+  <hr />
+  <div class="pdf-holder">
+    <!-- <a> -->
+    <!-- <embed src="../../../../assets/committees.pdf" type="application/pdf" width="100%" height="800px"/> -->
+    <!-- </a> -->
+    <iframe
+      name="committeePdf"
+      id="committeePdf"
+      width="100%"
+      height="700vw"
+      src="/assets/pdfs/committees.pdf#view=FitH"
+    >
+    </iframe>
   </div>
 </div>
