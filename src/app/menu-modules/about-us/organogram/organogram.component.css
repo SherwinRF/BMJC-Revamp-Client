@@ -87,7 +87,7 @@
   .card {
     height: 100%;
     background-color: white !important;
-    box-shadow: 1px 1px 5px black;
+    box-shadow: 1px 1px 5px rgb(113, 113, 113);
     position: relative;
     transition: transform 1s;
   }
@@ -608,4 +608,9 @@
   margin-left: 25%;
   text-align: left;
   line-height: 1.2;
+}
+
+.container,
+.modal {
+  font-family: "Roboto", sans-serif;
 }

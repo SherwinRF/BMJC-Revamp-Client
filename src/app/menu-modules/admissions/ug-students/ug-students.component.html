@@ -1,4 +1,12 @@
-<div class="container">
+<div *ngIf="data.length === 0" class="container">
+  <app-loading-page></app-loading-page>
+</div>
+
+<div *ngIf="data.length !== 0" class="container my-3">
+  <div>
+    <div class="decorated h2"><span>UG Admissions</span></div>
+    <hr />
+  </div>
   <div class="card text-center" style="margin-top: 30px; margin-bottom: 30px">
     <div class="card-header">MBBS Course</div>
     <div class="card-body">
@@ -10,11 +18,12 @@
           ></i>
         </div>
         <div class="data-right">
-          There are 200 admissions to MBBS course every year in the college.
+          <p>
+            There are 200 admissions to MBBS course every year in the college.
+          </p>
         </div>
 
         <br />
-
         <div class="data-left">
           <i
             class="fa fa-book-medical"
@@ -22,13 +31,14 @@
           ></i>
         </div>
         <div class="data-right">
-          The admissions are on the basis of merit of All India NEET with
-          constitutional reservations, done by the centralised process by Govt.
-          of Maharashtra.
+          <p>
+            The admissions are on the basis of merit of All India NEET with
+            constitutional reservations, done by the centralised process by
+            Govt. of Maharashtra.
+          </p>
         </div>
 
         <br />
-
         <div class="data-left">
           <i
             class="fa fa-book-medical"
@@ -36,14 +46,15 @@
           ></i>
         </div>
         <div class="data-right">
-          The breakup of seats is 15% by DGHS GOI, of the remaining seats, 30%
-          for State Level and 70% for Development board area (Rest of
-          Maharashtra).There are about 1000 medical students studying in B. J.
-          Govt. Medical College.
+          <p>
+            The breakup of seats is 15% by DGHS GOI, of the remaining seats, 30%
+            for State Level and 70% for Development board area (Rest of
+            Maharashtra).There are about 1000 medical students studying in B. J.
+            Govt. Medical College.
+          </p>
         </div>
 
         <br />
-
         <div class="data-left">
           <i
             class="fa fa-book-medical"
@@ -51,13 +62,12 @@
           ></i>
         </div>
         <div class="data-right">
-          MBBS - Recognized by MCI &amp; MUHS.
-          <br />
-          BPMT -&nbsp; Recognized by MUHS.
+          <p>MBBS - Recognized by MCI &amp; MUHS. <br /></p>
+
+          <p>BPMT -&nbsp; Recognized by MUHS.</p>
         </div>
 
         <br />
-
         <div class="data-left">
           <i
             class="fa fa-book-medical"
@@ -65,32 +75,65 @@
           ></i>
         </div>
         <div class="data-right">
-          M.B.B.S. = 200 (MCI &amp; MUHS).<br />B.P.M.T. = 092 (M.U.H.S.).
+          <p>
+            M.B.B.S. = 200 (MCI &amp; MUHS).<br />B.P.M.T. = 092 (M.U.H.S.).
+          </p>
         </div>
       </div>
     </div>
   </div>
-
-  <div class="card text-center" style="margin-top: 30px; margin-bottom: 30px">
-    <div class="card-header">Internship</div>
-    <div class="card-body text-center">
-      <div class="card-text">
-        <h4>Organised by department of PSM.</h4>
+  <div class="row">
+    <div
+      class="col-md-6 col-sm-12 m-auto ug-chart-container"
+      (window:resize)="drawchart()"
+    >
+      <google-chart
+        #chart
+        class="chart"
+        [title]="title"
+        [type]="type"
+        [data]="data"
+        [options]="options"
+        [width]="width"
+        [height]="height"
+      >
+      </google-chart>
+    </div>
+    <!-- <div class="col-md-2 col-sm-12"></div> -->
+    <div class="col-md-6 col-sm-12">
+      <div class="row">
+        <div class="col-12">
+          <div
+            class="card text-center"
+            style="margin-top: 15px; margin-bottom: 30px"
+          >
+            <div class="card-header">Internship</div>
+            <div class="card-body text-center">
+              <div class="card-text">
+                <h4>Organised by department of PSM.</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12">
+          <div class="card text-center">
+            <div class="card-header">Nursing course</div>
+            <div class="card-body text-center">
+              <ul class="card-text">
+                <p>
+                  <li>
+                    Every year 50 candidates are admitted to the B.Sc. Nursing
+                    course, which is of 3 and half years duration.
+                  </li>
+                </p>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-  <div class="card text-center" style="margin-top: 30px; margin-bottom: 30px">
-    <div class="card-header">Nursing course</div>
-    <div class="card-body text-center">
-      <div class="card-text">
-        <h4>
-          Every year 50 candidates are admitted to the B.Sc. Nursing course,
-          which is of 3 and half years duration.
-        </h4>
-      </div>
-    </div>
-  </div>
-  <div class="card-group" style="margin-top: 30px; margin-bottom: 30px">
+  <div class="card-group" style="margin-top: 15px; margin-bottom: 30px">
     <div class="card" style="margin-right: 15px">
       <div class="card-header">
         <b>Vice-Chancellor</b>
@@ -166,7 +209,6 @@
       </div>
     </div>
   </div>
-
   <div class="row" style="margin-top: 30px; margin-bottom: 30px">
     <div class="col-sm-6">
       <div class="card">
@@ -174,11 +216,12 @@
           <h5 class="card-title">Ug student Admission link</h5>
           <p class="card-text">list of admission in year 2016.</p>
           <button
-            onclick='location.href="assets/pdfs/PG admission 2016.pdf"'
-            target="_blank"
-            class="primary-btn"
+            type="button"
+            class="primary-btn h5"
+            data-toggle="modal"
+            data-target="#exampleModal"
           >
-            Click here
+            Click more
           </button>
         </div>
       </div>
@@ -189,13 +232,52 @@
           <h5 class="card-title">More information</h5>
           <p class="card-text">Visit given links for more information</p>
           <button
-            onclick='location.href="http://www.dmer.org "'
+            onclick="location.href='http://www.dmer.org'"
             target="_blank"
-            class="primary-btn"
+            class="primary-btn h5"
           >
             Click here
           </button>
         </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="exampleModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">UG Admission PDF's</h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <ul *ngFor="let item of ugstore; let i = index" class="fa-ul">
+          <!-- <div *ngIf="i>=3"> -->
+          <li>
+            <span class="fa-li"><i class="fa fa-chevron-right"></i></span>
+            <!-- <h6>{{i+1}}</h6> -->
+            <a href="{{ item.link }}"
+              ><h4>{{ item.name }}</h4></a
+            >
+            <hr />
+          </li>
+          <!-- </div> -->
+        </ul>
       </div>
     </div>
   </div>

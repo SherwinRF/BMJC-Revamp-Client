@@ -1,4 +1,12 @@
-<div class="container my-3">
+<div *ngIf="data.length === 0" class="container">
+  <app-loading-page></app-loading-page>
+</div>
+
+<div *ngIf="data.length !== 0" class="container my-3">
+  <div>
+    <div class="decorated h2"><span>PG Admissions</span></div>
+    <hr />
+  </div>
   <div class="card text-center">
     <div class="card-header">MD/MS Courses</div>
 
@@ -11,7 +19,7 @@
           ></i>
         </div>
         <div class="data-right">
-          This college has postgraduate facilities in all major branches.
+          <p>This college has postgraduate facilities in all major branches.</p>
         </div>
         <br />
         <div class="data-left">
@@ -21,8 +29,10 @@
           ></i>
         </div>
         <div class="data-right">
-          Every year around 144 students are admitted for PG courses
-          (MD/MS/Diploma).
+          <p>
+            Every year around 144 students are admitted for PG courses
+            (MD/MS/Diploma).
+          </p>
         </div>
         <br />
         <div class="data-left">
@@ -32,45 +42,81 @@
           ></i>
         </div>
         <div class="data-right">
-          The distribution of seats is 25% by All India entrance exam, 25% in
-          service Medical officer's quota and remaining by State Level Enterance
-          Exam.
+          <p>
+            The distribution of seats is 25% by All India entrance exam, 25% in
+            service Medical officer's quota and remaining by State Level
+            Enterance Exam.
+          </p>
         </div>
       </div>
     </div>
   </div>
-  <div class="card text-center">
-    <div class="card-header">DM/M.Ch. Super Speciality</div>
-    <div class="card-body text-center">
-      <ul class="card-text">
-        <li>
-          It is availbale in cardiophoric surgery. Annual admissions is 1,
-          through all India competitive exam.
-        </li>
-      </ul>
+
+  <div class="row">
+    <div class="col-md-6 col-sm-12 my-auto" (window:resize)="drawchart()">
+      <google-chart
+        #chart
+        class="chart"
+        [title]="title"
+        [type]="type"
+        [data]="data"
+        [options]="options"
+        [width]="width"
+        [height]="height"
+      >
+      </google-chart>
+    </div>
+    <div class="col-md-6 col-sm-12">
+      <div class="row">
+        <div class="col-12">
+          <div class="card text-center">
+            <div class="card-header" style="width: 100% auto">
+              DM/M.Ch. Super Speciality
+            </div>
+            <div class="card-body text-center">
+              <ul class="card-text">
+                <p>
+                  <li>
+                    It is availbale in cardiophoric surgery. Annual admissions
+                    is 1, through all India competitive exam.
+                  </li>
+                </p>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-12">
+          <div class="card text-center">
+            <div class="card-header">DMLT COURSE</div>
+            <div class="card-body text-center">
+              <ul class="card-text">
+                <p>
+                  <li>
+                    The College conducts DMLT course for training technicians.
+                    There are 10+6 seats and the duration of course is one and
+                    half years.
+                  </li>
+                </p>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-  <div class="card text-center">
-    <div class="card-header">DMLT COURSE</div>
-    <div class="card-body text-center">
-      <ul class="card-text">
-        <li>
-          The College conducts DMLT course for training technicians. There are
-          10+6 seats and the duration of course is one and half years.
-        </li>
-      </ul>
-    </div>
-  </div>
+
   <div class="card text-center">
     <div class="card-header">
       INDIRA GANDHI NATIONAL OPEN UNIVERSITY (IGNOU) COURSES
     </div>
     <div class="card-body text-center">
       <ul class="card-text">
-        <li>
-          PGDMCH- PG Diploma in Maternal & Child Health PGDGM- PG Diploma in
-          Geriatric Medicine
-        </li>
+        <p>
+          <li>
+            PGDMCH- PG Diploma in Maternal & Child Health PGDGM- PG Diploma in
+            Geriatric Medicine
+          </li>
+        </p>
       </ul>
     </div>
   </div>
@@ -82,11 +128,12 @@
           <h5 class="card-title">Pg student Admission link.</h5>
           <p class="card-text">The list contains list of admissions.</p>
           <button
-            onclick='location.href="assets/pdfs/PG admission 2016.pdf"'
-            target="_blank"
+            type="button"
             class="primary-btn"
+            data-toggle="modal"
+            data-target="#exampleModal"
           >
-            Click here
+            Clcik more
           </button>
         </div>
       </div>
@@ -105,6 +152,42 @@
             Click here
           </button>
         </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div
+  class="modal fade"
+  id="exampleModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">PG Admission PDF's</h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <ul *ngFor="let item of pgstore; let i = index" class="fa-ul">
+          <!-- <div *ngIf="i>=3"> -->
+          <li>
+            <span class="fa-li"><i class="fa fa-chevron-right"></i></span>
+            <!-- <h6>{{i+1}}</h6> -->
+            <a href="{{ item.link }}">{{ item.name }}</a>
+            <hr />
+          </li>
+          <!-- </div> -->
+        </ul>
       </div>
     </div>
   </div>

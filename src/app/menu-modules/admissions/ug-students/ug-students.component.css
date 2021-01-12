@@ -7,6 +7,9 @@
   color: white;
   background-color: #007fff;
   text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: normal;
 }
 a {
   color: #007fff !important;
@@ -65,7 +68,8 @@ h3 {
   color: #2a2a2a;
 }
 h4,
-li {
+li,
+h5 {
   font-family: "Roboto", sans-serif;
   font-size: 13px;
   font-weight: 500;
@@ -79,6 +83,7 @@ span {
 @media (min-width: 575px) and (max-width: 767px) {
   .card {
     width: 80%;
+    margin: 0 auto;
   }
   .img {
     float: none !important;
@@ -114,4 +119,13 @@ ul {
 .data-right {
   margin-left: 3%;
   text-align: left;
+}
+.fa-chevron-right {
+  color: #ff8811;
+  margin-right: 5px;
+}
+
+google-chart {
+  margin: auto !important;
+  box-shadow: 0 0 4px rgb(117, 117, 117);
 }

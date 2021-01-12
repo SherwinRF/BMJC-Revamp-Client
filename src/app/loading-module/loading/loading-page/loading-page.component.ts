@@ -6,17 +6,7 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./loading-page.component.css"],
 })
 export class LoadingPageComponent implements OnInit {
-  loadingTexts: string[] = [
-    "loading...",
-    "loading...",
-    "loading...",
-    "loading...",
-    "loading...",
-  ];
-  currentLoadingText: string;
   constructor() {}
 
-  ngOnInit(): void {
-    this.currentLoadingText = this.loadingTexts[Math.floor(Math.random() * 5)];
-  }
+  ngOnInit(): void {}
 }
