@@ -59,17 +59,24 @@ export class UgStudentsComponent implements OnInit {
     this.drawchart();
   }
   drawchart() {
-    // if (document.documentElement.clientWidth > 1024) {
-    //   this.width = 550;
-    //   this.height = 320;
-    // }
-    // if (
-    //   document.documentElement.clientWidth <= 1024 &&
-    //   document.documentElement.clientWidth >= 992
-    // ) {
-    //   this.width = 450;
-    //   this.height = 320;
-    // }
+    if (document.documentElement.clientWidth >= 1040) {
+      this.width = 460;
+      this.height = 320;
+    }
+    if (
+      document.documentElement.clientWidth > 1024 &&
+      document.documentElement.clientWidth < 1040
+    ) {
+      this.width = 450;
+      this.height = 320;
+    }
+    if (
+      document.documentElement.clientWidth <= 1024 &&
+      document.documentElement.clientWidth >= 992
+    ) {
+      this.width = 450;
+      this.height = 320;
+    }
     if (
       document.documentElement.clientWidth <= 991 &&
       document.documentElement.clientWidth >= 768
@@ -77,23 +84,23 @@ export class UgStudentsComponent implements OnInit {
       this.width = 340;
       this.height = 360;
     }
-    // if (
-    //   document.documentElement.clientWidth <= 767 &&
-    //   document.documentElement.clientWidth >= 575
-    // ) {
-    //   this.width = 350;
-    //   this.height = 350;
-    // }
-    // if (
-    //   document.documentElement.clientWidth <= 574 &&
-    //   document.documentElement.clientWidth >= 479
-    // ) {
-    //   this.width = 508;
-    //   this.height = 300;
-    // }
-    // if (document.documentElement.clientWidth <= 480) {
-    //   this.width = 328;
-    //   this.height = 253;
-    // }
+    if (
+      document.documentElement.clientWidth <= 767 &&
+      document.documentElement.clientWidth >= 575
+    ) {
+      this.width = 350;
+      this.height = 350;
+    }
+    if (
+      document.documentElement.clientWidth <= 574 &&
+      document.documentElement.clientWidth >= 479
+    ) {
+      this.width = 508;
+      this.height = 300;
+    }
+    if (document.documentElement.clientWidth <= 480) {
+      this.width = 328;
+      this.height = 253;
+    }
   }
 }

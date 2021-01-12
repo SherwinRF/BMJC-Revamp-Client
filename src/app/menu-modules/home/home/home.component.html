@@ -163,7 +163,7 @@
       </li>
     </ul>
     <button
-      class="banner_button primary-btn"
+      class="banner_button primary-btn totop"
       routerLink="/academics/research-publications"
     >
       See more
@@ -576,7 +576,7 @@
         <h3 class="blog-title card-title m-0">Journals</h3>
       </div>
       <p>Cras ultricies ligula sed magna dictum porta auris blandita.</p>
-      <button class="primary-btn" routerLink="/resources/journals">
+      <button class="primary-btn totop" routerLink="/resources/journals">
         Read more
       </button>
     </div>
@@ -596,7 +596,7 @@
         <h3 class="blog-title card-title m-0">Activities</h3>
       </div>
       <p>Cras ultricies ligula sed magna dictum porta auris blandita.</p>
-      <button class="primary-btn" routerLink="/academics/activities">
+      <button class="primary-btn totop" routerLink="/academics/activities">
         Read more
       </button>
     </div>
@@ -617,7 +617,9 @@
       </div>
       <p>Cras ultricies ligula sed magna dictum porta auris blandita.</p>
 
-      <button class="primary-btn" routerLink="/hospital">Read more</button>
+      <button class="primary-btn totop" routerLink="/hospital">
+        Read more
+      </button>
     </div>
   </div>
 </div>
@@ -640,7 +642,11 @@
           </div>
         </div>
         <div class="col-lg-8 my-4">
-          <form action="#" method="post">
+          <form
+            ngNativeValidate
+            #userlogin="ngForm"
+            (ngSubmit)="register($event)"
+          >
             <div class="row loan-form-w3ls">
               <div class="col-lg-4">
                 <div class="form-group">
@@ -649,6 +655,7 @@
                     type="text"
                     name="Name"
                     placeholder="Name"
+                    id="name"
                     required=""
                   />
                 </div>
@@ -673,16 +680,16 @@
                   />
                 </div>
                 <div class="form-group date-plu">
-                  <input type="date" name="date" id="dateofbirth" required="" />
+                  <input type="date" name="date" id="dateofbirth" required />
                 </div>
               </div>
               <div class="col-lg-4">
                 <div class="form-group">
                   <select class="form-control" required="">
                     <option value="">Hourly Preferences</option>
-                    <option value="1">Morning</option>
-                    <option value="2">Afternoon</option>
-                    <option value="3">Evening</option>
+                    <option value="Morning">Morning</option>
+                    <option value="Afternoon">Afternoon</option>
+                    <option value="Evening">Evening</option>
                   </select>
                 </div>
                 <button type="submit" class="btn btn_apt">Register</button>
@@ -709,7 +716,7 @@
             <h3>Awards and achievements</h3>
             <p>200+ awards and achievements within multiple medical fields</p>
             <button
-              class="primary-btn"
+              class="primary-btn totop"
               routerLink="/academics/awards-and-achievements"
             >
               Read more
@@ -724,7 +731,11 @@
           <div class="service-content">
             <h3>History</h3>
             <p>BJMC and Sassoon Hospital has a long history since 1867</p>
-            <button class="primary-btn" routerLink="/about-us/history">
+            <button
+              class="primary-btn totop"
+              id="toTop"
+              routerLink="/about-us/history"
+            >
               Read more
             </button>
           </div>
@@ -742,7 +753,7 @@
               University is affiliated to Maharashtra University of Health
               Sciences, Nashik
             </p>
-            <button class="primary-btn" routerLink="/about-us/university">
+            <button class="primary-btn totop" routerLink="/about-us/university">
               Read more
             </button>
           </div>
@@ -755,7 +766,10 @@
           <div class="service-content">
             <h3>Results</h3>
             <p>Results of UG and PG students across all departments</p>
-            <button class="primary-btn" routerLink="/students-corner/results">
+            <button
+              class="primary-btn totop"
+              routerLink="/students-corner/results"
+            >
               Read more
             </button>
           </div>
@@ -766,50 +780,6 @@
 </section>
 <!-- --------------------------------------------------------SERVICES ENDS-------------------------------------------------------- -->
 <!-- move top icon -->
-<a class="fa fa-arrow-circle-up move-up text-center" id="toTop"></a>
+<a class="fa fa-arrow-circle-up move-up text-center totop"></a>
 <!-- //move top icon -->
-
-<!-- --------------------------------------------------------------ORIGIIAEFNADF SERVICES----------------------------------------------------------------->
-<!-- <section class="services-w3ls pt-5" id="services" style="margin-top: 3.6%;">
-	<div class="service_box py-xl-5 py-lg-3 px-5">
-		<div class="row">
-			<div class="col-lg-6">
-				<div class="d-flex services-box">
-					<span class="fa fa-trophy" aria-hidden="true"></span>
-					<div class="service-content ml-4">
-						<h3>Awards and Achievements</h3>
-						<p>Quisque sagittis lacus eu lorem sodalesd inagittis lacg enean adipiscing.</p>
-						<button class="primary-btn" routerLink="/academics/awards-and-achievements">Read more</button>
-					</div>
-				</div>
-				<div class="d-flex services-box mt-5">
-					<span class="fa fa-book" aria-hidden="true"></span>
-					<div class="service-content ml-4">
-						<h3>Journals</h3>
-						<p>Quisque sagittis lacus eu lorem sodalesd inagittis lacg enean adipiscing.</p>
-						<button class="primary-btn" routerLink="/resources/journals">Read more</button>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-6 mt-lg-0 mt-5">
-				<div class="d-flex services-box">
-					<span class="fa fa-graduation-cap" aria-hidden="true"></span>
-					<div class="service-content ">
-						<h3>University</h3>
-						<p>Quisque sagittis lacus eu lorem sodalesd inagittis lacg enean adipiscing.gjghbbb vhghgtg hghgghv</p>
-						<button class="primary-btn" routerLink="/about-us/university">Read more</button>
-					</div>
-				</div>
-				<div class="d-flex services-box mt-5">
-					<span class="fa fa-line-chart" aria-hidden="true"></span>
-					<div class="service-content ">
-						<h3>Results</h3>
-						<p>Quisque sagittis lacus eu lorem sodalesd inagittis lacg enean adipiscing.</p>
-						<button class="primary-btn" routerLink="/students-corner/results">Read more</button>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</section> -->
 <!-- --------------------------------------------------------SERVICES ENDS-------------------------------------------------------- -->

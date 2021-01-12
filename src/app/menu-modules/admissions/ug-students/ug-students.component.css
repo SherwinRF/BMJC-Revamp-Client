@@ -129,3 +129,9 @@ google-chart {
   margin: auto !important;
   box-shadow: 0 0 4px rgb(117, 117, 117);
 }
+
+/* @media all and (min-width: 1199px) {
+  .ug-chart-container {
+    width: 100%;
+  }
+} */
