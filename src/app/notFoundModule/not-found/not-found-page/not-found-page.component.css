@@ -80,3 +80,24 @@ button {
     transform: scale3d(1, 1, 1);
   }
 }
+
+@media all and (max-width: 525px) {
+  .home-btn {
+    position: absolute;
+    top: 40%;
+  }
+}
+
+@media all and (max-width: 390px) {
+  .title {
+    display: none;
+  }
+
+  img {
+    display: none;
+  }
+
+  .home-btn {
+    position: relative;
+  }
+}
