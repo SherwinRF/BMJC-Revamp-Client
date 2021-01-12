@@ -1,5 +1,5 @@
 .btn-dept {
-  background: transparent;
+  background: #fff;
   box-shadow: 2px 2px 10px grey;
   height: 100%;
   transition: transform 1s;
@@ -21,11 +21,13 @@ a {
 
 .lowerdiv {
   border: none;
+  background: #f0f0f0;
 }
 
 .col-box {
   text-align: center;
   font-size: 25px;
+  background: #fff;
 }
 
 .btn-anch {
@@ -66,7 +68,6 @@ h2 {
   padding-top: 0;
   padding-bottom: 5px;
   margin-bottom: 50px;
-
   text-align: center;
   font-size: 25px;
 }

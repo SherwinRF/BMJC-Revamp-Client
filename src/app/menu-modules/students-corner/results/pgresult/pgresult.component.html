@@ -127,10 +127,10 @@
             <td>{{ item.student_results.department }}</td>
             <td
               [ngClass]="{
-                green: item.result == 'PASS',
-                red: item.result == 'FAIL',
-                orange: item.result == 'FAILS-ATKT',
-                blue: item.result == 'WITHHELD'
+                green: item.student_results.result == 'PASS',
+                red: item.student_results.result == 'FAIL',
+                orange: item.student_results.result == 'FAILS-ATKT',
+                blue: item.student_results.result == 'WITHHELD'
               }"
             >
               {{ item.student_results.result }}
