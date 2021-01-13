@@ -12,11 +12,14 @@ h3 {
   font-size: 32px;
 }
 
-thead {
-  color: white;
+.con1 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background: white;
+}
+th {
   text-align: center;
 }
-
 option:nth-child(1) {
   font-weight: bold;
 }

@@ -46,7 +46,6 @@ export class TeachingStaffComponent implements OnInit {
     this.data3 = null;
 
     let dept = event.target.value;
-    console.log(dept);
     if (dept == "All Departments") {
       this.httpclient
         .get("http://13.232.107.115:8000/teachers")
@@ -65,8 +64,6 @@ export class TeachingStaffComponent implements OnInit {
         .get("http://13.232.107.115:8000/teachers/" + dept)
         .subscribe((resu) => {
           this.data3 = resu;
-
-          console.log(resu);
         });
     }
   }

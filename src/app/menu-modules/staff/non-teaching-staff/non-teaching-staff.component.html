@@ -9,26 +9,27 @@
       <hr />
     </div>
   </div> -->
+  <div class="container con1">
+    <div *ngIf="data2">
+      <table
+        datatable
+        [dtOptions]="dtOptions"
+        class="row-border table-striped table-bordered hover"
+      >
+        <thead>
+          <tr>
+            <th scope="col">NAME</th>
 
-  <div *ngIf="data2">
-    <table
-      datatable
-      [dtOptions]="dtOptions"
-      class="table table-bordered table-hover table-striped"
-    >
-      <thead [ngStyle]="{ 'background-color': theme.primary }" align="center">
-        <tr>
-          <th>NAME</th>
-
-          <th>POST</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr id="row" *ngFor="let item of data2">
-          <td>{{ item.name }}</td>
-          <td>{{ item.post }}</td>
-        </tr>
-      </tbody>
-    </table>
+            <th scope="col">POST</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr id="row" *ngFor="let item of data2">
+            <td>{{ item.name }}</td>
+            <td>{{ item.post }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 </div>

@@ -11,77 +11,80 @@
       <hr />
     </div>
   </div> -->
-
-  <div class="form-row align-items-center">
-    <div class="col-auto my-1">
-      <label class="mr-sm-2" for="dept">Filter by Department</label>
-      <select
-        class="custom-select mr-sm-2"
-        id="dept"
-        (change)="table_filter($event)"
-      >
-        <option value="All Departments" selected>
-          <strong>All Departments</strong>
-        </option>
-        <option value="Anatomy">Anatomy</option>
-        <option value="Biochemistry">Biochemistry</option>
-        <option value="ENT">ENT</option>
-        <option value="Forensic Medicine">Forensic Medicine</option>
-        <option value="Medicine">Medicine</option>
-        <option value="Microbiology">Microbiology</option>
-        <option value="Obstetrics & Gynecology">Obstetrics & Gynecology</option>
-        <option value="Pathology">Pathology</option>
-        <option value="Pediatrics">Pediatrics</option>
-        <option value="Pharmacology">Pharmacology</option>
-        <option value="Psychiatry">Psychiatry</option>
-        <option value="Radiology">Radiology</option>
-        <option value="Skin and VD">Skin and VD</option>
-        <option value="Surgery">Surgery</option>
-      </select>
+  <div class="container con1">
+    <div class="form-row align-items-center">
+      <div class="col-auto my-1">
+        <label class="mr-sm-2" for="dept">Filter by Department</label>
+        <select
+          class="custom-select mr-sm-2"
+          id="dept"
+          (change)="table_filter($event)"
+        >
+          <option value="All Departments" selected>
+            <strong>All Departments</strong>
+          </option>
+          <option value="Anatomy">Anatomy</option>
+          <option value="Biochemistry">Biochemistry</option>
+          <option value="ENT">ENT</option>
+          <option value="Forensic Medicine">Forensic Medicine</option>
+          <option value="Medicine">Medicine</option>
+          <option value="Microbiology">Microbiology</option>
+          <option value="Obstetrics & Gynecology">
+            Obstetrics & Gynecology
+          </option>
+          <option value="Pathology">Pathology</option>
+          <option value="Pediatrics">Pediatrics</option>
+          <option value="Pharmacology">Pharmacology</option>
+          <option value="Psychiatry">Psychiatry</option>
+          <option value="Radiology">Radiology</option>
+          <option value="Skin and VD">Skin and VD</option>
+          <option value="Surgery">Surgery</option>
+        </select>
+      </div>
+      <div class="col-auto my-1">
+        <label class="mr-sm-2" for="year">Filter by Year</label>
+        <select
+          class="custom-select mr-sm-2"
+          id="year"
+          (change)="table_filter($event)"
+        >
+          <option value="All Years" selected>All Years</option>
+          <option value="2016">2016</option>
+          <option value="2017">2017</option>
+          <option value="2018">2018</option>
+        </select>
+      </div>
     </div>
-    <div class="col-auto my-1">
-      <label class="mr-sm-2" for="year">Filter by Year</label>
-      <select
-        class="custom-select mr-sm-2"
-        id="year"
-        (change)="table_filter($event)"
-      >
-        <option value="All Years" selected>All Years</option>
-        <option value="2016">2016</option>
-        <option value="2017">2017</option>
-        <option value="2018">2018</option>
-      </select>
-    </div>
-  </div>
-  <br />
+    <br />
 
-  <div *ngIf="Awards">
-    <table
-      datatable
-      [dtOptions]="dtOptions"
-      class="row-border hover table-bordered"
-    >
-      <thead [ngStyle]="{ 'background-color': theme.primary }" align="center">
-        <tr>
-          <th>Name</th>
-          <th>Designation</th>
-          <th>Achievement</th>
-          <th>Department</th>
-          <th>Date</th>
-          <th>Place</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let a of Awards">
-          <td>{{ a.name.length === 0 ? "N/A" : a.name }}</td>
-          <td>{{ a.designation.length === 0 ? "N/A" : a.designation }}</td>
-          <td>{{ a.achievement.length === 0 ? "N/A" : a.achievement }}</td>
-          <td>{{ a.department.length === 0 ? "N/A" : a.department }}</td>
-          <td>{{ a.date_day }} {{ a.date_month }} {{ a.date_year }}</td>
-          <td>{{ a.place.length === 0 ? "N/A" : a.place }}</td>
-        </tr>
-      </tbody>
-    </table>
+    <div *ngIf="Awards">
+      <table
+        datatable
+        [dtOptions]="dtOptions"
+        class="row-border table-striped table-bordered hover"
+      >
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Designation</th>
+            <th>Achievement</th>
+            <th>Department</th>
+            <th>Date</th>
+            <th>Place</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let a of Awards">
+            <td>{{ a.name.length === 0 ? "N/A" : a.name }}</td>
+            <td>{{ a.designation.length === 0 ? "N/A" : a.designation }}</td>
+            <td>{{ a.achievement.length === 0 ? "N/A" : a.achievement }}</td>
+            <td>{{ a.department.length === 0 ? "N/A" : a.department }}</td>
+            <td>{{ a.date_day }} {{ a.date_month }} {{ a.date_year }}</td>
+            <td>{{ a.place.length === 0 ? "N/A" : a.place }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 </div>
 <!-- <br />

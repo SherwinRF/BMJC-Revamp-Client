@@ -38,7 +38,7 @@ export class HomeComponent implements OnInit {
           location.href == "https://bjmcpune-development.netlify.app" ||
           location.href == "https://bjmcpune-development.netlify.app/home"
         ) {
-          console.log(location.href);
+          // console.log(location.href);
           var oTop = $("#stats").offset().top - window.innerHeight;
           if (a == 0 && $(window).scrollTop() > oTop) {
             $(".Count").each(function () {

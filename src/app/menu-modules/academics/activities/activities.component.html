@@ -10,69 +10,72 @@
       <h3>Academic Activities</h3>
     </div> -->
   <!-- </div> -->
-
-  <div class="form-row align-items-center">
-    <div class="col-auto my-1">
-      <label class="mr-sm-2" for="dept">Filter by Department</label>
-      <select
-        class="custom-select mr-sm-2"
-        id="dept"
-        (change)="table_filter($event)"
-      >
-        <option value="All Departments" selected>All Departments</option>
-        <option value="Anatomy">Anatomy</option>
-        <option value="ENT">ENT</option>
-        <option value="Medicine">Medicine</option>
-        <option value="Microbiology">Microbiology</option>
-        <option value="Obstetrics & Gynecology">Obstetrics & Gynecology</option>
-        <option value="Pediatrics">Pediatrics</option>
-        <option value="Psychiatry">Psychiatry</option>
-        <option value="Radiology">Radiology</option>
-        <option value="Skin and VD">Skin and VD</option>
-        <option value="Surgery">Surgery</option>
-      </select>
+  <div class="container con1">
+    <div class="form-row align-items-center">
+      <div class="col-auto my-1">
+        <label class="mr-sm-2" for="dept">Filter by Department</label>
+        <select
+          class="custom-select mr-sm-2"
+          id="dept"
+          (change)="table_filter($event)"
+        >
+          <option value="All Departments" selected>All Departments</option>
+          <option value="Anatomy">Anatomy</option>
+          <option value="ENT">ENT</option>
+          <option value="Medicine">Medicine</option>
+          <option value="Microbiology">Microbiology</option>
+          <option value="Obstetrics & Gynecology">
+            Obstetrics & Gynecology
+          </option>
+          <option value="Pediatrics">Pediatrics</option>
+          <option value="Psychiatry">Psychiatry</option>
+          <option value="Radiology">Radiology</option>
+          <option value="Skin and VD">Skin and VD</option>
+          <option value="Surgery">Surgery</option>
+        </select>
+      </div>
+      <div class="col-auto my-1">
+        <label class="mr-sm-2" for="year">Filter by Year</label>
+        <select
+          class="custom-select mr-sm-2"
+          id="year"
+          (change)="table_filter($event)"
+        >
+          <option value="All Years" selected>All Years</option>
+          <option value="2016">2016</option>
+          <option value="2017">2017</option>
+          <option value="2018">2018</option>
+        </select>
+      </div>
     </div>
-    <div class="col-auto my-1">
-      <label class="mr-sm-2" for="year">Filter by Year</label>
-      <select
-        class="custom-select mr-sm-2"
-        id="year"
-        (change)="table_filter($event)"
-      >
-        <option value="All Years" selected>All Years</option>
-        <option value="2016">2016</option>
-        <option value="2017">2017</option>
-        <option value="2018">2018</option>
-      </select>
-    </div>
-  </div>
-  <br />
+    <br />
 
-  <div *ngIf="Activity">
-    <table
-      datatable
-      [dtOptions]="dtOptions"
-      class="table-striped row-border hover table-bordered"
-    >
-      <thead [ngStyle]="{ 'background-color': theme.primary }">
-        <tr>
-          <th>Activity</th>
-          <th>Department</th>
-          <th>Date</th>
-          <th>Conducted By</th>
-          <th>Place</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let a of Activity">
-          <td>{{ a.activity }}</td>
-          <td>{{ a.department }}</td>
-          <td>{{ a.date_day }} {{ a.date_month }} {{ a.date_year }}</td>
-          <td>{{ a.conducted_by }}</td>
-          <td>{{ a.place }}</td>
-        </tr>
-      </tbody>
-    </table>
+    <div *ngIf="Activity">
+      <table
+        datatable
+        [dtOptions]="dtOptions"
+        class="row-border table-striped table-bordered hover"
+      >
+        <thead>
+          <tr>
+            <th>Activity</th>
+            <th>Department</th>
+            <th>Date</th>
+            <th>Conducted By</th>
+            <th>Place</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let a of Activity">
+            <td>{{ a.activity }}</td>
+            <td>{{ a.department }}</td>
+            <td>{{ a.date_day }} {{ a.date_month }} {{ a.date_year }}</td>
+            <td>{{ a.conducted_by }}</td>
+            <td>{{ a.place }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 </div>
 <!-- <br /> -->

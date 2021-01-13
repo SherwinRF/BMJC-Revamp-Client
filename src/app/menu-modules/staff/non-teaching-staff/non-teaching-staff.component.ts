@@ -13,7 +13,7 @@ import { data } from "jquery";
 })
 export class NonTeachingStaffComponent implements OnInit {
   theme: colorScheme;
-  dtOptions: any = {}; // new added
+  dtOptions: any = {};
   data2: any;
 
   constructor(
@@ -30,13 +30,12 @@ export class NonTeachingStaffComponent implements OnInit {
       paging: true,
       ordering: true,
       info: true,
-    }; // new added
+    };
 
     this.httpclient
       .get("http://13.232.107.115:8000/Non-Teaching")
       .subscribe((result3) => {
         this.data2 = result3;
-        console.log(result3);
-      }); // new added
+      });
   }
 }
