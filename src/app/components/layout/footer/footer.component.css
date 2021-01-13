@@ -59,3 +59,18 @@ footer {
   color: white;
   opacity: 1;
 }
+
+.fa-chevron-right {
+  color: #ff8811;
+}
+
+a.move-up {
+  font-size: 50px;
+  color: #ff8811;
+  display: inline-block;
+  position: fixed;
+  bottom: 4%;
+  right: 2%;
+  z-index: 0;
+  scroll-behavior: smooth;
+}

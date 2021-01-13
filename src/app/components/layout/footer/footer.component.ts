@@ -18,6 +18,13 @@ export class FooterComponent implements OnInit {
     this.themeChanger.subscribeToTheme().subscribe((currentTheme) => {
       this.theme = currentTheme;
     });
+
+    $(function () {
+      var a = 0;
+      $(".totop").click(function () {
+        $("html, body").animate({ scrollTop: 0 }, 50);
+      });
+    });
   }
   closeFun() {
     if (this.toggle) this.toggle = false;
