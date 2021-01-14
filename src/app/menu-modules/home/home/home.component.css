@@ -1005,3 +1005,7 @@ button.btn_apt:hover {
     font-size: 14px;
   }
 }
+
+.text-decoration-none {
+  color: #2a2a2a;
+}
