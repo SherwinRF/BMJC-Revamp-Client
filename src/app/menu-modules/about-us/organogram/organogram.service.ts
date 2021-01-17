@@ -9,7 +9,7 @@ export class OrganogramService {
   constructor(private httpclient: HttpClient) {}
 
   getDynamicStaff(): Observable<any[]> {
-    return this.httpclient.get<any[]>("http://13.232.107.115:8000/organogram", {
+    return this.httpclient.get<any[]>("http://35.154.255.25:8000/organogram", {
       responseType: "json",
     });
   }

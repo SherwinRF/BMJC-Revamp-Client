@@ -14,7 +14,7 @@ export class AwardsAndAchievementsComponent implements OnInit {
   theme: colorScheme;
   dtOptions: any = {};
   Awards: awards[];
-  dataURL = "http://13.232.107.115:8000/awards-achievements/";
+  dataURL = "http://35.154.255.25:8000/awards-achievements/";
 
   constructor(
     private themeChanger: ThemeChangerService,

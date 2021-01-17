@@ -8,18 +8,18 @@ export class AdmissionsService {
   constructor(private http: HttpClient) {}
   getpdfug(): Observable<any> {
     return this.http.get<any>(
-      "http://13.232.107.115:8000/files/admissions-ug-admission"
+      "http://35.154.255.25:8000/files/admissions-ug-admission"
     );
   }
   getpdfpg(): Observable<any> {
     return this.http.get<any>(
-      "http://13.232.107.115:8000/files/admissions-pg-admission"
+      "http://35.154.255.25:8000/files/admissions-pg-admission"
     );
   }
   getchartpg(): Observable<any> {
-    return this.http.get<any>("http://13.232.107.115:8000/Results/PG");
+    return this.http.get<any>("http://35.154.255.25:8000/Results/PG");
   }
   getchartug(): Observable<any> {
-    return this.http.get<any>("http://13.232.107.115:8000/Results/UG");
+    return this.http.get<any>("http://35.154.255.25:8000/Results/UG");
   }
 }

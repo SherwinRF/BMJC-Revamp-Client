@@ -35,7 +35,7 @@ export class TeachingStaffComponent implements OnInit {
     }; // new added
 
     this.httpclient
-      .get("http://13.232.107.115:8000/teachers")
+      .get("http://35.154.255.25:8000/teachers")
       .subscribe((result4) => {
         this.data3 = result4;
         this.data4 = result4;
@@ -48,7 +48,7 @@ export class TeachingStaffComponent implements OnInit {
     let dept = event.target.value;
     if (dept == "All Departments") {
       this.httpclient
-        .get("http://13.232.107.115:8000/teachers")
+        .get("http://35.154.255.25:8000/teachers")
         .subscribe((result4) => {
           this.data3 = result4;
         });
@@ -61,7 +61,7 @@ export class TeachingStaffComponent implements OnInit {
       };
     } else {
       this.httpclient
-        .get("http://13.232.107.115:8000/teachers/" + dept)
+        .get("http://35.154.255.25:8000/teachers/" + dept)
         .subscribe((resu) => {
           this.data3 = resu;
         });

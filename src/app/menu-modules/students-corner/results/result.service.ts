@@ -8,12 +8,12 @@ export class ResultService {
   constructor(private http: HttpClient) {}
   getStoredResult(): Observable<Results[]> {
     //return this.http.get<Results[]>("http://localhost:8000/Results_Year");
-    return this.http.get<Results[]>("http://13.232.107.115:8000/Results_Year");
+    return this.http.get<Results[]>("http://35.154.255.25:8000/Results_Year");
   }
   getSeatNumber(seat) {
     //return this.http.get<Results[]>("http://localhost:8000/Results/" + seat);
     return this.http.get<Results[]>(
-      "http://13.232.107.115:8000/Resultsbyid/" + seat
+      "http://35.154.255.25:8000/Resultsbyid/" + seat
     );
   }
 }

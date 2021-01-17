@@ -14,7 +14,7 @@ export class ActivitiesComponent implements OnInit {
   theme: colorScheme;
   dtOptions: any = {};
   Activity: activity[];
-  dataURL = "http://13.232.107.115:8000/academic-activities/";
+  dataURL = "http://35.154.255.25:8000/academic-activities/";
 
   constructor(
     private themeChanger: ThemeChangerService,

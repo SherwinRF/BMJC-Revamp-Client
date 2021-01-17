@@ -4,8 +4,8 @@ import { HttpClient } from "@angular/common/http";
 @Injectable()
 // providedIn: 'root'
 export class HomeService {
-  url = "http://13.232.107.115:8000/files/home";
-  url2 = "http://13.232.107.115:8000/files/home-newsandevents";
+  url = "http://35.154.255.25:8000/files/home";
+  url2 = "http://35.154.255.25:8000/files/home-newsandevents";
 
   constructor(private http: HttpClient) {}
   getLinks() {
@@ -30,7 +30,7 @@ export class HomeService {
     const body = { obj };
 
     this.http
-      .post("http://13.232.107.115:8000/register", body)
+      .post("http://35.154.255.25:8000/register", body)
       .subscribe((data) => {});
   }
 }

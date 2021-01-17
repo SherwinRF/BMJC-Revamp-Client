@@ -9,6 +9,6 @@ import { Observable } from "rxjs";
 export class DepartmentsService {
   constructor(private httpclient: HttpClient) {}
   getData(): Observable<any> {
-    return this.httpclient.get("http://13.232.107.115:8000/files/departments");
+    return this.httpclient.get("http://35.154.255.25:8000/files/departments");
   }
 }

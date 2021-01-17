@@ -14,7 +14,7 @@ export class ResearchPublicationsComponent implements OnInit {
   theme: colorScheme;
   dtOptions: any = {};
   Research: research[];
-  dataURL = "http://13.232.107.115:8000/research_publications/";
+  dataURL = "http://35.154.255.25:8000/research_publications/";
 
   constructor(
     private themeChanger: ThemeChangerService,
