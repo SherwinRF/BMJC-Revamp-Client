@@ -1,16 +1,98 @@
-<div class="container my-3">
-  <div>
-    <h2 class="decorated"><span>Hospital</span></h2>
+<div class="container-fluid">
+  <div class="my-4">
+    <h2 class="decorated"><span>Distribution of beds</span></h2>
   </div>
   <hr />
-  <div class="pdf-holder">
-    <iframe
-      name="committeePdf"
-      id="committeePdf"
-      width="100%"
-      height="700vw"
-      src="/assets/pdfs/hospital.pdf#view=FitH"
-    >
-    </iframe>
+
+  <div class="wrapper">
+    <div class="box1">
+      <google-chart
+        #chart
+        class="chart"
+        [title]="titlepie1"
+        [type]="typepie1"
+        [data]="datapie1"
+        [options]="optionspie1"
+        [width]="widthpie1"
+        [height]="heightpie1"
+      >
+      </google-chart>
+    </div>
+
+    <div class="box2">
+      <google-chart
+        #chart
+        class="chart"
+        [title]="titlepie4"
+        [type]="typepie4"
+        [data]="datapie4"
+        [options]="optionspie4"
+        [width]="widthpie4"
+        [height]="heightpie4"
+      >
+      </google-chart>
+    </div>
+
+    <div class="box3">
+      <google-chart
+        #chart
+        class="chart"
+        [title]="titlepie2"
+        [type]="typepie2"
+        [data]="datapie2"
+        [options]="optionspie2"
+        [width]="widthpie2"
+        [height]="heightpie2"
+      >
+      </google-chart>
+    </div>
+
+    <div class="box4">
+      <google-chart
+        #chart
+        class="chart"
+        [title]="titlepie3"
+        [type]="typepie3"
+        [data]="datapie3"
+        [options]="optionspie3"
+        [width]="widthpie3"
+        [height]="heightpie3"
+      >
+      </google-chart>
+    </div>
+
+    <!-- <div class="box5">
+      <google-chart
+          #chart
+          class="linechart"
+          [title]="title"
+          [type]="type"
+          [data]="data"
+          [options]="options"
+          [width]="width"
+          [height]="height"
+        >
+    </google-chart>
+    </div> -->
+  </div>
+
+  <div class="my-4">
+    <h2 class="decorated"><span>Hospital Statistics</span></h2>
+  </div>
+  <hr />
+
+  <div class="container-fluid inner-fluid">
+    <div class="container">
+      <div class="pdf-holder">
+        <iframe
+          name="committeePdf"
+          id="committeePdf"
+          width="100%"
+          height="700vw"
+          src="/assets/pdfs/hospital.pdf#view=FitH"
+        >
+        </iframe>
+      </div>
+    </div>
   </div>
 </div>

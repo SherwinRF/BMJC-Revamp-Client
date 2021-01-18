@@ -1,18 +1,22 @@
 <div *ngIf="!data" class="container">
-  <app-loading-page></app-loading-page>
+  <h2>loading</h2>
 </div>
 
-<div *ngIf="data" class="container my-3 pr-3 tryscroll">
-  <div>
-    <div class="decorated h2"><span>Departments and Centres</span></div>
-    <hr />
-  </div>
+<div *ngIf="data" class="container my-3 py-5 pr-3 tryscroll">
   <div class="upperdiv">
+    <div class="page-title">
+      <h1>DEPARTMENTS &amp; CENTERS</h1>
+    </div>
+
+    <hr />
+
     <div class="row py-5 text-center">
       <div class="col-md-4 col-sm-6 py-2">
         <div class="col-12 btn-dept py-3">
           <a href="./departments#pre-clinical">
-            <span class="btn-text"> Pre-Clinical Department </span>
+            <span>
+              <h1>Pre-Clinical Department</h1>
+            </span>
           </a>
         </div>
       </div>
@@ -287,7 +291,7 @@
           <div class="col-md-4 col-sm-6 py-2">
             <div class="col-12">
               <div class="btn-anch py-3">
-                <a routerLink="/qwerty">
+                <a href="/departments">
                   <span class="btn-text"> Cardiology </span>
                   &nbsp;&nbsp;
                   <span class="badge badge-primary badge-pill"> PDF </span>
@@ -299,7 +303,7 @@
           <div class="col-md-4 col-sm-6 py-2">
             <div class="col-12">
               <div class="btn-anch py-3">
-                <a routerLink="/qwerty">
+                <a href="/departments">
                   <span class="btn-text"> Neurology </span>
                   &nbsp;&nbsp;
                   <span class="badge badge-primary badge-pill"> PDF </span>
@@ -311,7 +315,7 @@
           <div class="col-md-4 col-sm-6 py-2">
             <div class="col-12">
               <div class="btn-anch py-3">
-                <a routerLink="/qwerty">
+                <a href="/departments">
                   <span class="btn-text"> Nephrology </span>
                   &nbsp;&nbsp;
                   <span class="badge badge-primary badge-pill"> PDF </span>
@@ -475,7 +479,7 @@
           <div class="col-md-4 col-sm-6 py-2">
             <div class="col-12">
               <div class="btn-anch py-3">
-                <a routerLink="/qwerty"
+                <a href="/departments"
                   ><span class="btn-text"> Nursing </span>
                   &nbsp;&nbsp;
                   <span class="badge badge-primary badge-pill"> PDF </span>
@@ -511,7 +515,7 @@
           <div class="col-md-4 col-sm-6 py-2">
             <div class="col-12">
               <div class="btn-anch py-3">
-                <a routerLink="/qwerty"
+                <a href="/departments"
                   ><span class="btn-text"> Physiotherapy </span>
                   &nbsp;&nbsp;
                   <span class="badge badge-primary badge-pill"> PDF </span>
@@ -523,7 +527,7 @@
           <div class="col-md-4 col-sm-6 py-2">
             <div class="col-12">
               <div class="btn-anch py-3">
-                <a routerLink="/qwerty"
+                <a href="/departments"
                   ><span class="btn-text"> Disaster Management </span>
                   &nbsp;&nbsp;
                   <span class="badge badge-primary badge-pill"> PDF </span>
@@ -535,7 +539,7 @@
           <div class="col-md-4 col-sm-6 py-2">
             <div class="col-12">
               <div class="btn-anch py-3">
-                <a routerLink="/qwerty"
+                <a href="/departments"
                   ><span class="btn-text">
                     Body / Kidney / Organ donation
                   </span>
@@ -549,7 +553,7 @@
           <div class="col-md-4 col-sm-6 py-2">
             <div class="col-12">
               <div class="btn-anch py-3">
-                <a routerLink="/qwerty"
+                <a href="/departments"
                   ><span class="btn-text">
                     Institute of Nursing education
                   </span>
@@ -581,7 +585,7 @@
           <div class="col-md-4 col-sm-6 py-2">
             <div class="col-12">
               <div class="btn-anch py-3">
-                <a routerLink="/qwerty">
+                <a href="/departments">
                   <span class="btn-text"> ART </span>
                   &nbsp;&nbsp;
                   <span class="badge badge-primary badge-pill"> PDF </span>
@@ -593,7 +597,7 @@
           <div class="col-md-4 col-sm-6 py-2">
             <div class="col-12">
               <div class="btn-anch py-3">
-                <a routerLink="/qwerty">
+                <a href="/departments">
                   <span class="btn-text"> ICTC </span>
                   &nbsp;&nbsp;
                   <span class="badge badge-primary badge-pill"> PDF </span>

@@ -6,142 +6,157 @@
   <div class="container landm pb-5">
     <!-- ROW 1 -->
     <div class="row pt-5">
-      <div class="col-md-4"></div>
+      <div class="col-4"></div>
 
-      <div class="col-md-4 bg-info card dean">
-        <div class="card-header">
-          <div class="card-tools">
-            <img
-              class="card-img-top rounded-circle"
-              src="../../../../assets/about-us/organogram/{{
-                dynamStaff[0].Name
-              }}.jpg"
-              style="width: 100%; height: 40%"
-            />
+      <ng-container *ngFor="let item of dynamStaff">
+        <div class="col-4 bg-info card dean" *ngIf="item.Designation == 'Dean'">
+          <div class="card-header">
+            <div class="card-tools">
+              <img
+                class="card-img-top rounded-circle"
+                src="../../../../assets/about-us/organogram/{{ item.Name }}.jpg"
+                style="width: 100%; height: 40%"
+              />
+            </div>
+          </div>
+          <div class="card-body">
+            <b>{{ item.Name }}</b
+            ><br /><br />
+            {{ item.Designation }}
+          </div>
+          <div class="card-footer">
+            <button
+              class="primary-btn"
+              type="button"
+              data-toggle="modal"
+              data-target="#deanModal"
+            >
+              Know more
+            </button>
           </div>
         </div>
-        <div class="card-body">
-          <b>{{ dynamStaff[0].Name }}</b
-          ><br /><br />
-          {{ dynamStaff[0].Designation }}
-        </div>
-        <div class="card-footer">
-          <button
-            class="primary-btn"
-            type="button"
-            data-toggle="modal"
-            data-target="#deanModal"
-          >
-            Know more
-          </button>
-        </div>
-      </div>
+      </ng-container>
 
-      <div class="col-md-4"></div>
+      <div class="col-4"></div>
 
       <!-- </div> -->
 
       <!-- ROW 2 -->
       <!-- <div class="row pt-3"> -->
 
-      <div class="col-md-1"></div>
+      <div class="col-1"></div>
 
-      <div class="col-md-3 mt-5 ugdean">
-        <div class="col-md-12 card bg-info">
-          <div class="card-header">
-            <div class="card-tools">
-              <img
-                class="card-img-top rounded-circle"
-                src="../../../../assets/about-us/organogram/{{
-                  dynamStaff[1].Name
-                }}.jpg"
-                style="width: 100%; height: 50%"
-              />
+      <ng-container *ngFor="let item of dynamStaff">
+        <div
+          class="col-3 mt-5 ugdean"
+          *ngIf="item.Designation == 'Dy.Dean (UG)'"
+        >
+          <div class="col-12 card bg-info">
+            <div class="card-header">
+              <div class="card-tools">
+                <img
+                  class="card-img-top rounded-circle"
+                  src="../../../../assets/about-us/organogram/{{
+                    item.Name
+                  }}.jpg"
+                  style="width: 100%; height: 50%"
+                />
+              </div>
+            </div>
+            <div class="card-body">
+              <b>{{ item.Name }}</b
+              ><br /><br />
+              {{ item.Designation }}
+            </div>
+            <div class="card-footer">
+              <button
+                class="primary-btn"
+                type="button"
+                data-toggle="modal"
+                data-target="#ugdeanModal"
+              >
+                Know more
+              </button>
             </div>
           </div>
-          <div class="card-body">
-            <b>{{ dynamStaff[1].Name }}</b
-            ><br /><br />
-            {{ dynamStaff[1].Designation }}
-          </div>
-          <div class="card-footer">
-            <button
-              class="primary-btn"
-              type="button"
-              data-toggle="modal"
-              data-target="#ugdeanModal"
-            >
-              Know more
-            </button>
-          </div>
         </div>
-      </div>
+      </ng-container>
 
       <!-- <div class="col-md-1"></div> -->
 
-      <div class="col-md-3 mt-5 ml-4 pgdean">
-        <div class="col-md-12 card bg-info">
-          <div class="card-header">
-            <div class="card-tools">
-              <img
-                class="card-img-top rounded-circle"
-                src="../../../../assets/about-us/organogram/{{
-                  dynamStaff[2].Name
-                }}.jpg"
-                style="width: 100%; height: 50%"
-              />
+      <ng-container *ngFor="let item of dynamStaff">
+        <div
+          class="col-3 mt-5 ml-4 pgdean"
+          *ngIf="item.Designation == 'Dy. Dean (PG)'"
+        >
+          <div class="col-12 card bg-info">
+            <div class="card-header">
+              <div class="card-tools">
+                <img
+                  class="card-img-top rounded-circle"
+                  src="../../../../assets/about-us/organogram/{{
+                    item.Name
+                  }}.jpg"
+                  style="width: 100%; height: 50%"
+                />
+              </div>
+            </div>
+            <div class="card-body">
+              <b>{{ item.Name }}</b
+              ><br /><br />
+              {{ item.Designation }}
+            </div>
+            <div class="card-footer">
+              <button
+                class="primary-btn"
+                type="button"
+                data-toggle="modal"
+                data-target="#pgdeanModal"
+              >
+                Know more
+              </button>
             </div>
           </div>
-          <div class="card-body">
-            <b>{{ dynamStaff[2].Name }}</b
-            ><br /><br />
-            {{ dynamStaff[2].Designation }}
-          </div>
-          <div class="card-footer">
-            <button
-              class="primary-btn"
-              type="button"
-              data-toggle="modal"
-              data-target="#pgdeanModal"
-            >
-              Know more
-            </button>
-          </div>
         </div>
-      </div>
+      </ng-container>
 
       <!-- <div class="col-md-1"></div> -->
 
-      <div class="col-md-3 mt-5 ml-4 vicedean">
-        <div class="col-md-12 card bg-info">
-          <div class="card-header">
-            <div class="card-tools">
-              <img
-                class="card-img-top rounded-circle"
-                src="../../../../assets/about-us/organogram/{{
-                  dynamStaff[3].Name
-                }}.jpg"
-                style="width: 100%; height: 50%"
-              />
+      <ng-container *ngFor="let item of dynamStaff">
+        <div
+          class="col-3 mt-5 ml-4 vicedean"
+          *ngIf="item.Designation == 'Vice.Dean (Administration)'"
+        >
+          <div class="col-12 card bg-info">
+            <div class="card-header">
+              <div class="card-tools">
+                <img
+                  class="card-img-top rounded-circle"
+                  src="../../../../assets/about-us/organogram/{{
+                    item.Name
+                  }}.jpg"
+                  style="width: 100%; height: 50%"
+                />
+              </div>
+            </div>
+            <div class="card-body">
+              <b>{{ item.Name }}</b
+              ><br /><br />
+              {{ item.Designation }}
+            </div>
+            <div class="card-footer">
+              <button
+                class="primary-btn"
+                type="button"
+                data-toggle="modal"
+                data-target="#vicedeanModal"
+              >
+                Know more
+              </button>
             </div>
           </div>
-          <div class="card-body">
-            <b>{{ dynamStaff[3].Name }}</b
-            ><br /><br />
-            {{ dynamStaff[3].Designation }}
-          </div>
-          <div class="card-footer">
-            <button
-              class="primary-btn"
-              type="button"
-              data-toggle="modal"
-              data-target="#vicedeanModal"
-            >
-              Know more
-            </button>
-          </div>
         </div>
-      </div>
+      </ng-container>
 
       <!-- <div class="col-md-2"></div> -->
 
@@ -150,133 +165,158 @@
       <!-- ROW 3 -->
       <!-- <div class="row pt-3"> -->
 
-      <div class="col-md-4"></div>
+      <div class="col-4"></div>
 
-      <div class="col-md-4 card bg-info mt-5 superintendents">
+      <div class="col-4 card bg-info mt-5 superintendents">
         <div class="card-body">
           <b>Superintendents</b>
         </div>
       </div>
 
-      <div class="col-md-4"></div>
+      <div class="col-4"></div>
 
       <!-- </div> -->
 
       <!-- ROW 4 -->
       <!-- <div class="row pt-3"> -->
 
-      <div class="col-md-4 card bg-info mt-5 medsup">
-        <div class="card-body">
-          <b>{{ dynamStaff[4].Name }}</b
-          ><br /><br />
-          {{ dynamStaff[4].Designation }}
+      <ng-container *ngFor="let item of dynamStaff">
+        <div
+          class="col-4 card bg-info mt-5 medsup"
+          *ngIf="item.Designation == 'Medical Superintendent'"
+        >
+          <div class="card-body">
+            <b>{{ item.Name }}</b
+            ><br /><br />
+            {{ item.Designation }}
+          </div>
+          <div class="card-footer">
+            <button
+              class="primary-btn"
+              type="button"
+              data-toggle="modal"
+              data-target="#medsupModal"
+            >
+              Know more
+            </button>
+          </div>
         </div>
-        <div class="card-footer">
-          <button
-            class="primary-btn"
-            type="button"
-            data-toggle="modal"
-            data-target="#medsupModal"
-          >
-            Know more
-          </button>
-        </div>
-      </div>
+      </ng-container>
 
-      <div class="col-md-3"></div>
+      <div class="col-3"></div>
 
-      <div class="col-md-4 card bg-info mt-5 officers">
+      <div class="col-4 card bg-info mt-5 officers">
         <div class="card-body">
           <b>Officers</b>
         </div>
       </div>
 
-      <div class="col-md-1"></div>
+      <div class="col-1"></div>
 
       <!-- </div> -->
 
       <!-- ROW 5 -->
       <!-- <div class="row pt-3"> -->
 
-      <div class="col-md-4 card bg-info mt-5 dymedsup">
-        <div class="card-body">
-          <b>{{ dynamStaff[5].Name }}</b
-          ><br /><br />
-          {{ dynamStaff[5].Designation }}
-        </div>
-        <div class="card-footer">
-          <button
-            class="primary-btn"
-            type="button"
-            data-toggle="modal"
-            data-target="#dymedsupModal"
-          >
-            Know more
-          </button>
-        </div>
-      </div>
-
-      <div class="col-md-2"></div>
-
-      <div class="col-md-2 mt-5 sghoffsup1">
-        <div class="col-md-12 card bg-info">
+      <ng-container *ngFor="let item of dynamStaff">
+        <div
+          class="col-4 card bg-info mt-5 dymedsup"
+          *ngIf="item.Designation == 'Dy. Medical Superintendent'"
+        >
           <div class="card-body">
-            <b>{{ dynamStaff[6].Name }}</b
+            <b>{{ item.Name }}</b
             ><br /><br />
-            {{ dynamStaff[6].Designation }}
+            {{ item.Designation }}
           </div>
           <div class="card-footer">
             <button
               class="primary-btn"
               type="button"
               data-toggle="modal"
-              data-target="#sghoffsup1Modal"
+              data-target="#dymedsupModal"
             >
               Know more
             </button>
           </div>
         </div>
-      </div>
+      </ng-container>
 
-      <div class="col-md-2 mt-5 nursingoffsup">
-        <div class="col-md-12 card bg-info">
-          <div class="card-body">
-            <b>{{ dynamStaff[7].Name }}</b
-            ><br /><br />
-            {{ dynamStaff[7].Designation }}
-          </div>
-          <div class="card-footer">
-            <button
-              class="primary-btn"
-              type="button"
-              data-toggle="modal"
-              data-target="#nursingoffsupModal"
-            >
-              Know more
-            </button>
-          </div>
-        </div>
-      </div>
+      <div class="col-2"></div>
 
-      <div class="col-md-2 mt-5 sghoffsup2">
-        <div class="col-md-12 card bg-info">
-          <div class="card-body">
-            <b>{{ dynamStaff[8].Name }}</b
-            ><br /><br />
-            {{ dynamStaff[8].Designation }}
-          </div>
-          <div class="card-footer">
-            <button
-              class="primary-btn"
-              type="button"
-              data-toggle="modal"
-              data-target="#sghoffsup2Modal"
-            >
-              Know more
-            </button>
+      <ng-container *ngFor="let item of dynamStaff">
+        <div
+          class="col-2 mt-5 sghoffsup1"
+          *ngIf="item.Name == 'Mr. Sanjay B. Dahibhate'"
+        >
+          <div class="col-12 card bg-info">
+            <div class="card-body">
+              <b>{{ item.Name }}</b
+              ><br /><br />
+              {{ item.Designation }}
+            </div>
+            <div class="card-footer">
+              <button
+                class="primary-btn"
+                type="button"
+                data-toggle="modal"
+                data-target="#sghoffsup1Modal"
+              >
+                Know more
+              </button>
+            </div>
           </div>
         </div>
-      </div>
+      </ng-container>
+
+      <ng-container *ngFor="let item of dynamStaff">
+        <div
+          class="col-2 mt-5 nursingoffsup"
+          *ngIf="item.Designation == 'Office Superintendent (Nursing)'"
+        >
+          <div class="col-12 card bg-info">
+            <div class="card-body">
+              <b>{{ item.Name }}</b
+              ><br /><br />
+              {{ item.Designation }}
+            </div>
+            <div class="card-footer">
+              <button
+                class="primary-btn"
+                type="button"
+                data-toggle="modal"
+                data-target="#nursingoffsupModal"
+              >
+                Know more
+              </button>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+
+      <ng-container *ngFor="let item of dynamStaff">
+        <div
+          class="col-2 mt-5 sghoffsup2"
+          *ngIf="item.Name == 'Mr. P. M. Adhari'"
+        >
+          <div class="col-12 card bg-info">
+            <div class="card-body">
+              <b>{{ item.Name }}</b
+              ><br /><br />
+              {{ item.Designation }}
+            </div>
+            <div class="card-footer">
+              <button
+                class="primary-btn"
+                type="button"
+                data-toggle="modal"
+                data-target="#sghoffsup2Modal"
+              >
+                Know more
+              </button>
+            </div>
+          </div>
+        </div>
+      </ng-container>
 
       <!-- </div> -->
 
@@ -285,80 +325,95 @@
 
       <div class="col-md-7"></div>
 
-      <div class="col-md-4 card bg-info mt-5 adminoff">
+      <div class="col-4 card bg-info mt-5 adminoff">
         <div class="card-body">
           <b>Administrative Officers</b>
         </div>
       </div>
 
-      <div class="col-md-1"></div>
+      <div class="col-1"></div>
 
       <!-- </div> -->
 
       <!-- ROW 7 -->
       <!-- <div class="row pt-3"> -->
 
-      <div class="col-md-6"></div>
+      <div class="col-6"></div>
 
-      <div class="col-md-2 mt-5 bjgmcsghadminoff">
-        <div class="col-md-12 card bg-info">
-          <div class="card-body">
-            <b>{{ dynamStaff[9].Name }}</b
-            ><br /><br />
-            {{ dynamStaff[9].Designation }}
-          </div>
-          <div class="card-footer">
-            <button
-              class="primary-btn"
-              type="button"
-              data-toggle="modal"
-              data-target="#bjgmcsghadminoffModal"
-            >
-              Know more
-            </button>
+      <ng-container *ngFor="let item of dynamStaff">
+        <div
+          class="col-2 mt-5 bjgmcsghadminoff"
+          *ngIf="item.Designation == 'Administrative Officer (BJGMC / SGH)'"
+        >
+          <div class="col-12 card bg-info">
+            <div class="card-body">
+              <b>{{ item.Name }}</b
+              ><br /><br />
+              {{ item.Designation }}
+            </div>
+            <div class="card-footer">
+              <button
+                class="primary-btn"
+                type="button"
+                data-toggle="modal"
+                data-target="#bjgmcsghadminoffModal"
+              >
+                Know more
+              </button>
+            </div>
           </div>
         </div>
-      </div>
+      </ng-container>
 
-      <div class="col-md-2 mt-5 bjgmcadminoff">
-        <div class="col-md-12 card bg-info">
-          <div class="card-body">
-            <b>{{ dynamStaff[10].Name }}</b
-            ><br /><br />
-            {{ dynamStaff[10].Designation }}
-          </div>
-          <div class="card-footer">
-            <button
-              class="primary-btn"
-              type="button"
-              data-toggle="modal"
-              data-target="#bjgmcadminoffModal"
-            >
-              Know more
-            </button>
+      <ng-container *ngFor="let item of dynamStaff">
+        <div
+          class="col-2 mt-5 bjgmcadminoff"
+          *ngIf="item.Designation == 'Administrative officer (BJGMC)'"
+        >
+          <div class="col-12 card bg-info">
+            <div class="card-body">
+              <b>{{ item.Name }}</b
+              ><br /><br />
+              {{ item.Designation }}
+            </div>
+            <div class="card-footer">
+              <button
+                class="primary-btn"
+                type="button"
+                data-toggle="modal"
+                data-target="#bjgmcadminoffModal"
+              >
+                Know more
+              </button>
+            </div>
           </div>
         </div>
-      </div>
+      </ng-container>
 
-      <div class="col-md-2 mt-5 sghadminoff">
-        <div class="col-md-12 card bg-info">
-          <div class="card-body">
-            <b>{{ dynamStaff[11].Name }}</b
-            ><br /><br />
-            {{ dynamStaff[11].Designation }}
-          </div>
-          <div class="card-footer">
-            <button
-              class="primary-btn"
-              type="button"
-              data-toggle="modal"
-              data-target="#sghadminoffModal"
-            >
-              Know more
-            </button>
+      <ng-container *ngFor="let item of dynamStaff">
+        <div
+          class="col-2 mt-5 sghadminoff"
+          *ngIf="item.Designation == 'Administrative officer (SGH)'"
+        >
+          <div class="col-12 card bg-info">
+            <div class="card-body">
+              <b>{{ item.Name }}</b
+              ><br /><br />
+              {{ item.Designation }}
+            </div>
+            <div class="card-footer">
+              <button
+                class="primary-btn"
+                type="button"
+                data-toggle="modal"
+                data-target="#sghadminoffModal"
+              >
+                Know more
+              </button>
+            </div>
           </div>
         </div>
-      </div>
+      </ng-container>
     </div>
   </div>
 
@@ -488,12 +543,6 @@
                               Medical Superintendents
                             </button>
                           </span>
-                          <!-- <span>
-                                                      <button class="btn btn-info knowmore" type="button"
-                                                          data-toggle="modal" data-target="#medSupModal">
-                                                          Know more
-                                                      </button>
-                                                  </span> -->
                         </h2>
                       </div>
 
@@ -552,12 +601,6 @@
                               Office Superintendents
                             </button>
                           </span>
-                          <!-- <span>
-                                                      <button class="btn btn-info knowmore" type="button"
-                                                          data-toggle="modal" data-target="#officeSupModal">
-                                                          Know more
-                                                      </button>
-                                                  </span> -->
                         </h2>
                       </div>
 
@@ -572,7 +615,11 @@
                             <ng-container *ngFor="let item of dynamStaff">
                               <div
                                 class="col-sm-4 col-6 my-3"
-                                *ngIf="item.Designation.includes('Office')"
+                                *ngIf="
+                                  item.Designation.includes(
+                                    'Office Superintendent'
+                                  )
+                                "
                               >
                                 <div class="col-12 card deanscard">
                                   <div class="card-header">
@@ -681,532 +728,562 @@
   <!-- Large View Modals -->
 
   <!-- Dean Modal -->
-  <div
-    class="modal fade"
-    id="deanModal"
-    tabindex="-1"
-    aria-labelledby="exampleModalLabel"
-    aria-hidden="true"
-  >
+  <ng-container *ngFor="let item of dynamStaff">
     <div
-      class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-dialog"
+      class="modal fade"
+      id="deanModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+      *ngIf="item.Designation == 'Dean'"
     >
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">
-            {{ dynamStaff[0].Name }}<br />({{ dynamStaff[0].Designation }})
-          </h5>
-          <button
-            type="button"
-            class="close"
-            data-dismiss="modal"
-            aria-label="Close"
-          >
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <h6>Address:</h6>
-          <br />
-          <p>{{ dynamStaff[0].Address }}</p>
-          <hr />
-          <h6>Contact:</h6>
-          <br />
-          <p>
-            Tel: {{ dynamStaff[0].Contact.Tel[0] }},
-            {{ dynamStaff[0].Contact.Tel[1] }}<br />
-            Fax: {{ dynamStaff[0].Contact.Fax }}<br />
-            Cell: {{ dynamStaff[0].Contact.Cell }}<br />
-            Email: {{ dynamStaff[0].Contact.Email }}
-          </p>
+      <div
+        class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-dialog"
+      >
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              {{ item.Name }}<br />({{ item.Designation }})
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <h6>Address:</h6>
+            <br />
+            <p>{{ item.Address }}</p>
+            <hr />
+            <h6>Contact:</h6>
+            <br />
+            <p>
+              Tel: {{ item.Contact.Tel[0] }}, {{ item.Contact.Tel[1] }}<br />
+              Fax: {{ item.Contact.Fax }}<br />
+              Cell: {{ item.Contact.Cell }}<br />
+              Email: {{ item.Contact.Email }}
+            </p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  </ng-container>
 
   <!-- UGDean Modal -->
-  <div
-    class="modal fade"
-    id="ugdeanModal"
-    tabindex="-1"
-    aria-labelledby="exampleModalLabel"
-    aria-hidden="true"
-  >
+  <ng-container *ngFor="let item of dynamStaff">
     <div
-      class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-dialog"
+      class="modal fade"
+      id="ugdeanModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+      *ngIf="item.Designation == 'Dy.Dean (UG)'"
     >
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">
-            {{ dynamStaff[1].Name }}<br />({{ dynamStaff[1].Designation }})
-          </h5>
-          <button
-            type="button"
-            class="close"
-            data-dismiss="modal"
-            aria-label="Close"
-          >
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <h6>Address:</h6>
-          <br />
-          <p>{{ dynamStaff[1].Address }}</p>
-          <hr />
-          <h6>Contact:</h6>
-          <br />
-          <p>
-            Tel: {{ dynamStaff[1].Contact.Tel[0] }},
-            {{ dynamStaff[1].Contact.Tel[1] }}<br />
-            <!-- Fax: {{dynamStaff[1].Contact.Fax}}<br /> -->
-            Cell: {{ dynamStaff[1].Contact.Cell }}<br />
-            <!-- Email: {{dynamStaff[1].Contact.Email}} -->
-          </p>
+      <div
+        class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-dialog"
+      >
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              {{ item.Name }}<br />({{ item.Designation }})
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <h6>Address:</h6>
+            <br />
+            <p>{{ item.Address }}</p>
+            <hr />
+            <h6>Contact:</h6>
+            <br />
+            <p>
+              Tel: {{ item.Contact.Tel[0] }}, {{ item.Contact.Tel[1] }}<br />
+              <!-- Fax: {{item.Contact.Fax}}<br /> -->
+              Cell: {{ item.Contact.Cell }}<br />
+              <!-- Email: {{item.Contact.Email}} -->
+            </p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  </ng-container>
 
   <!-- PGDean Modal -->
-  <div
-    class="modal fade"
-    id="pgdeanModal"
-    tabindex="-1"
-    aria-labelledby="exampleModalLabel"
-    aria-hidden="true"
-  >
+  <ng-container *ngFor="let item of dynamStaff">
     <div
-      class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-dialog"
+      class="modal fade"
+      id="pgdeanModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+      *ngIf="item.Designation == 'Dy. Dean (PG)'"
     >
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">
-            {{ dynamStaff[2].Name }}<br />({{ dynamStaff[2].Designation }})
-          </h5>
-          <button
-            type="button"
-            class="close"
-            data-dismiss="modal"
-            aria-label="Close"
-          >
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <h6>Address:</h6>
-          <br />
-          <p>{{ dynamStaff[2].Address }}</p>
-          <hr />
-          <h6>Contact:</h6>
-          <br />
-          <p>
-            Tel: {{ dynamStaff[2].Contact.Tel[0] }}<br />
-            <!-- {{dynamStaff[2].Contact.Tel[1]}}<br /> -->
-            <!-- Fax: {{dynamStaff[2].Contact.Fax}}<br /> -->
-            Cell: {{ dynamStaff[2].Contact.Cell }}<br />
-            <!-- Email: {{dynamStaff[2].Contact.Email}} -->
-          </p>
+      <div
+        class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-dialog"
+      >
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              {{ item.Name }}<br />({{ item.Designation }})
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <h6>Address:</h6>
+            <br />
+            <p>{{ item.Address }}</p>
+            <hr />
+            <h6>Contact:</h6>
+            <br />
+            <p>
+              Tel: {{ item.Contact.Tel[0] }}<br />
+              <!-- {{item.Contact.Tel[1]}}<br /> -->
+              <!-- Fax: {{item.Contact.Fax}}<br /> -->
+              Cell: {{ item.Contact.Cell }}<br />
+              <!-- Email: {{item.Contact.Email}} -->
+            </p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  </ng-container>
 
   <!-- ViceDean Modal -->
-  <div
-    class="modal fade"
-    id="vicedeanModal"
-    tabindex="-1"
-    aria-labelledby="exampleModalLabel"
-    aria-hidden="true"
-  >
+  <ng-container *ngFor="let item of dynamStaff">
     <div
-      class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-dialog"
+      class="modal fade"
+      id="vicedeanModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+      *ngIf="item.Designation == 'Vice.Dean (Administration)'"
     >
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">
-            {{ dynamStaff[3].Name }}<br />({{ dynamStaff[3].Designation }})
-          </h5>
-          <button
-            type="button"
-            class="close"
-            data-dismiss="modal"
-            aria-label="Close"
-          >
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <h6>Address:</h6>
-          <br />
-          <p>{{ dynamStaff[3].Address }}</p>
-          <hr />
-          <h6>Contact:</h6>
-          <br />
-          <p>
-            Tel: {{ dynamStaff[3].Contact.Tel[0] }},
-            {{ dynamStaff[3].Contact.Tel[1] }}<br />
-            <!-- Fax: {{dynamStaff[3].Contact.Fax}}<br /> -->
-            <!-- Cell: {{dynamStaff[3].Contact.Cell}}<br /> -->
-            <!-- Email: {{dynamStaff[3].Contact.Email}} -->
-          </p>
+      <div
+        class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-dialog"
+      >
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              {{ item.Name }}<br />({{ item.Designation }})
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <h6>Address:</h6>
+            <br />
+            <p>{{ item.Address }}</p>
+            <hr />
+            <h6>Contact:</h6>
+            <br />
+            <p>
+              Tel: {{ item.Contact.Tel[0] }}, {{ item.Contact.Tel[1] }}<br />
+              <!-- Fax: {{item.Contact.Fax}}<br /> -->
+              <!-- Cell: {{item.Contact.Cell}}<br /> -->
+              <!-- Email: {{item.Contact.Email}} -->
+            </p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  </ng-container>
 
   <!-- Medical Superintendent Modal -->
-  <div
-    class="modal fade"
-    id="medsupModal"
-    tabindex="-1"
-    aria-labelledby="exampleModalLabel"
-    aria-hidden="true"
-  >
+  <ng-container *ngFor="let item of dynamStaff">
     <div
-      class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-dialog"
+      class="modal fade"
+      id="medsupModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+      *ngIf="item.Designation == 'Medical Superintendent'"
     >
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">
-            {{ dynamStaff[4].Name }}<br />({{ dynamStaff[4].Designation }})
-          </h5>
-          <button
-            type="button"
-            class="close"
-            data-dismiss="modal"
-            aria-label="Close"
-          >
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <h6>Address:</h6>
-          <br />
-          <p>{{ dynamStaff[4].Address }}</p>
-          <hr />
-          <h6>Contact:</h6>
-          <br />
-          <p>
-            Tel: {{ dynamStaff[4].Contact.Tel[0] }}<br />
-            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{dynamStaff[4].Contact.Tel[1]}}<br /> -->
-            <!-- Fax: {{dynamStaff[4].Contact.Fax}}<br /> -->
-            Cell: {{ dynamStaff[4].Contact.Cell }}<br />
-            Email: {{ dynamStaff[4].Contact.Email }}
-          </p>
+      <div
+        class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-dialog"
+      >
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              {{ item.Name }}<br />({{ item.Designation }})
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <h6>Address:</h6>
+            <br />
+            <p>{{ item.Address }}</p>
+            <hr />
+            <h6>Contact:</h6>
+            <br />
+            <p>
+              Tel: {{ item.Contact.Tel[0] }}<br />
+              <!-- {{item.Contact.Tel[1]}}<br /> -->
+              <!-- Fax: {{item.Contact.Fax}}<br /> -->
+              Cell: {{ item.Contact.Cell }}<br />
+              Email: {{ item.Contact.Email }}
+            </p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  </ng-container>
 
   <!-- DyMedical Superintendent Modal -->
-  <div
-    class="modal fade"
-    id="dymedsupModal"
-    tabindex="-1"
-    aria-labelledby="exampleModalLabel"
-    aria-hidden="true"
-  >
+  <ng-container *ngFor="let item of dynamStaff">
     <div
-      class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-dialog"
+      class="modal fade"
+      id="dymedsupModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+      *ngIf="item.Designation == 'Dy. Medical Superintendent'"
     >
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">
-            {{ dynamStaff[5].Name }}<br />({{ dynamStaff[5].Designation }})
-          </h5>
-          <button
-            type="button"
-            class="close"
-            data-dismiss="modal"
-            aria-label="Close"
-          >
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <h6>Address:</h6>
-          <br />
-          <p>{{ dynamStaff[5].Address }}</p>
-          <hr />
-          <h6>Contact:</h6>
-          <br />
-          <p>
-            Tel: {{ dynamStaff[5].Contact.Tel[0] }},
-            {{ dynamStaff[5].Contact.Tel[1] }}<br />
-            <!-- Fax: {{dynamStaff[5].Contact.Fax}}<br /> -->
-            Cell: {{ dynamStaff[5].Contact.Cell }}<br />
-            <!-- Email: {{dynamStaff[5].Contact.Email}} -->
-          </p>
+      <div
+        class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-dialog"
+      >
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              {{ item.Name }}<br />({{ item.Designation }})
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <h6>Address:</h6>
+            <br />
+            <p>{{ item.Address }}</p>
+            <hr />
+            <h6>Contact:</h6>
+            <br />
+            <p>
+              Tel: {{ item.Contact.Tel[0] }}, {{ item.Contact.Tel[1] }}<br />
+              <!-- Fax: {{item.Contact.Fax}}<br /> -->
+              Cell: {{ item.Contact.Cell }}<br />
+              <!-- Email: {{item.Contact.Email}} -->
+            </p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  </ng-container>
 
   <!-- SGHOffice Superintendent 1 Modal -->
-  <div
-    class="modal fade"
-    id="sghoffsup1Modal"
-    tabindex="-1"
-    aria-labelledby="exampleModalLabel"
-    aria-hidden="true"
-  >
+  <ng-container *ngFor="let item of dynamStaff">
     <div
-      class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-dialog"
+      class="modal fade"
+      id="sghoffsup1Modal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+      *ngIf="item.Name == 'Mr. Sanjay B. Dahibhate'"
     >
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">
-            {{ dynamStaff[6].Name }}<br />({{ dynamStaff[6].Designation }})
-          </h5>
-          <button
-            type="button"
-            class="close"
-            data-dismiss="modal"
-            aria-label="Close"
-          >
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <h6>Address:</h6>
-          <br />
-          <p>{{ dynamStaff[6].Address }}</p>
-          <hr />
-          <h6>Contact:</h6>
-          <br />
-          <p>
-            Tel: {{ dynamStaff[6].Contact.Tel[0] }}<br />
-            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{dynamStaff[6].Contact.Tel[1]}}<br /> -->
-            <!-- Fax: {{dynamStaff[6].Contact.Fax}}<br /> -->
-            Cell: {{ dynamStaff[6].Contact.Cell }}<br />
-            <!-- Email: {{dynamStaff[6].Contact.Email}} -->
-          </p>
+      <div
+        class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-dialog"
+      >
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              {{ item.Name }}<br />({{ item.Designation }})
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <h6>Address:</h6>
+            <br />
+            <p>{{ item.Address }}</p>
+            <hr />
+            <h6>Contact:</h6>
+            <br />
+            <p>
+              Tel: {{ item.Contact.Tel[0] }}<br />
+              <!-- {{item.Contact.Tel[1]}}<br /> -->
+              <!-- Fax: {{item.Contact.Fax}}<br /> -->
+              Cell: {{ item.Contact.Cell }}<br />
+              <!-- Email: {{item.Contact.Email}} -->
+            </p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  </ng-container>
 
   <!-- Nursing Office Superintendent Modal -->
-  <div
-    class="modal fade"
-    id="nursingoffsupModal"
-    tabindex="-1"
-    aria-labelledby="exampleModalLabel"
-    aria-hidden="true"
-  >
+  <ng-container *ngFor="let item of dynamStaff">
     <div
-      class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-dialog"
+      class="modal fade"
+      id="nursingoffsupModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+      *ngIf="item.Designation == 'Office Superintendent (Nursing)'"
     >
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">
-            {{ dynamStaff[7].Name }}<br />({{ dynamStaff[7].Designation }})
-          </h5>
-          <button
-            type="button"
-            class="close"
-            data-dismiss="modal"
-            aria-label="Close"
-          >
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <h6>Address:</h6>
-          <br />
-          <p>{{ dynamStaff[7].Address }}</p>
-          <hr />
-          <h6>Contact:</h6>
-          <br />
-          <p>
-            Tel: {{ dynamStaff[7].Contact.Tel[0] }}<br />
-            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{dynamStaff[7].Contact.Tel[1]}}<br /> -->
-            <!-- Fax: {{dynamStaff[7].Contact.Fax}}<br /> -->
-            Cell: {{ dynamStaff[7].Contact.Cell }}<br />
-            <!-- Email: {{dynamStaff[7].Contact.Email}} -->
-          </p>
+      <div
+        class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-dialog"
+      >
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              {{ item.Name }}<br />({{ item.Designation }})
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <h6>Address:</h6>
+            <br />
+            <p>{{ item.Address }}</p>
+            <hr />
+            <h6>Contact:</h6>
+            <br />
+            <p>
+              Tel: {{ item.Contact.Tel[0] }}<br />
+              <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{item.Contact.Tel[1]}}<br /> -->
+              <!-- Fax: {{item.Contact.Fax}}<br /> -->
+              Cell: {{ item.Contact.Cell }}<br />
+              <!-- Email: {{item.Contact.Email}} -->
+            </p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  </ng-container>
 
   <!-- SGHOffice Superintendent 2 Modal -->
-  <div
-    class="modal fade"
-    id="sghoffsup2Modal"
-    tabindex="-1"
-    aria-labelledby="exampleModalLabel"
-    aria-hidden="true"
-  >
+  <ng-container *ngFor="let item of dynamStaff">
     <div
-      class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-dialog"
+      class="modal fade"
+      id="sghoffsup2Modal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+      *ngIf="item.Name == 'Mr. P. M. Adhari'"
     >
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">
-            {{ dynamStaff[8].Name }}<br />({{ dynamStaff[8].Designation }})
-          </h5>
-          <button
-            type="button"
-            class="close"
-            data-dismiss="modal"
-            aria-label="Close"
-          >
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <h6>Address:</h6>
-          <br />
-          <p>{{ dynamStaff[8].Address }}</p>
-          <hr />
-          <h6>Contact:</h6>
-          <br />
-          <p>
-            Tel: {{ dynamStaff[8].Contact.Tel[0] }}<br />
-            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{dynamStaff[8].Contact.Tel[1]}}<br /> -->
-            <!-- Fax: {{dynamStaff[8].Contact.Fax}}<br /> -->
-            <!-- Cell: {{dynamStaff[8].Contact.Cell}}<br /> -->
-            <!-- Email: {{dynamStaff[8].Contact.Email}} -->
-          </p>
+      <div
+        class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-dialog"
+      >
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              {{ item.Name }}<br />({{ item.Designation }})
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <h6>Address:</h6>
+            <br />
+            <p>{{ item.Address }}</p>
+            <hr />
+            <h6>Contact:</h6>
+            <br />
+            <p>
+              Tel: {{ item.Contact.Tel[0] }}<br />
+              <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{item.Contact.Tel[1]}}<br /> -->
+              <!-- Fax: {{item.Contact.Fax}}<br /> -->
+              <!-- Cell: {{item.Contact.Cell}}<br /> -->
+              <!-- Email: {{item.Contact.Email}} -->
+            </p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  </ng-container>
 
   <!-- Administrative Officer (BJGMC / SGH) Modal -->
-  <div
-    class="modal fade"
-    id="bjgmcsghadminoffModal"
-    tabindex="-1"
-    aria-labelledby="exampleModalLabel"
-    aria-hidden="true"
-  >
+  <ng-container *ngFor="let item of dynamStaff">
     <div
-      class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-dialog"
+      class="modal fade"
+      id="bjgmcsghadminoffModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+      *ngIf="item.Designation == 'Administrative Officer (BJGMC / SGH)'"
     >
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">
-            {{ dynamStaff[9].Name }}<br />({{ dynamStaff[9].Designation }})
-          </h5>
-          <button
-            type="button"
-            class="close"
-            data-dismiss="modal"
-            aria-label="Close"
-          >
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <h6>Address:</h6>
-          <br />
-          <p>{{ dynamStaff[9].Address }}</p>
-          <hr />
-          <h6>Contact:</h6>
-          <br />
-          <p>
-            Tel: {{ dynamStaff[9].Contact.Tel[0] }}<br />
-            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{dynamStaff[9].Contact.Tel[1]}}<br /> -->
-            <!-- Fax: {{dynamStaff[9].Contact.Fax}}<br /> -->
-            Cell: {{ dynamStaff[9].Contact.Cell }}<br />
-            <!-- Email: {{dynamStaff[9].Contact.Email}} -->
-          </p>
+      <div
+        class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-dialog"
+      >
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              {{ item.Name }}<br />({{ item.Designation }})
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <h6>Address:</h6>
+            <br />
+            <p>{{ item.Address }}</p>
+            <hr />
+            <h6>Contact:</h6>
+            <br />
+            <p>
+              Tel: {{ item.Contact.Tel[0] }}<br />
+              <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{item.Contact.Tel[1]}}<br /> -->
+              <!-- Fax: {{item.Contact.Fax}}<br /> -->
+              Cell: {{ item.Contact.Cell }}<br />
+              <!-- Email: {{item.Contact.Email}} -->
+            </p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  </ng-container>
 
   <!-- Administrative officer (BJGMC) Modal -->
-  <div
-    class="modal fade"
-    id="bjgmcadminoffModal"
-    tabindex="-1"
-    aria-labelledby="exampleModalLabel"
-    aria-hidden="true"
-  >
+  <ng-container *ngFor="let item of dynamStaff">
     <div
-      class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-dialog"
+      class="modal fade"
+      id="bjgmcadminoffModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+      *ngIf="item.Designation == 'Administrative officer (BJGMC)'"
     >
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">
-            {{ dynamStaff[10].Name }}<br />({{ dynamStaff[10].Designation }})
-          </h5>
-          <button
-            type="button"
-            class="close"
-            data-dismiss="modal"
-            aria-label="Close"
-          >
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <h6>Address:</h6>
-          <br />
-          <p>{{ dynamStaff[10].Address }}</p>
-          <hr />
-          <h6>Contact:</h6>
-          <br />
-          <p>
-            Tel: {{ dynamStaff[10].Contact.Tel[0] }},
-            {{ dynamStaff[10].Contact.Tel[1] }}<br />
-            <!-- Fax: {{dynamStaff[10].Contact.Fax}}<br /> -->
-            Cell: {{ dynamStaff[10].Contact.Cell }}<br />
-            <!-- Email: {{dynamStaff[10].Contact.Email}} -->
-          </p>
+      <div
+        class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-dialog"
+      >
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              {{ item.Name }}<br />({{ item.Designation }})
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <h6>Address:</h6>
+            <br />
+            <p>{{ item.Address }}</p>
+            <hr />
+            <h6>Contact:</h6>
+            <br />
+            <p>
+              Tel: {{ item.Contact.Tel[0] }}, {{ item.Contact.Tel[1] }}<br />
+              <!-- Fax: {{item.Contact.Fax}}<br /> -->
+              Cell: {{ item.Contact.Cell }}<br />
+              <!-- Email: {{item.Contact.Email}} -->
+            </p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  </ng-container>
 
   <!-- Administrative officer (SGH) Modal -->
-  <div
-    class="modal fade"
-    id="sghadminoffModal"
-    tabindex="-1"
-    aria-labelledby="exampleModalLabel"
-    aria-hidden="true"
-  >
+  <ng-container *ngFor="let item of dynamStaff">
     <div
-      class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-dialog"
+      class="modal fade"
+      id="sghadminoffModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+      *ngIf="item.Designation == 'Administrative officer (SGH)'"
     >
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">
-            {{ dynamStaff[11].Name }}<br />({{ dynamStaff[11].Designation }})
-          </h5>
-          <button
-            type="button"
-            class="close"
-            data-dismiss="modal"
-            aria-label="Close"
-          >
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <h6>Address:</h6>
-          <br />
-          <p>{{ dynamStaff[11].Address }}</p>
-          <hr />
-          <h6>Contact:</h6>
-          <br />
-          <p>
-            Tel: {{ dynamStaff[11].Contact.Tel[0] }},
-            {{ dynamStaff[11].Contact.Tel[1] }}<br />
-            <!-- Fax: {{dynamStaff[11].Contact.Fax}}<br /> -->
-            <!-- Cell: {{dynamStaff[11].Contact.Cell}}<br /> -->
-            <!-- Email: {{dynamStaff[11].Contact.Email}} -->
-          </p>
+      <div
+        class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-dialog"
+      >
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              {{ item.Name }}<br />({{ item.Designation }})
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <h6>Address:</h6>
+            <br />
+            <p>{{ item.Address }}</p>
+            <hr />
+            <h6>Contact:</h6>
+            <br />
+            <p>
+              Tel: {{ item.Contact.Tel[0] }}, {{ item.Contact.Tel[1] }}<br />
+              <!-- Fax: {{item.Contact.Fax}}<br /> -->
+              <!-- Cell: {{item.Contact.Cell}}<br /> -->
+              <!-- Email: {{item.Contact.Email}} -->
+            </p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  </ng-container>
 
   <!-- Small View Modals -->
 
