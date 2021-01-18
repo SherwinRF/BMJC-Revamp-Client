@@ -67,11 +67,11 @@
         </thead>
         <tbody>
           <tr *ngFor="let a of Activity">
-            <td>{{ a.activity }}</td>
-            <td>{{ a.department }}</td>
+            <td>{{ a.activity.length === 0 ? "N/A" : a.activity }}</td>
+            <td>{{ a.department.length === 0 ? "N/A" : a.department }}</td>
             <td>{{ a.date_day }} {{ a.date_month }} {{ a.date_year }}</td>
-            <td>{{ a.conducted_by }}</td>
-            <td>{{ a.place }}</td>
+            <td>{{ a.conducted_by.length === 0 ? "N/A" : a.conducted_by }}</td>
+            <td>{{ a.place.length === 0 ? "N/A" : a.place }}</td>
           </tr>
         </tbody>
       </table>
