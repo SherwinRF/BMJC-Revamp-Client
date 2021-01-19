@@ -34,5 +34,10 @@ module.exports = function (config) {
     browsers: ["Chrome"],
     singleRun: false,
     restartOnFileChange: true,
+    files: [
+      "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+      "node_modules/bootstrap/dist/js/bootstrap.min.css",
+      "node_modules/jquery/dist/jquery.min.js",
+    ],
   });
 };
