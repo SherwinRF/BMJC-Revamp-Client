@@ -1,22 +1,18 @@
 <div *ngIf="!data" class="container">
-  <h2>loading</h2>
+  <app-loading-page></app-loading-page>
 </div>
 
-<div *ngIf="data" class="container my-3 py-5 pr-3 tryscroll">
-  <div class="upperdiv">
-    <div class="page-title">
-      <h1>DEPARTMENTS &amp; CENTERS</h1>
-    </div>
-
+<div *ngIf="data" class="container my-3 pr-3 tryscroll">
+  <div>
+    <div class="decorated h2"><span>Departments and Centres</span></div>
     <hr />
-
+  </div>
+  <div class="upperdiv">
     <div class="row py-5 text-center">
       <div class="col-md-4 col-sm-6 py-2">
         <div class="col-12 btn-dept py-3">
           <a href="./departments#pre-clinical">
-            <span>
-              <h1>Pre-Clinical Department</h1>
-            </span>
+            <span class="btn-text"> Pre-Clinical Department </span>
           </a>
         </div>
       </div>
@@ -48,7 +44,7 @@
       <div class="col-md-4 col-sm-6 py-2">
         <div class="col-12 btn-dept py-3">
           <a href="./departments#surs">
-            <span class="btn-text"> Surgical Specialitie </span>
+            <span class="btn-text"> Surgical Specialities </span>
           </a>
         </div>
       </div>
@@ -91,7 +87,7 @@
           <div class="col-md-4 col-sm-6 py-2">
             <div class="col-12">
               <div class="btn-anch py-3">
-                <a href="{{ data[1].link }}" target="_blank">
+                <a href="{{ data[18].link }}" target="_blank">
                   <span class="btn-text"> Anatomy </span>
                   &nbsp;&nbsp;
                   <span class="badge badge-primary badge-pill"> PDF </span>
@@ -103,7 +99,7 @@
           <div class="col-md-4 col-sm-6 py-2">
             <div class="col-12">
               <div class="btn-anch py-3">
-                <a href="{{ data[21].link }}" target="_blank">
+                <a href="{{ data[5].link }}" target="_blank">
                   <span class="btn-text"> Physiology </span>
                   &nbsp;&nbsp;
                   <span class="badge badge-primary badge-pill"> PDF </span>
@@ -115,7 +111,7 @@
           <div class="col-md-4 col-sm-6 py-2">
             <div class="col-12">
               <div class="btn-anch py-3">
-                <a href="{{ data[2].link }}" target="_blank">
+                <a href="{{ data[21].link }}" target="_blank">
                   <span class="btn-text"> Biochemistry </span>
                   &nbsp;&nbsp;
                   <span class="badge badge-primary badge-pill"> PDF </span>
@@ -133,7 +129,7 @@
           <div class="col-md-4 col-sm-6 py-2">
             <div class="col-12">
               <div class="btn-anch py-3">
-                <a href="{{ data[18].link }}" target="_blank">
+                <a href="{{ data[19].link }}" target="_blank">
                   <span class="btn-text"> Pathology </span>
                   &nbsp;&nbsp;
                   <span class="badge badge-primary badge-pill"> PDF </span>
@@ -145,7 +141,7 @@
           <div class="col-md-4 col-sm-6 py-2">
             <div class="col-12">
               <div class="btn-anch py-3">
-                <a href="{{ data[13].link }}" target="_blank">
+                <a href="{{ data[9].link }}" target="_blank">
                   <span class="btn-text"> Microbioloy </span>
                   &nbsp;&nbsp;
                   <span class="badge badge-primary badge-pill"> PDF </span>
@@ -157,7 +153,7 @@
           <div class="col-md-4 col-sm-6 py-2">
             <div class="col-12">
               <div class="btn-anch py-3">
-                <a href="{{ data[28].link }}" target="_blank">
+                <a href="{{ data[10].link }}" target="_blank">
                   <span class="btn-text"> Pharmacology </span>
                   &nbsp;&nbsp;
                   <span class="badge badge-primary badge-pill"> PDF </span>
@@ -169,7 +165,7 @@
           <div class="col-md-4 col-sm-6 py-2">
             <div class="col-12">
               <div class="btn-anch py-3">
-                <a href="{{ data[8].link }}" target="_blank">
+                <a href="{{ data[1].link }}" target="_blank">
                   <span class="btn-text"> Community Medicine </span>
                   &nbsp;&nbsp;
                   <span class="badge badge-primary badge-pill"> PDF </span>
@@ -199,7 +195,7 @@
           <div class="col-md-4 col-sm-6 py-2">
             <div class="col-12">
               <div class="btn-anch py-3">
-                <a href="{{ data[25].link }}" target="_blank">
+                <a href="{{ data[6].link }}" target="_blank">
                   <span class="btn-text"> Skin & V. D. </span>
                   &nbsp;&nbsp;
                   <span class="badge badge-primary badge-pill"> PDF </span>
@@ -211,7 +207,7 @@
           <div class="col-md-4 col-sm-6 py-2">
             <div class="col-12">
               <div class="btn-anch py-3">
-                <a href="{{ data[19].link }}" target="_blank">
+                <a href="{{ data[12].link }}" target="_blank">
                   <span class="btn-text"> Pediatrics </span>
                   &nbsp;&nbsp;
                   <span class="badge badge-primary badge-pill"> PDF </span>
@@ -223,7 +219,7 @@
           <div class="col-md-4 col-sm-6 py-2">
             <div class="col-12">
               <div class="btn-anch py-3">
-                <a href="{{ data[24].link }}" target="_blank">
+                <a href="{{ data[7].link }}" target="_blank">
                   <span class="btn-text"> Radiology </span>
                   &nbsp;&nbsp;
                   <span class="badge badge-primary badge-pill"> PDF </span>
@@ -235,7 +231,7 @@
           <div class="col-md-4 col-sm-6 py-2">
             <div class="col-12">
               <div class="btn-anch py-3">
-                <a href="{{ data[23].link }}" target="_blank">
+                <a href="{{ data[17].link }}" target="_blank">
                   <span class="btn-text"> Psychiatry </span>
                   &nbsp;&nbsp;
                   <span class="badge badge-primary badge-pill"> PDF </span>
@@ -259,7 +255,7 @@
           <div class="col-md-4 col-sm-6 py-2">
             <div class="col-12">
               <div class="btn-anch py-3">
-                <a href="{{ data[12].link }}" target="_blank">
+                <a href="{{ data[4].link }}" target="_blank">
                   <span class="btn-text"> General Medicine </span>
                   &nbsp;&nbsp;
                   <span class="badge badge-primary badge-pill"> PDF </span>
@@ -271,7 +267,7 @@
           <div class="col-md-4 col-sm-6 py-2">
             <div class="col-12">
               <div class="btn-anch py-3">
-                <a href="{{ data[5].link }}" target="_blank">
+                <a href="{{ data[2].link }}" target="_blank">
                   <span class="btn-text">
                     Tuberculosis and Chest Diseases
                   </span>
@@ -291,7 +287,7 @@
           <div class="col-md-4 col-sm-6 py-2">
             <div class="col-12">
               <div class="btn-anch py-3">
-                <a href="/departments">
+                <a routerLink="/qwerty">
                   <span class="btn-text"> Cardiology </span>
                   &nbsp;&nbsp;
                   <span class="badge badge-primary badge-pill"> PDF </span>
@@ -303,7 +299,7 @@
           <div class="col-md-4 col-sm-6 py-2">
             <div class="col-12">
               <div class="btn-anch py-3">
-                <a href="/departments">
+                <a routerLink="/qwerty">
                   <span class="btn-text"> Neurology </span>
                   &nbsp;&nbsp;
                   <span class="badge badge-primary badge-pill"> PDF </span>
@@ -315,7 +311,7 @@
           <div class="col-md-4 col-sm-6 py-2">
             <div class="col-12">
               <div class="btn-anch py-3">
-                <a href="/departments">
+                <a routerLink="/qwerty">
                   <span class="btn-text"> Nephrology </span>
                   &nbsp;&nbsp;
                   <span class="badge badge-primary badge-pill"> PDF </span>
@@ -333,7 +329,7 @@
           <div class="col-md-4 col-sm-6 py-2">
             <div class="col-12">
               <div class="btn-anch py-3">
-                <a href="{{ data[17].link }}" target="_blank">
+                <a href="{{ data[27].link }}" target="_blank">
                   <span class="btn-text"> Orthopedics </span>
                   &nbsp;&nbsp;
                   <span class="badge badge-primary badge-pill"> PDF </span>
@@ -345,7 +341,7 @@
           <div class="col-md-4 col-sm-6 py-2">
             <div class="col-12">
               <div class="btn-anch py-3">
-                <a href="{{ data[26].link }}" target="_blank">
+                <a href="{{ data[14].link }}" target="_blank">
                   <span class="btn-text"> General Surgery </span>
                   &nbsp;&nbsp;
                   <span class="badge badge-primary badge-pill"> PDF </span>
@@ -369,7 +365,7 @@
           <div class="col-md-4 col-sm-6 py-2">
             <div class="col-12">
               <div class="btn-anch py-3">
-                <a href="{{ data[9].link }}" target="_blank">
+                <a href="{{ data[22].link }}" target="_blank">
                   <span class="btn-text"> Otorhinolaryngology (ENT) </span>
                   &nbsp;&nbsp;
                   <span class="badge badge-primary badge-pill"> PDF </span>
@@ -381,7 +377,7 @@
           <div class="col-md-4 col-sm-6 py-2">
             <div class="col-12">
               <div class="btn-anch py-3">
-                <a href="{{ data[15].link }}" target="_blank">
+                <a href="{{ data[23].link }}" target="_blank">
                   <span class="btn-text"> Obstetrics & Gynecology </span>
                   &nbsp;&nbsp;
                   <span class="badge badge-primary badge-pill"> PDF </span>
@@ -399,7 +395,7 @@
           <div class="col-md-4 col-sm-6 py-2">
             <div class="col-12">
               <div class="btn-anch py-3">
-                <a href="{{ data[27].link }}" target="_blank">
+                <a href="{{ data[28].link }}" target="_blank">
                   <span class="btn-text"> Urosurgery </span>
                   &nbsp;&nbsp;
                   <span class="badge badge-primary badge-pill"> PDF </span>
@@ -411,7 +407,7 @@
           <div class="col-md-4 col-sm-6 py-2">
             <div class="col-12">
               <div class="btn-anch py-3">
-                <a href="{{ data[14].link }}" target="_blank">
+                <a href="{{ data[26].link }}" target="_blank">
                   <span class="btn-text"> Neuro-Surgery </span>
                   &nbsp;&nbsp;
                   <span class="badge badge-primary badge-pill"> PDF </span>
@@ -423,7 +419,7 @@
           <div class="col-md-4 col-sm-6 py-2">
             <div class="col-12">
               <div class="btn-anch py-3">
-                <a href="{{ data[22].link }}" target="_blank">
+                <a href="{{ data[20].link }}" target="_blank">
                   <span class="btn-text"> Plastic Surgery </span>
                   &nbsp;&nbsp;
                   <span class="badge badge-primary badge-pill"> PDF </span>
@@ -435,7 +431,7 @@
           <div class="col-md-4 col-sm-6 py-2">
             <div class="col-12">
               <div class="btn-anch py-3">
-                <a href="{{ data[20].link }}" target="_blank">
+                <a href="{{ data[15].link }}" target="_blank">
                   <span class="btn-text"> Pediatric Surgery </span>
                   &nbsp;&nbsp;
                   <span class="badge badge-primary badge-pill"> PDF </span>
@@ -447,7 +443,7 @@
           <div class="col-md-4 col-sm-6 py-2">
             <div class="col-12">
               <div class="btn-anch py-3">
-                <a href="{{ data[7].link }}" target="_blank">
+                <a href="{{ data[13].link }}" target="_blank">
                   <span class="btn-text">
                     Cardiovascular and Thoracic Surgery
                   </span>
@@ -467,7 +463,7 @@
           <div class="col-md-4 col-sm-6 py-2">
             <div class="col-12">
               <div class="btn-anch py-3">
-                <a href="{{ data[6].link }}" target="_blank">
+                <a href="{{ data[24].link }}" target="_blank">
                   <span class="btn-text"> Dentistry </span>
                   &nbsp;&nbsp;
                   <span class="badge badge-primary badge-pill"> PDF </span>
@@ -479,7 +475,7 @@
           <div class="col-md-4 col-sm-6 py-2">
             <div class="col-12">
               <div class="btn-anch py-3">
-                <a href="/departments"
+                <a routerLink="/qwerty"
                   ><span class="btn-text"> Nursing </span>
                   &nbsp;&nbsp;
                   <span class="badge badge-primary badge-pill"> PDF </span>
@@ -491,7 +487,7 @@
           <div class="col-md-4 col-sm-6 py-2">
             <div class="col-12">
               <div class="btn-anch py-3">
-                <a href="{{ data[10].link }}" target="_blank">
+                <a href="{{ data[25].link }}" target="_blank">
                   <span class="btn-text"> Eye Bank </span>
                   &nbsp;&nbsp;
                   <span class="badge badge-primary badge-pill"> PDF </span>
@@ -503,7 +499,7 @@
           <div class="col-md-4 col-sm-6 py-2">
             <div class="col-12">
               <div class="btn-anch py-3">
-                <a href="{{ data[4].link }}" target="_blank">
+                <a href="{{ data[8].link }}" target="_blank">
                   <span class="btn-text"> Blood Bank </span>
                   &nbsp;&nbsp;
                   <span class="badge badge-primary badge-pill"> PDF </span>
@@ -515,7 +511,7 @@
           <div class="col-md-4 col-sm-6 py-2">
             <div class="col-12">
               <div class="btn-anch py-3">
-                <a href="/departments"
+                <a routerLink="/qwerty"
                   ><span class="btn-text"> Physiotherapy </span>
                   &nbsp;&nbsp;
                   <span class="badge badge-primary badge-pill"> PDF </span>
@@ -527,7 +523,7 @@
           <div class="col-md-4 col-sm-6 py-2">
             <div class="col-12">
               <div class="btn-anch py-3">
-                <a href="/departments"
+                <a routerLink="/qwerty"
                   ><span class="btn-text"> Disaster Management </span>
                   &nbsp;&nbsp;
                   <span class="badge badge-primary badge-pill"> PDF </span>
@@ -539,7 +535,7 @@
           <div class="col-md-4 col-sm-6 py-2">
             <div class="col-12">
               <div class="btn-anch py-3">
-                <a href="/departments"
+                <a routerLink="/qwerty"
                   ><span class="btn-text">
                     Body / Kidney / Organ donation
                   </span>
@@ -553,7 +549,7 @@
           <div class="col-md-4 col-sm-6 py-2">
             <div class="col-12">
               <div class="btn-anch py-3">
-                <a href="/departments"
+                <a routerLink="/qwerty"
                   ><span class="btn-text">
                     Institute of Nursing education
                   </span>
@@ -585,7 +581,7 @@
           <div class="col-md-4 col-sm-6 py-2">
             <div class="col-12">
               <div class="btn-anch py-3">
-                <a href="/departments">
+                <a routerLink="/qwerty">
                   <span class="btn-text"> ART </span>
                   &nbsp;&nbsp;
                   <span class="badge badge-primary badge-pill"> PDF </span>
@@ -597,7 +593,7 @@
           <div class="col-md-4 col-sm-6 py-2">
             <div class="col-12">
               <div class="btn-anch py-3">
-                <a href="/departments">
+                <a routerLink="/qwerty">
                   <span class="btn-text"> ICTC </span>
                   &nbsp;&nbsp;
                   <span class="badge badge-primary badge-pill"> PDF </span>
