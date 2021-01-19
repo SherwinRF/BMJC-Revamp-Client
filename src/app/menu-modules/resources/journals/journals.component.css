@@ -38,3 +38,7 @@ p:hover {
   box-shadow: 0 0 10px #007fff;
   transform: scale(1.02);
 }
+
+img {
+  height: 60%;
+}

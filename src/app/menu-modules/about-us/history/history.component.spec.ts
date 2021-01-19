@@ -167,10 +167,12 @@ describe("HistoryComponent", () => {
     );
   });
   it("should display the modal when 'Read more' button is clicked", () => {
-    letbtn = fixture.debugElement.query(By.css("#readMore")).nativeElement;
-    btn.click();
+    const letbtn = fixture.debugElement.query(By.css("#readMore"))
+      .nativeElement;
+    letbtn.click();
     fixture.detectChanges();
-    letmodal1 = fixture.debugElement.query(By.css("#myModal")).nativeElement;
-    expect(window.getComputedStyle(modal1).display).toBe("block");
+    const letmodal1 = fixture.debugElement.query(By.css("#myModal"))
+      .nativeElement;
+    expect(window.getComputedStyle(letmodal1).display).toBe("block");
   });
 });
